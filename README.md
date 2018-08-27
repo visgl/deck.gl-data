@@ -16,4 +16,4 @@ Large static data files used by the websites of various vis.gl repositories, to 
 See [ImageMagick convert docx](https://www.imagemagick.org/script/convert.php)
 
 ```
-convert --resize x300 input.gif
+convert input.gif --resize x300 output.gif
