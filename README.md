@@ -17,3 +17,8 @@ See [ImageMagick convert docx](https://www.imagemagick.org/script/convert.php)
 
 ```
 convert input.gif --resize x300 output.gif
+```
+
+
+## Source 
+[website/sf-districts.png](https://github.com/uber-common/deck.gl-data/blob/master/website/sf-districts.png) is modified (removed the sea from original image) from [San Francisco districts map.svg](https://commons.wikimedia.org/wiki/File:San_Francisco_districts_map.svg).
