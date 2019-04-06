@@ -20,5 +20,8 @@ convert input.gif --resize x300 output.gif
 ```
 
 
-## Source 
+## Sources
+
 [website/sf-districts.png](https://github.com/uber-common/deck.gl-data/blob/master/website/sf-districts.png) is modified (removed the sea from original image) from [San Francisco districts map.svg](https://commons.wikimedia.org/wiki/File:San_Francisco_districts_map.svg).
+
+[examples/mesh/alfa147.obj](https://github.com/uber-common/deck.gl-data/blob/master/examples/mesh/alfa147.obj) is from John Burkardt's [data sample collection](https://people.sc.fsu.edu/~jburkardt/data/data.html)
