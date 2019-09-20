@@ -9,12 +9,13 @@ Large static data files used by the websites of various vis.gl repositories, to 
 * `images/whats-new` - small 150 pixel tall images and GIFS used in what's new pages
 * `images/docs` - Larger images and GIFs used inline in docs
 * `luma.gl` - assets for luma.gl
+* `3d-tiles` - 3D Tilesets
 
 ## Attributions / Licenses / Data Sources
 
 ### 3D Tiles
 
-* `3d-tiles/RoyalExhibitionBuilding`
+#### `3d-tiles/RoyalExhibitionBuilding`
 
 The Royal Exhibition Building World Heritage Site in Melbourne, Australia, captured with the Zebedee handheld mapping system.
 
@@ -23,11 +24,18 @@ The Royal Exhibition Building World Heritage Site in Melbourne, Australia, captu
  - Zebdee offers the data publicly under the Creative Commons Attribution 3.0 Unported License.
 - Tiling generously provided by Cesium ion / https://cesium.com/
 
+#### `Geodan Rotterdam tilesets`
+
+- Copied from Geodan's [3D tiles example](https://github.com/Geodan/mapbox-3dtiles)
+- Under [BSD-3 Clause License](https://github.com/Geodan/mapbox-3dtiles/blob/master/LICENSE)
+
 ### Images
 
-[website/sf-districts.png](https://github.com/uber-common/deck.gl-data/blob/master/website/sf-districts.png) is modified (removed the sea from original image) from [San Francisco districts map.svg](https://commons.wikimedia.org/wiki/File:San_Francisco_districts_map.svg).
+- [website/sf-districts.png](https://github.com/uber-common/deck.gl-data/blob/master/website/sf-districts.png) is modified (removed the sea from original image) from [San Francisco districts map.svg](https://commons.wikimedia.org/wiki/File:San_Francisco_districts_map.svg).
 
-[examples/mesh/minicooper.obj](https://github.com/uber-common/deck.gl-data/blob/master/examples/mesh/minicooper.obj) is from John Burkardt's [data sample collection](https://people.sc.fsu.edu/~jburkardt/data/data.html)
+### Meshes
+
+- [examples/mesh/minicooper.obj](https://github.com/uber-common/deck.gl-data/blob/master/examples/mesh/minicooper.obj) is from John Burkardt's [data sample collection](https://people.sc.fsu.edu/~jburkardt/data/data.html)
 
 ## Instructions
 
