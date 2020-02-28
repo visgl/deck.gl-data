@@ -33,6 +33,8 @@ The Royal Exhibition Building World Heritage Site in Melbourne, Australia, captu
 
 - [website/sf-districts.png](https://github.com/uber-common/deck.gl-data/blob/master/website/sf-districts.png) is modified (removed the sea from original image) from [San Francisco districts map.svg](https://commons.wikimedia.org/wiki/File:San_Francisco_districts_map.svg).
 
+- [website/image-tiles/moon.images](https://github.com/uber-common/deck.gl-data/blob/master/website/image-tiles/moon.images) is a [DeepZoom](https://docs.microsoft.com/en-us/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc645077(v=vs.95)?redirectedfrom=MSDN) pyramid of [this image of the moon](http://lroc.sese.asu.edu/posts/293).  We use it for non-profit educational purposes from NASA/GSFC/Arizona State University under [these terms](http://lroc.sese.asu.edu/about/terms). 
+
 ### Meshes
 
 - [examples/mesh/minicooper.obj](https://github.com/uber-common/deck.gl-data/blob/master/examples/mesh/minicooper.obj) is from John Burkardt's [data sample collection](https://people.sc.fsu.edu/~jburkardt/data/data.html)
