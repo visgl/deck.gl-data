@@ -1,0 +1,17 @@
+Crowdsourced air traffic data from The OpenSky Network 2020
+https://zenodo.org/record/4419082
+
+Credit
+----
+Matthias Schäfer, Martin Strohmeier, Vincent Lenders, Ivan Martinovic and Matthias Wilhelm.
+"Bringing Up OpenSky: A Large-scale ADS-B Sensor Network for Research".
+In Proceedings of the 13th IEEE/ACM International Symposium on Information Processing in Sensor Networks (IPSN), pages 83-94, April 2014.
+
+Xavier Olive.
+"traffic, a toolbox for processing and analysing air traffic data."
+Journal of Open Source Software 4(39), July 2019.
+
+
+License
+----
+Creative Commons CC-BY
