@@ -1,0 +1,3530 @@
+{
+  "nodes": {
+    "Aegon Targaryen": {
+      "name": "Aegon Targaryen",
+      "house": "Targaryen",
+      "x": 803.8,
+      "y": 1171.1
+    },
+    "Elia Martell": {
+      "name": "Elia Martell",
+      "house": "Martell",
+      "x": 789.4,
+      "y": 960.0
+    },
+    "Rhaegar Targaryen": {
+      "name": "Rhaegar Targaryen",
+      "house": "Targaryen",
+      "x": 835.1,
+      "y": 1244.7
+    },
+    "Rhaenys Targaryen": {
+      "name": "Rhaenys Targaryen",
+      "house": "Targaryen",
+      "x": 693.2,
+      "y": 1087.7
+    },
+    "Jon Snow": {
+      "name": "Jon Snow",
+      "house": [
+        "Stark",
+        "Targaryen"
+      ],
+      "actors": [
+        "Kit Harington"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkwMjUxMDk2OV5BMl5BanBnXkFtZTcwMzg3MTg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 659.4,
+      "y": 1362.7
+    },
+    "Gregor Clegane": {
+      "name": "Gregor Clegane",
+      "actors": [
+        "Ian Whyte",
+        "Conan Stevens",
+        "Hafþór Júlíus Björnsson"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3OTg2MTM2MF5BMl5BanBnXkFtZTcwNDk1NzE5OQ@@._V1._SX100_SY140_.jpg",
+      "x": 837.5,
+      "y": 896.1
+    },
+    "Aeron Greyjoy": {
+      "name": "Aeron Greyjoy",
+      "house": "Greyjoy",
+      "actors": [
+        "Michael Feast"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzI5MDg0ZDAtN2Y2ZC00MzU1LTgyYjQtNTBjYjEzODczZDVhXkEyXkFqcGdeQXVyNTg0Nzg4NTE@._V1._SX100_SY140_.jpg",
+      "x": 594.2,
+      "y": 743.4
+    },
+    "Balon Greyjoy": {
+      "name": "Balon Greyjoy",
+      "house": "Greyjoy",
+      "actors": [
+        "Patrick Malahide"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxNjkwODczN15BMl5BanBnXkFtZTcwODMwNTgzNw@@._V1._SX100_SY140_.jpg",
+      "x": 642.3,
+      "y": 679.4
+    },
+    "Euron Greyjoy": {
+      "name": "Euron Greyjoy",
+      "house": "Greyjoy",
+      "actors": [
+        "Pilou Asbæk"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzg1MTJhMjMtMmY4Yy00NTU2LTliZWUtNjM4YzAxY2M3ZDBkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 695.6,
+      "y": 739.1
+    },
+    "Aerys II Targaryen": {
+      "name": "Aerys II Targaryen",
+      "house": "Targaryen",
+      "actors": [
+        "David Rintoul"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMWQzOWViN2ItNDZhOS00MmZlLTkxZTYtZDg5NGUwMGRmYWZjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 993.8,
+      "y": 1264.2
+    },
+    "Brandon Stark": {
+      "name": "Brandon Stark",
+      "house": "Stark",
+      "x": 1183.9,
+      "y": 1357.3
+    },
+    "Rickard Stark": {
+      "name": "Rickard Stark",
+      "house": "Stark",
+      "x": 1135.7,
+      "y": 1421.2
+    },
+    "Arthur Dayne": {
+      "name": "Arthur Dayne",
+      "actors": [
+        "Luke Roberts"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BODczZDUxYmQtMzk1MC00ZTUwLTk1MjAtZDJlODViMWFhOGU5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 931.3,
+      "y": 1117.0
+    },
+    "Jaime Lannister": {
+      "name": "Jaime Lannister",
+      "house": "Lannister",
+      "actors": [
+        "Nikolaj Coster-Waldau"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIzMzU1NjM1MF5BMl5BanBnXkFtZTcwMzIxODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 950.7,
+      "y": 630.8
+    },
+    "Daenerys Targaryen": {
+      "name": "Daenerys Targaryen",
+      "house": "Targaryen",
+      "actors": [
+        "Emilia Clarke"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4MzIxMTQwMF5BMl5BanBnXkFtZTcwMzY2NDg1Nw@@._V1._SX100_SY140_.jpg",
+      "x": 818.2,
+      "y": 1382.2
+    },
+    "Viserys Targaryen": {
+      "name": "Viserys Targaryen",
+      "house": "Targaryen",
+      "actors": [
+        "Harry Lloyd"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgwNzIxMTU1OV5BMl5BanBnXkFtZTcwNzI2ODg5NA@@._V1._SX100_SY140_.jpg",
+      "x": 977.0,
+      "y": 1401.7
+    },
+    "Rhaella Targaryen": {
+      "name": "Rhaella Targaryen",
+      "house": "Targaryen",
+      "x": 928.8,
+      "y": 1465.6
+    },
+    "Akho": {
+      "name": "Akho",
+      "actors": [
+        "Chuku Modu"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOGE4ZDZmOGUtNGE4Ny00Y2VmLThiOGItMjk3Y2U0ZDY3OWQxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 960.1,
+      "y": 1539.2
+    },
+    "Daario Naharis": {
+      "name": "Daario Naharis",
+      "actors": [
+        "Ed Skrein",
+        "Michiel Huisman"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BY2ExMDJmNzMtMDVmZi00MDNlLWI1NzYtOTkxOTdlOWU4YzE4XkEyXkFqcGdeQXVyNTcxMzMwNTA@._V1._SX100_SY140_.jpg",
+      "x": 911.9,
+      "y": 1603.1
+    },
+    "Alliser Thorne": {
+      "name": "Alliser Thorne",
+      "actors": [
+        "Owen Teale"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxMjExMjA3M15BMl5BanBnXkFtZTcwMjI1ODg5NA@@._V1._SX100_SY140_.jpg",
+      "x": 642.5,
+      "y": 1500.2
+    },
+    "Alton Lannister": {
+      "name": "Alton Lannister",
+      "house": "Lannister",
+      "actors": [
+        "Karl Davies"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU0NTU1NTAzOF5BMl5BanBnXkFtZTcwNzA2NDk4OA@@._V1._SX100_SY140_.jpg",
+      "x": 871.3,
+      "y": 621.1
+    },
+    "Alys Karstark": {
+      "name": "Alys Karstark",
+      "actors": [
+        "Megan Parkinson"
+      ],
+      "x": 965.0,
+      "y": 842.0
+    },
+    "Harald Karstark": {
+      "name": "Harald Karstark",
+      "actors": [
+        "Paul Rattray"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTE4OTIwNWQtZjNkOC00MzhhLThhYzQtMmU1OTFiZGU3YzMzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 902.5,
+      "y": 694.7
+    },
+    "Amory Lorch": {
+      "name": "Amory Lorch",
+      "actors": [
+        "Fintan McKeown"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTVmY2M2YmUtY2JkYS00NjIyLWFhYTAtNTNlZmI4ODdiNmE5XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
+      "x": 1727.9,
+      "y": 846.6
+    },
+    "Yoren": {
+      "name": "Yoren",
+      "actors": [
+        "Francis Magee"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTZjZWMwZWItYTdlNi00N2RmLWFlYjQtZTZlYTIxYTRkMWJlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1804.4,
+      "y": 823.1
+    },
+    "Jaqen H'ghar": {
+      "name": "Jaqen H'ghar",
+      "actors": [
+        "Tom Wlaschiha"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA1MjI5MzYwNzNeQTJeQWpwZ15BbWU3MDkxNDcxOTk@._V1._SX100_SY140_.jpg",
+      "x": 1786.5,
+      "y": 901.1
+    },
+    "Areo Hotah": {
+      "name": "Areo Hotah",
+      "actors": [
+        "Deobia Oparei"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNWFkNTAwNzctOGQ2ZS00OTMyLWE3NDYtOGUwM2E1MzVlYjI0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1268.2,
+      "y": 669.8
+    },
+    "Tyene Sand": {
+      "name": "Tyene Sand",
+      "house": "Martell",
+      "actors": [
+        "Rosabell Laurenti Sellers"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDY5NzBiMTQtYzhmMS00Y2FmLTkzYzYtYzM2ODBjNGZlNGNiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1188.8,
+      "y": 660.1
+    },
+    "Doran Martell": {
+      "name": "Doran Martell",
+      "house": "Martell",
+      "actors": [
+        "Alexander Siddig"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZWU5NzJkNWMtYTM4MS00YmE2LWExYmItNDNiOTE3YzI5YzAxXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1._SX100_SY140_.jpg",
+      "x": 933.8,
+      "y": 768.3
+    },
+    "Howland Reed": {
+      "name": "Howland Reed",
+      "actors": [
+        "Leo Woodruff"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTdkNjRkMTAtZGMwOS00OTA4LWE5NzktNDIyOTNiOTM0ZjkxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 883.2,
+      "y": 1180.8
+    },
+    "Eddard Stark": {
+      "name": "Eddard Stark",
+      "house": "Stark",
+      "actors": [
+        "Sean Bean"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BODcwMjg0MDQ5MF5BMl5BanBnXkFtZTcwMTk2NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1090.1,
+      "y": 1136.4
+    },
+    "Arya Stark": {
+      "name": "Arya Stark",
+      "house": "Stark",
+      "actors": [
+        "Maisie Williams"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk5MTYwNDc0OF5BMl5BanBnXkFtZTcwOTg2NDg1Nw@@._V1._SX100_SY140_.jpg",
+      "x": 1155.1,
+      "y": 935.1
+    },
+    "Robb Stark": {
+      "name": "Robb Stark",
+      "house": "Stark",
+      "actors": [
+        "Richard Madden"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjI2NDE1NzczNF5BMl5BanBnXkFtZTcwNjcwODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1203.2,
+      "y": 871.2
+    },
+    "Sansa Stark": {
+      "name": "Sansa Stark",
+      "house": "Stark",
+      "actors": [
+        "Sophie Turner"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNjAwMjE2NDExNF5BMl5BanBnXkFtZTcwODAwODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1234.4,
+      "y": 944.8
+    },
+    "Bran Stark": {
+      "name": "Bran Stark",
+      "house": "Stark",
+      "actors": [
+        "Isaac Hempstead Wright"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA1NTg0NTI3MTBeQTJeQWpwZ15BbWU3MDEyNjg4OTQ@._V1._SX100_SY140_.jpg",
+      "x": 1186.3,
+      "y": 1008.7
+    },
+    "Rickon Stark": {
+      "name": "Rickon Stark",
+      "house": "Stark",
+      "actors": [
+        "Art Parkinson"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMWZiOGNjMDAtOTRlNi00MDJmLWEyMTMtOGEwZTM5ODJlNDAyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1107.0,
+      "y": 998.9
+    },
+    "Red Keep Stableboy": {
+      "name": "Red Keep Stableboy",
+      "actors": [
+        "Hugo Culverhouse"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZjA0NGQzMmQtZTdlMi00Y2Q5LWE1N2ItNGNhODdmZDAxZTg3XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
+      "x": 1282.6,
+      "y": 880.9
+    },
+    "Polliver": {
+      "name": "Polliver",
+      "actors": [
+        "Andy Kellegher"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BY2EwODU4ZGMtZGVkZi00ZjE4LTlhZTItNzNjNGZiM2UxZTc1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1362.0,
+      "y": 890.6
+    },
+    "Rorge": {
+      "name": "Rorge",
+      "actors": [
+        "Andy Beckwith"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZjE4Mjc3MTktMDYyOC00ZDVlLWJlNjMtYzFiMDFlYzg3MjJjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1313.8,
+      "y": 954.5
+    },
+    "Meryn Trant": {
+      "name": "Meryn Trant",
+      "actors": [
+        "Ian Beattie"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTVjYTRhZWMtM2QwOC00MmYyLTk3ZjAtYmI1ZTlhNmQ3NzE0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1410.1,
+      "y": 826.7
+    },
+    "The Waif": {
+      "name": "The Waif",
+      "actors": [
+        "Faye Marsay"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzlkNTU5NTYtNmY5OS00NTY2LTk2YWItODU0OTc0MTA5NDQ1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1330.7,
+      "y": 817.1
+    },
+    "Black Walder Rivers": {
+      "name": "Black Walder Rivers",
+      "house": "Frey",
+      "actors": [
+        "Tim Plester"
+      ],
+      "x": 1424.5,
+      "y": 1037.9
+    },
+    "Lothar Frey": {
+      "name": "Lothar Frey",
+      "house": "Frey",
+      "actors": [
+        "Daniel Tuite",
+        "Tom Brooke"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMDc0NDA3YmYtZTNjYi00ZDExLWE2NTUtNzk5NjI3MGI3NzM0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1441.3,
+      "y": 900.3
+    },
+    "Walder Frey": {
+      "name": "Walder Frey",
+      "house": "Frey",
+      "actors": [
+        "David Bradley"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYzU0YzZjMTktZDA2Ni00YTRhLWFkZTgtOTQ4Yjg2MmQ2OGUzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1472.6,
+      "y": 974.0
+    },
+    "Petyr Baelish": {
+      "name": "Petyr Baelish",
+      "actors": [
+        "Aidan Gillen"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ1MjE3OTc3M15BMl5BanBnXkFtZTcwODgzODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1138.2,
+      "y": 1072.6
+    },
+    "The Night King": {
+      "name": "The Night King",
+      "actors": [
+        "Richard Brake",
+        "Vladimir 'Furdo' Furdik"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BY2ZjNmYyMjAtNGUwYi00N2JmLWEyMTYtMDM5YmM2MWFhMWFiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1._SX100_SY140_.jpg",
+      "x": 1075.7,
+      "y": 925.3
+    },
+    "White Walker": {
+      "name": "White Walker",
+      "actors": [
+        "Tim Loane"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjYzNDMyZWUtMDVlMy00OGQxLWFkZTctOWMxZDk1MDA5MmQzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 517.5,
+      "y": 1205.7
+    },
+    "Viserion": {
+      "name": "Viserion",
+      "house": "Targaryen",
+      "x": 900.1,
+      "y": 1043.4
+    },
+    "Catelyn Stark": {
+      "name": "Catelyn Stark",
+      "house": [
+        "Stark",
+        "Tully"
+      ],
+      "actors": [
+        "Michelle Fairley"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY2ODc4MTkxMV5BMl5BanBnXkFtZTcwNjM3MTg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1455.8,
+      "y": 1111.5
+    },
+    "Nymeria": {
+      "name": "Nymeria",
+      "house": "Stark",
+      "x": 1109.5,
+      "y": 650.3
+    },
+    "Baby Sam": {
+      "name": "Baby Sam",
+      "actors": [
+        "William Wilson",
+        "James Wilson"
+      ],
+      "x": 376.1,
+      "y": 1045.6
+    },
+    "Samwell Tarly": {
+      "name": "Samwell Tarly",
+      "actors": [
+        "John Bradley"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQyODYyOTczMF5BMl5BanBnXkFtZTcwNjY0ODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 407.3,
+      "y": 1119.2
+    },
+    "Gilly": {
+      "name": "Gilly",
+      "actors": [
+        "Hannah Murray"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYzOTQxMTA3MF5BMl5BanBnXkFtZTcwODM5NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 455.5,
+      "y": 1055.3
+    },
+    "Yara Greyjoy": {
+      "name": "Yara Greyjoy",
+      "house": "Greyjoy",
+      "actors": [
+        "Gemma Whelan"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2NzU5ODk0MV5BMl5BanBnXkFtZTcwMzEyNDY2OQ@@._V1._SX100_SY140_.jpg",
+      "x": 647.5,
+      "y": 803.0
+    },
+    "Theon Greyjoy": {
+      "name": "Theon Greyjoy",
+      "house": "Greyjoy",
+      "actors": [
+        "Alfie Allen"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTM3ODUyOTY3N15BMl5BanBnXkFtZTcwNjI4MTg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 758.2,
+      "y": 886.3
+    },
+    "Barristan Selmy": {
+      "name": "Barristan Selmy",
+      "actors": [
+        "Ian McElhinney"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUyMTE0NjUxNV5BMl5BanBnXkFtZTcwOTA1ODg5NA@@._V1._SX100_SY140_.jpg",
+      "x": 755.7,
+      "y": 1235.0
+    },
+    "Benjen Stark": {
+      "name": "Benjen Stark",
+      "house": "Stark",
+      "actors": [
+        "Joseph Mawle"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjFiY2M5MjgtZmRiMS00ZTAyLTk2Y2UtMjdjZTRkZmVlYTMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1104.5,
+      "y": 1347.6
+    },
+    "Lyanna Stark": {
+      "name": "Lyanna Stark",
+      "house": "Stark",
+      "actors": [
+        "Aisling Franciosi"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTE5NTczY2QtNmQxYS00NTAwLWE2ZTAtYzc1MTkyZGU5MzRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1008.2,
+      "y": 1475.3
+    },
+    "Beric Dondarrion": {
+      "name": "Beric Dondarrion",
+      "actors": [
+        "Richard Dormer",
+        "David Michael Scott"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjQwMTEwNTg2MF5BMl5BanBnXkFtZTgwNTAxODYxOTE@._V1._SX100_SY140_.jpg",
+      "x": 1353.6,
+      "y": 488.7
+    },
+    "Sandor Clegane": {
+      "name": "Sandor Clegane",
+      "actors": [
+        "Rory McCann"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQwMjEwNDQ1MF5BMl5BanBnXkFtZTcwMzAxODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1263.6,
+      "y": 458.5
+    },
+    "Biter": {
+      "name": "Biter",
+      "actors": [
+        "Gerard Jordan"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjQ1ZWY3NTYtNmYzZS00ZDQyLThhMDItYTQyNmU0ZDg5NWViL2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_SY100_SX100_AL_.jpg",
+      "x": 1288.1,
+      "y": 534.6
+    },
+    "Bowen Marsh": {
+      "name": "Bowen Marsh",
+      "actors": [
+        "Michael Condron"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNmRkMDYxYjQtYTBjZi00NDZlLThmNGMtYzlhNGI1ZDE5NTJmXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 721.9,
+      "y": 1510.0
+    },
+    "Summer": {
+      "name": "Summer",
+      "house": "Stark",
+      "x": 1157.6,
+      "y": 586.4
+    },
+    "Brienne of Tarth": {
+      "name": "Brienne of Tarth",
+      "actors": [
+        "Gwendoline Christie"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTYzNDY4NzgzOV5BMl5BanBnXkFtZTcwNDM5ODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1376.4,
+      "y": 1101.8
+    },
+    "Stannis Baratheon": {
+      "name": "Stannis Baratheon",
+      "house": "Baratheon",
+      "actors": [
+        "Stephen Dillane"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjExNzY0NzI0NF5BMl5BanBnXkFtZTcwNjA2NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1232.0,
+      "y": 1293.4
+    },
+    "Renly Baratheon": {
+      "name": "Renly Baratheon",
+      "house": "Baratheon",
+      "actors": [
+        "Gethin Anthony"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNjA4OTE5MzcyOF5BMl5BanBnXkFtZTcwNDA1ODg5NA@@._V1._SX100_SY140_.jpg",
+      "x": 1248.9,
+      "y": 1155.9
+    },
+    "Podrick Payne": {
+      "name": "Podrick Payne",
+      "actors": [
+        "Daniel Portman"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTU5NjczOTQyNl5BMl5BanBnXkFtZTcwMzMwNTk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1217.6,
+      "y": 1082.3
+    },
+    "Bronn": {
+      "name": "Bronn",
+      "actors": [
+        "Jerome Flynn"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY0MzI5MjY1OV5BMl5BanBnXkFtZTcwODM1ODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 503.6,
+      "y": 991.4
+    },
+    "Vardis Egen": {
+      "name": "Vardis Egen",
+      "actors": [
+        "Brendan McCormack"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzg1Y2NiYTYtNDY0Yi00OGMwLWJjZjktZDVlNDE1Y2M3MTMzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 424.2,
+      "y": 981.7
+    },
+    "Matthos Seaworth": {
+      "name": "Matthos Seaworth",
+      "actors": [
+        "Kerr Logan"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTBlYmZlMGEtMzg5Yy00OGFjLWE3Y2MtNjc2NTViN2ExNzM3XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
+      "x": 613.8,
+      "y": 1078.0
+    },
+    "Lead Dornish Guard": {
+      "name": "Lead Dornish Guard",
+      "actors": [
+        "Christian Vit"
+      ],
+      "x": 551.7,
+      "y": 927.5
+    },
+    "Lollys Stokeworth": {
+      "name": "Lollys Stokeworth",
+      "actors": [
+        "Elizabeth Cadwallader"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BODQ5MTY2MjAtZmM4NC00OGZmLWIyYjEtYTNlOGQxMzg2NzgxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 472.3,
+      "y": 917.8
+    },
+    "Brother Ray": {
+      "name": "Brother Ray",
+      "actors": [
+        "Ian McShane"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAwNjU5MTY3NzleQTJeQWpwZ15BbWU4MDIwODkwMTkx._V1._SX100_SY140_.jpg",
+      "x": 1102.3,
+      "y": 311.0
+    },
+    "Lem Lemoncloak": {
+      "name": "Lem Lemoncloak",
+      "actors": [
+        "Jóhannes Haukur Jóhannesson"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZWYxOGUwODAtZmY0MS00OTFkLWI0YTUtZTkxNjI1ZjE1YmJhXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1160.9,
+      "y": 365.5
+    },
+    "Brynden Tully": {
+      "name": "Brynden Tully",
+      "house": "Tully",
+      "actors": [
+        "Clive Russell"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTg5ZDIwOWUtMjQ1OS00YjgxLThmMDgtOWUwZjQ4MzE3ZDhlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1607.1,
+      "y": 1086.3
+    },
+    "Hoster Tully": {
+      "name": "Hoster Tully",
+      "house": "Tully",
+      "actors": [
+        "Christopher Newman"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTY3YzMzOWUtNzNjYi00ODYzLThjNjUtNzc4NzFlNmE2NjgyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1535.2,
+      "y": 1121.2
+    },
+    "Joyeuse Erenford": {
+      "name": "Joyeuse Erenford",
+      "actors": [
+        "Kelly Long"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA4MTU5NDQzM15BMl5BanBnXkFtZTcwNjQxNDM2OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1503.9,
+      "y": 1047.6
+    },
+    "Lysa Arryn": {
+      "name": "Lysa Arryn",
+      "house": [
+        "Arryn",
+        "Tully"
+      ],
+      "actors": [
+        "Kate Dickie"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMmNlYTYzOTYtOTg1ZC00YzdlLTliNTgtZDhjMTY1MGViZTA5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1328.3,
+      "y": 1165.7
+    },
+    "Edmure Tully": {
+      "name": "Edmure Tully",
+      "house": "Tully",
+      "actors": [
+        "Tobias Menzies"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYjEzNThlMmQtMDgzYi00MTQ5LTllMzQtNDZjY2JiMTVhNmNkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1487.1,
+      "y": 1185.1
+    },
+    "Catspaw Assassin": {
+      "name": "Catspaw Assassin",
+      "actors": [
+        "Lalor Roddy"
+      ],
+      "x": 1237.0,
+      "y": 596.2
+    },
+    "Cersei Lannister": {
+      "name": "Cersei Lannister",
+      "house": [
+        "Lannister",
+        "Baratheon"
+      ],
+      "actors": [
+        "Lena Headey"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgzNTAxNjExMl5BMl5BanBnXkFtZTcwMDEwNzI4OQ@@._V1._CR954,56,605,670._SX100_SY140_.jpg",
+      "x": 1047.0,
+      "y": 503.0
+    },
+    "Tywin Lannister": {
+      "name": "Tywin Lannister",
+      "house": "Lannister",
+      "actors": [
+        "Charles Dance"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTA4ODMxMzE1OV5BMl5BanBnXkFtZTcwMTM0ODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 854.4,
+      "y": 758.6
+    },
+    "Joffrey Baratheon": {
+      "name": "Joffrey Baratheon",
+      "house": "Baratheon",
+      "actors": [
+        "Jack Gleeson"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk1NDg5MTAwMl5BMl5BanBnXkFtZTcwOTIwODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1013.1,
+      "y": 778.1
+    },
+    "Myrcella Baratheon": {
+      "name": "Myrcella Baratheon",
+      "house": "Baratheon",
+      "actors": [
+        "Aimee Richardson",
+        "Nell Tiger Free"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA4OTA1MTIxMzdeQTJeQWpwZ15BbWU3MDY2NjQ4NTc@._V1._SX100_SY140_.jpg",
+      "x": 981.9,
+      "y": 704.5
+    },
+    "Tommen Baratheon": {
+      "name": "Tommen Baratheon",
+      "house": "Baratheon",
+      "actors": [
+        "Callum Wharry",
+        "Dean-Charles Chapman"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTY1YWUxM2QtZjhmZC00ZmQ2LThkM2YtNTk2MmQ5OTk3NGMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 775.0,
+      "y": 748.8
+    },
+    "Tyrion Lannister": {
+      "name": "Tyrion Lannister",
+      "house": "Lannister",
+      "actors": [
+        "Peter Dinklage"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2MDAwOTI0OV5BMl5BanBnXkFtZTcwNjA3NDg1Nw@@._V1._SX100_SY140_.jpg",
+      "x": 948.2,
+      "y": 979.5
+    },
+    "Robert Baratheon": {
+      "name": "Robert Baratheon",
+      "house": "Baratheon",
+      "actors": [
+        "Mark Addy"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzQwMDcwNzY5MF5BMl5BanBnXkFtZTcwMzIyMTE5OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1058.9,
+      "y": 1062.8
+    },
+    "Lancel Lannister": {
+      "name": "Lancel Lannister",
+      "house": "Lannister",
+      "actors": [
+        "Eugene Simon"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjI0MTQ5MzEzNV5BMl5BanBnXkFtZTgwNTQ4MDA2NTE@._V1._SX100_SY140_.jpg",
+      "x": 909.9,
+      "y": 344.2
+    },
+    "High Sparrow": {
+      "name": "High Sparrow",
+      "actors": [
+        "Jonathan Pryce"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTcyOTk0MjExMF5BMl5BanBnXkFtZTgwODk5Njk5NzE@._V1._SX100_SY140_.jpg",
+      "x": 1016.7,
+      "y": 429.0
+    },
+    "Loras Tyrell": {
+      "name": "Loras Tyrell",
+      "house": "Tyrell",
+      "actors": [
+        "Finn Jones"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzcwNDAxZGMtODU1Mi00YzA2LWJhMzYtN2FjZjg2YWZlMTQ4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1096.1,
+      "y": 438.7
+    },
+    "Mace Tyrell": {
+      "name": "Mace Tyrell",
+      "house": "Tyrell",
+      "actors": [
+        "Roger Ashton-Griffiths"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTcyZWFjZjItYmI4NS00ZDE2LTg4Y2YtYWJkYWI5MWJlNWFjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1126.4,
+      "y": 512.8
+    },
+    "Margaery Tyrell": {
+      "name": "Margaery Tyrell",
+      "house": "Tyrell",
+      "actors": [
+        "Natalie Dormer"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzODQ1MDg3NV5BMl5BanBnXkFtZTcwODA4NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1078.2,
+      "y": 576.7
+    },
+    "Kevan Lannister": {
+      "name": "Kevan Lannister",
+      "house": "Lannister",
+      "actors": [
+        "Ian Gelder"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjZkMzliOWYtODIwNS00ZTU2LWIxNTAtYjFlNTA1YjdhNzc4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 937.3,
+      "y": 419.3
+    },
+    "Craster": {
+      "name": "Craster",
+      "actors": [
+        "Robert Pugh"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzZiNjZiMGItNTQ2Yi00MGU3LWFjMTktNzlmNDFlYzA3MjY3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 630.7,
+      "y": 940.5
+    },
+    "Karl Tanner": {
+      "name": "Karl Tanner",
+      "actors": [
+        "Burn Gorman"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDEwZGVlODEtM2VhNC00ZjJmLTlmMjAtNzBlNTdmOTcwZGY2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 676.3,
+      "y": 1225.2
+    },
+    "Mero": {
+      "name": "Mero",
+      "actors": [
+        "Mark Killeen"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZmUzODdkZTQtOTAxZC00MjI5LWFmZjctZDYyYTVlNzMxMjdiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 991.3,
+      "y": 1612.9
+    },
+    "Prendahl na Ghezn": {
+      "name": "Prendahl na Ghezn",
+      "actors": [
+        "Ramon Tikaram"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYzkyZDYyNGYtNDEyNC00NTQ2LWI4N2MtNmM0YzcwOTc1ODRlXkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
+      "x": 943.2,
+      "y": 1676.7
+    },
+    "Mossador": {
+      "name": "Mossador",
+      "actors": [
+        "Reece Noi"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMGYxZjVkOGEtMWI0NS00ODc3LTlkMzUtMGFkNzJlMDc1MGY4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 863.8,
+      "y": 1667.0
+    },
+    "Khal Drogo": {
+      "name": "Khal Drogo",
+      "actors": [
+        "Jason Momoa"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQzMTE2MjczM15BMl5BanBnXkFtZTcwMDA5NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1073.2,
+      "y": 1274.0
+    },
+    "Mirri Maz Duur": {
+      "name": "Mirri Maz Duur",
+      "actors": [
+        "Mia Soteriou"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDNiMzM4ZTAtZDhkMy00OTI3LTkxNzgtMTVjNmU5YTEyYTVjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 914.5,
+      "y": 1254.4
+    },
+    "Doreah": {
+      "name": "Doreah",
+      "actors": [
+        "Roxanne McKee"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzNWJmNzYtZjFhYy00NmI5LWFkOWUtOWQ0ZjUzZDYwYjM1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 945.7,
+      "y": 1328.1
+    },
+    "Xaro Xhoan Daxos": {
+      "name": "Xaro Xhoan Daxos",
+      "actors": [
+        "Nonso Anozie"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3NTA5NDA3NF5BMl5BanBnXkFtZTcwNzY2NDg1Nw@@._V1._SX100_SY140_.jpg",
+      "x": 880.7,
+      "y": 1529.5
+    },
+    "Khal Rhalko": {
+      "name": "Khal Rhalko",
+      "actors": [
+        "Andrei Claude"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYTFkMWRiMDItN2Q2Ny00N2VlLWIxMzYtZDMwODkwNDE4ZTYyXkEyXkFqcGdeQXVyMTk0NzA0Njg@._V1._SX100_SY140_.jpg",
+      "x": 866.3,
+      "y": 1318.3
+    },
+    "Khal Moro": {
+      "name": "Khal Moro",
+      "actors": [
+        "Joseph Naufahu"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BN2ZkODIwY2MtNzViYS00NDEwLWE2ZjItZDFiMzg1MWVjMzQwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 787.0,
+      "y": 1308.6
+    },
+    "Dothraki Bloodrider #1": {
+      "name": "Dothraki Bloodrider #1",
+      "actors": [
+        "Diogo Sales"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2Mzk1MzczMl5BMl5BanBnXkFtZTgwNDQyODAxODE@._V1._SX100_SY140_.jpg",
+      "x": 849.4,
+      "y": 1455.8
+    },
+    "Dothraki Bloodrider #2": {
+      "name": "Dothraki Bloodrider #2",
+      "actors": [
+        "Junade Khan"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ2Mzk1MzczMl5BMl5BanBnXkFtZTgwNDQyODAxODE@._V1._SX100_SY140_.jpg",
+      "x": 707.6,
+      "y": 1298.8
+    },
+    "Randyll Tarly": {
+      "name": "Randyll Tarly",
+      "actors": [
+        "James Faulkner"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIwMTY0NTc4N15BMl5BanBnXkFtZTgwNTMyNzYwOTE@._V1._SX100_SY140_.jpg",
+      "x": 486.3,
+      "y": 1132.1
+    },
+    "Dickon Tarly": {
+      "name": "Dickon Tarly",
+      "actors": [
+        "Freddie Stroma",
+        "Tom Hopper"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzk1YjNlZGQtNTU0MC00OGZmLThhYTQtZDM1ZjI2OGNlZGQxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 438.1,
+      "y": 1195.9
+    },
+    "Lord Varys": {
+      "name": "Lord Varys",
+      "actors": [
+        "Conleth Hill"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzNDk2MjczM15BMl5BanBnXkFtZTcwODk0ODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 738.8,
+      "y": 1372.4
+    },
+    "Grey Worm": {
+      "name": "Grey Worm",
+      "actors": [
+        "Jacob Anderson"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjk3ZDJlNTQtZDBiMC00ODVhLTlmYmYtYzkxMDA0N2QxNDY0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 962.6,
+      "y": 1190.6
+    },
+    "Jorah Mormont": {
+      "name": "Jorah Mormont",
+      "house": "Mormont",
+      "actors": [
+        "Iain Glen"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzNTcxMDI2NV5BMl5BanBnXkFtZTcwMzgxNzI4OQ@@._V1._CR225,437,407,405._SX100_SY140_.jpg",
+      "x": 628.2,
+      "y": 1289.1
+    },
+    "Missandei": {
+      "name": "Missandei",
+      "actors": [
+        "Nathalie Emmanuel"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTE5OTI0OTA0OV5BMl5BanBnXkFtZTcwODczOTAzOQ@@._V1._SX100_SY140_.jpg",
+      "x": 868.8,
+      "y": 969.7
+    },
+    "Rhaego": {
+      "name": "Rhaego",
+      "x": 1025.1,
+      "y": 1337.8
+    },
+    "Drogon": {
+      "name": "Drogon",
+      "house": "Targaryen",
+      "x": 820.7,
+      "y": 1033.6
+    },
+    "Rhaegal": {
+      "name": "Rhaegal",
+      "house": "Targaryen",
+      "x": 741.3,
+      "y": 1023.8
+    },
+    "Davos Seaworth": {
+      "name": "Davos Seaworth",
+      "actors": [
+        "Liam Cunningham"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTMwODc0NzI4Ml5BMl5BanBnXkFtZTcwNzY3NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 897.6,
+      "y": 1392.0
+    },
+    "Melessa Tarly": {
+      "name": "Melessa Tarly",
+      "actors": [
+        "Samantha Spiro"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BN2U0YmU1Y2EtNTNkOS00MzIxLWI3OTgtNjUwNGY4YTNiNWJlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 311.0,
+      "y": 1247.0
+    },
+    "Talla Tarly": {
+      "name": "Talla Tarly",
+      "house": "Tarly",
+      "actors": [
+        "Rebecca Benson"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTYwYTA2MWEtM2FjNS00MDNhLWIyMzMtODI0Mjg2Y2ZlODBiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 359.2,
+      "y": 1183.1
+    },
+    "Dongo the Giant": {
+      "name": "Dongo the Giant",
+      "actors": [
+        "Ian Whyte"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTRjNGYxNWItYmRhNS00MDY3LWFmZTItMzYzNTEwMjg3YTA1XkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1._SX100_SY140_.jpg",
+      "x": 960.2,
+      "y": 1755.3
+    },
+    "Night's Watchman": {
+      "name": "Night's Watchman",
+      "actors": [
+        "Patrick J Molloy"
+      ],
+      "x": 1039.9,
+      "y": 1747.7
+    },
+    "Dontos Hollard": {
+      "name": "Dontos Hollard",
+      "actors": [
+        "Tony Way"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzUzYzg5NGUtOWE5Zi00Y2MwLTg2YzQtMDZlOWE1NDZjZmFkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1265.7,
+      "y": 1018.4
+    },
+    "Ellaria Sand": {
+      "name": "Ellaria Sand",
+      "house": "Martell",
+      "actors": [
+        "Indira Varma"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNWQ0ZDE5NDUtNDVmZi00ZTI5LTkyOTgtNDhiNjMwZjY3ZjgwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1061.3,
+      "y": 714.2
+    },
+    "Trystane Martell": {
+      "name": "Trystane Martell",
+      "house": "Martell",
+      "actors": [
+        "Toby Sebastian"
+      ],
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BODkzNjY0NTA0MV5BMl5BanBnXkFtZTgwNjc1NDE3NTE@._V1_SX100_CR0,0,100,100_AL_.jpg",
+      "x": 919.4,
+      "y": 557.2
+    },
+    "Oberyn Martell": {
+      "name": "Oberyn Martell",
+      "house": "Martell",
+      "actors": [
+        "Pedro Pascal"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTJmYjViYjctYTU0My00NTJiLWE2YzUtOWZkNTg4MTZkZmEyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 823.2,
+      "y": 684.9
+    },
+    "Irri": {
+      "name": "Irri",
+      "actors": [
+        "Amrita Acharia"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BY2Y0ZmNiMjItNzVmNi00MGEyLWFhMTUtZDZkYTBmZjFiZDY1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1056.4,
+      "y": 1411.5
+    },
+    "Drennan": {
+      "name": "Drennan",
+      "actors": [
+        "David Coakley"
+      ],
+      "x": 1263.3,
+      "y": 1367.1
+    },
+    "Osha": {
+      "name": "Osha",
+      "actors": [
+        "Natalia Tena"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjI4NjY0ODY2OV5BMl5BanBnXkFtZTcwMzU5ODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1311.4,
+      "y": 1303.2
+    },
+    "Pyat Pree": {
+      "name": "Pyat Pree",
+      "actors": [
+        "Ian Hanmore"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYmMzZmVkMTItNmY3Yy00MDU2LThmNTctOWJmYTNhMThhNTRlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 661.9,
+      "y": 1014.1
+    },
+    "Kraznys mo Nakloz": {
+      "name": "Kraznys mo Nakloz",
+      "actors": [
+        "Dan Hildebrand"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMWIzZGY0NWUtMmM1OC00NDYzLTkxMjYtM2I1MGM5MTkzODMwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 772.6,
+      "y": 1097.5
+    },
+    "Will": {
+      "name": "Will",
+      "actors": [
+        "Bronson Webb"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA0NjU2MjIzNF5BMl5BanBnXkFtZTgwNzEyODI1MDI@._V1_SY100_CR16,0,100,100_AL_.jpg",
+      "x": 1169.5,
+      "y": 1146.2
+    },
+    "Lady": {
+      "name": "Lady",
+      "house": "Stark",
+      "x": 1140.7,
+      "y": 723.9
+    },
+    "Gerold Hightower": {
+      "name": "Gerold Hightower",
+      "actors": [
+        "Eddie Eyre"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BODc3OTIzYmEtYjk2Yy00NTgwLTk4OWMtMjlmMmJmNDE5OGU2XkEyXkFqcGdeQXVyNjU5MTM2ODI@._V1._SX100_SY140_.jpg",
+      "x": 1121.3,
+      "y": 1210.1
+    },
+    "Jon Arryn": {
+      "name": "Jon Arryn",
+      "actors": [
+        "John Standing"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYmJiMzVjYzEtODA2ZC00NTkwLWI1ZDEtNDUxM2Y1NzcxZjU0XkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1._SX100_SY140_.jpg",
+      "x": 1280.1,
+      "y": 1229.5
+    },
+    "Ilyn Payne": {
+      "name": "Ilyn Payne",
+      "actors": [
+        "Wilko Johnson"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOGY5ZGE1OGUtODYwNS00OTVlLWE1MWItMzI5NDBmYWIwZTI4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1200.7,
+      "y": 1219.8
+    },
+    "Roslin Frey": {
+      "name": "Roslin Frey",
+      "house": "Frey",
+      "actors": [
+        "Alexandra Dowling"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzhhZGIxYjctMjBkNC00YTJhLTlmMDAtOWUyYjlhNWE3Yzg3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1393.2,
+      "y": 964.2
+    },
+    "Obara Sand": {
+      "name": "Obara Sand",
+      "house": "Martell",
+      "actors": [
+        "Keisha Castle-Hughes"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOWU3OTRmYmItZTZiYi00Mjk1LTk2NTItMzBjZmQ3NDZhMDMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 791.9,
+      "y": 611.3
+    },
+    "Nymeria Sand": {
+      "name": "Nymeria Sand",
+      "house": "Martell",
+      "actors": [
+        "Jessica Henwick"
+      ],
+      "x": 743.8,
+      "y": 675.2
+    },
+    "Gared": {
+      "name": "Gared",
+      "actors": [
+        "Dermot Keaney"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNGYxZjljZTctZjIxYy00YmUwLTk3MDgtZWIyZjhkNDgwYTZiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 565.7,
+      "y": 1141.8
+    },
+    "Gatins": {
+      "name": "Gatins",
+      "actors": [
+        "Ricky Champ"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzIwZmJkNDktZWMwMC00ZGNlLWJkNWYtN2ZmOWEzNDFiNWMyXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1329.1,
+      "y": 412.6
+    },
+    "Gendry": {
+      "name": "Gendry",
+      "house": "Baratheon",
+      "actors": [
+        "Joe Dempsie"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTcxNzYwMTk4MV5BMl5BanBnXkFtZTcwNDg1ODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1027.6,
+      "y": 989.2
+    },
+    "Ghost": {
+      "name": "Ghost",
+      "house": "Stark",
+      "x": 885.7,
+      "y": 832.2
+    },
+    "Grey Wind": {
+      "name": "Grey Wind",
+      "house": "Stark",
+      "x": 1319.3,
+      "y": 608.3
+    },
+    "Shaggydog": {
+      "name": "Shaggydog",
+      "house": "Stark",
+      "x": 967.6,
+      "y": 493.3
+    },
+    "Rast": {
+      "name": "Rast",
+      "actors": [
+        "Luke Barnes"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYzI5NjQ3ZTctODgyYi00ZTZhLTk2M2EtM2E3MzYxNDBkMWU5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 710.1,
+      "y": 950.2
+    },
+    "Great Master #1": {
+      "name": "Great Master #1",
+      "actors": [
+        "Emilio Doorgasingh",
+        "Gianpiero Cognoli"
+      ],
+      "x": 852.0,
+      "y": 1107.2
+    },
+    "Greatjon Umber": {
+      "name": "Greatjon Umber",
+      "actors": [
+        "Clive Mantle"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BN2VjMTM4OTItMDUxMi00N2NiLThhMWMtNGNhMDQ4OGJhOWU0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 736.8,
+      "y": 437.7
+    },
+    "Smalljon Umber": {
+      "name": "Smalljon Umber",
+      "actors": [
+        "Dean S. Jagger"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNzViODI3ZTctMjZmNC00MzBhLWIxNTgtMDAzMTQ5OWM3YjE2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 809.1,
+      "y": 471.8
+    },
+    "Hugh of the Vale": {
+      "name": "Hugh of the Vale",
+      "actors": [
+        "Jefferson Hall"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BODRhNGQwNDgtNDEwNS00MWRlLWJmZTQtMTJlNjNmZTI1ZDk5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 806.3,
+      "y": 822.5
+    },
+    "Qyburn": {
+      "name": "Qyburn",
+      "actors": [
+        "Anton Lesser"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZGEzNDY2YjktMDM1ZS00MTI1LWEyYmMtNTdiMzczNmY4ZWEzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 840.0,
+      "y": 547.4
+    },
+    "Grenn": {
+      "name": "Grenn",
+      "actors": [
+        "Mark Stanley"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzkzOTI0NjM3MV5BMl5BanBnXkFtZTcwMTY3ODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1762.9,
+      "y": 1189.3
+    },
+    "Mag the Mighty": {
+      "name": "Mag the Mighty",
+      "actors": [
+        "Neil Fingleton"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMDI5NjYzMDMtMmNkOC00MDA4LWI1OTctN2EzYzQ2ZmNiZWYwXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1._SX100_SY140_.jpg",
+      "x": 1752.4,
+      "y": 1268.6
+    },
+    "Razdal mo Eraz": {
+      "name": "Razdal mo Eraz",
+      "actors": [
+        "George Georgiou"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BODdjNzdkYWQtZmE1OS00YzcxLTljMTctNWZmMDI3OTAzZmZiXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1042.0,
+      "y": 1200.3
+    },
+    "Harry Strickland": {
+      "name": "Harry Strickland",
+      "actors": [
+        "Marc Rissmann"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZGVkZjRkMzUtMzgzYy00YzcyLThhZmMtNDMxMGNmNGRmNWQyXkEyXkFqcGdeQXVyNDgzNTg0OTA@._V1._SX100_SY140_.jpg",
+      "x": 1010.7,
+      "y": 1126.7
+    },
+    "Rickard Karstark": {
+      "name": "Rickard Karstark",
+      "actors": [
+        "John Stahl",
+        "Steve Blount"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BM2IwZThkNjQtYzU2NS00ZTRiLWFjNDUtNTdmMGQ2ZmE5M2NmXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 998.8,
+      "y": 566.9
+    },
+    "Hodor": {
+      "name": "Hodor",
+      "actors": [
+        "Kristian Nairn"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzMzU4MDEyNF5BMl5BanBnXkFtZTcwNDM2ODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1863.1,
+      "y": 1129.4
+    },
+    "Locke": {
+      "name": "Locke",
+      "actors": [
+        "Noah Taylor"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTg1MDM2ODE0MF5BMl5BanBnXkFtZTcwNzM4MzA0OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1841.1,
+      "y": 1206.3
+    },
+    "Jojen Reed": {
+      "name": "Jojen Reed",
+      "actors": [
+        "Thomas Brodie-Sangster"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0OTU4MTk4M15BMl5BanBnXkFtZTcwMTE4MTE5OQ@@._V1._SX100_SY140_.jpg",
+      "x": 724.4,
+      "y": 1161.3
+    },
+    "Meera Reed": {
+      "name": "Meera Reed",
+      "actors": [
+        "Ellie Kendrick"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQyOTQwNjI5OF5BMl5BanBnXkFtZTcwOTcyMTEwOQ@@._V1._SX100_SY140_.jpg",
+      "x": 596.9,
+      "y": 1215.5
+    },
+    "Jafer Flowers": {
+      "name": "Jafer Flowers",
+      "x": 469.4,
+      "y": 1269.5
+    },
+    "Jory Cassel": {
+      "name": "Jory Cassel",
+      "actors": [
+        "Jamie Sives"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTg3OGE5MDktNmYxOS00YmFiLWFjMDYtMTBkMjlhYWJhZjYzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 996.3,
+      "y": 915.6
+    },
+    "Olenna Tyrell": {
+      "name": "Olenna Tyrell",
+      "house": "Tyrell",
+      "actors": [
+        "Diana Rigg"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxMjgwOTQ3Nl5BMl5BanBnXkFtZTcwMjE2NzE5OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1030.1,
+      "y": 640.6
+    },
+    "Janos Slynt": {
+      "name": "Janos Slynt",
+      "actors": [
+        "Dominic Carter"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNGUwMzllZGEtZjdkZi00NTgwLTgxY2UtODFhZjZlZDNmN2ZkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_SY100_SX100_AL_.jpg",
+      "x": 770.0,
+      "y": 1446.1
+    },
+    "The Tickler": {
+      "name": "The Tickler",
+      "actors": [
+        "Anthony Morris"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTRiZjdkNTctMzM3ZC00NDJjLWI1MjctNTdjZjFlYjNiOTMxXkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
+      "x": 1710.0,
+      "y": 924.5
+    },
+    "Jeor Mormont": {
+      "name": "Jeor Mormont",
+      "house": "Mormont",
+      "actors": [
+        "James Cosmo"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BODAwODYyNzk0NV5BMl5BanBnXkFtZTcwNDI2NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 645.1,
+      "y": 1151.6
+    },
+    "Ros": {
+      "name": "Ros",
+      "actors": [
+        "Esmé Bianco"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0NzA4OTQ5Ml5BMl5BanBnXkFtZTcwMDY5ODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1092.5,
+      "y": 787.8
+    },
+    "Othor": {
+      "name": "Othor",
+      "x": 500.6,
+      "y": 1343.2
+    },
+    "Qhorin Halfhand": {
+      "name": "Qhorin Halfhand",
+      "actors": [
+        "Simon Armstrong"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BODM1MzJmZmUtZWI2MS00YjliLWJhNTItZmMzNmQ1YzA0ZjlmXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 563.1,
+      "y": 1490.5
+    },
+    "Orell": {
+      "name": "Orell",
+      "actors": [
+        "Mackenzie Crook"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTQ1NDAzODQtNzAzMy00MDRhLTkwMWItZTNmMWJmN2I5MTlmXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 611.3,
+      "y": 1426.6
+    },
+    "Styr": {
+      "name": "Styr",
+      "actors": [
+        "Yuri Kolokolnikov"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAyNDM4Mjc1M15BMl5BanBnXkFtZTgwODQyMTg1MTE@._V1._SX100_SY140_.jpg",
+      "x": 690.6,
+      "y": 1436.3
+    },
+    "Mance Rayder": {
+      "name": "Mance Rayder",
+      "actors": [
+        "Ciarán Hinds"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU3NzQyNjAwNF5BMl5BanBnXkFtZTcwODcyMTEwOQ@@._V1._SX100_SY140_.jpg",
+      "x": 1087.6,
+      "y": 1485.1
+    },
+    "Othell Yarwyck": {
+      "name": "Othell Yarwyck",
+      "actors": [
+        "Brian Fortune"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDgzYzhkZWYtYTA3OS00ZTk5LTgwYTUtNThiMDFmNjBmZmIxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 531.9,
+      "y": 1416.8
+    },
+    "Olly": {
+      "name": "Olly",
+      "actors": [
+        "Brenock O'Connor"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOWFiYTRlMzMtMmQzZC00Y2UxLTgzMzAtZGEzOTlkMGRiODBkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 673.7,
+      "y": 1573.9
+    },
+    "Ygritte": {
+      "name": "Ygritte",
+      "actors": [
+        "Rose Leslie"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg0NDA1Njk3Nl5BMl5BanBnXkFtZTcwOTQ2NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 801.3,
+      "y": 1519.7
+    },
+    "Qotho": {
+      "name": "Qotho",
+      "actors": [
+        "Dar Salim"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOWFjY2Y4NTgtZjQ5OS00YjM0LWI3OTItMWYyM2QzYjQyODk1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 580.0,
+      "y": 1352.9
+    },
+    "Martyn Lannister": {
+      "name": "Martyn Lannister",
+      "house": "Lannister",
+      "actors": [
+        "Dean-Charles Chapman"
+      ],
+      "x": 858.1,
+      "y": 408.6
+    },
+    "Willem Lannister": {
+      "name": "Willem Lannister",
+      "house": "Lannister",
+      "actors": [
+        "Timothy Gibbons"
+      ],
+      "x": 888.4,
+      "y": 482.6
+    },
+    "Mago": {
+      "name": "Mago",
+      "actors": [
+        "Ivailo Dimitrov"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNjdmM2ZlMTQtOGRlMy00NzAyLWE0MWYtM2JiMjNlNjA3MDU2XkEyXkFqcGdeQXVyMjg2MTMyNTM@._V1._SX100_SY140_.jpg",
+      "x": 1152.6,
+      "y": 1283.7
+    },
+    "King's Landing Rioter #1": {
+      "name": "King's Landing Rioter #1",
+      "actors": [
+        "Reg Wayment"
+      ],
+      "x": 1304.6,
+      "y": 336.4
+    },
+    "King's Landing Rioter #2": {
+      "name": "King's Landing Rioter #2",
+      "actors": [
+        "Marko Juraga"
+      ],
+      "x": 1209.9,
+      "y": 517.9
+    },
+    "King's Landing Rioter #3": {
+      "name": "King's Landing Rioter #3",
+      "actors": [
+        "Rea Separovic"
+      ],
+      "x": 1239.1,
+      "y": 382.4
+    },
+    "Kitty Frey": {
+      "name": "Kitty Frey",
+      "house": "Frey",
+      "actors": [
+        "Lucy Hayes"
+      ],
+      "x": 1552.0,
+      "y": 983.7
+    },
+    "Lady Crane": {
+      "name": "Lady Crane",
+      "actors": [
+        "Essie Davis"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTUyOTFlNjgtYzJjYS00MDY5LWJhMDQtYTJiZThjOTlmNTg3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1378.8,
+      "y": 753.1
+    },
+    "Loboda": {
+      "name": "Loboda",
+      "actors": [
+        "Zachary Baharov"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMDU5NzIxYzQtNDExMi00YTljLThiNjItMWIxNDEwZTJhNjZkXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 548.8,
+      "y": 1279.3
+    },
+    "Lommy Greenhands": {
+      "name": "Lommy Greenhands",
+      "actors": [
+        "Eros Vlahos"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg2MWUxMzYtMTAxNy00M2MzLTk5N2QtOTY1ZTE1ZGE2OTU4XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1489.5,
+      "y": 836.4
+    },
+    "Talisa Maegyr": {
+      "name": "Talisa Maegyr",
+      "actors": [
+        "Oona Chaplin"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE1MjY3ODA5OF5BMl5BanBnXkFtZTcwMTA3NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1299.5,
+      "y": 743.4
+    },
+    "Lyanna Mormont": {
+      "name": "Lyanna Mormont",
+      "house": "Mormont",
+      "actors": [
+        "Bella Ramsey"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTY3MWNmYjAtZjZhYi00M2IzLWJjNDMtMjUzZmU3NTYyYWUxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1438.9,
+      "y": 1249.0
+    },
+    "Wun Wun": {
+      "name": "Wun Wun",
+      "actors": [
+        "Ian Whyte"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTFjMTczNTQtNzE5MC00ZTI1LWI0ZGMtMTA4NGU2ZGQ5ZjRkXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1._SX100_SY140_.jpg",
+      "x": 1407.7,
+      "y": 1175.4
+    },
+    "Maester Cressen": {
+      "name": "Maester Cressen",
+      "actors": [
+        "Oliver Ford Davies"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYjFmNDZjM2YtMGRkMy00NWM2LThjNWUtYzFkZGRjMjk0YWZlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 234.0,
+      "y": 1268.5
+    },
+    "Maester Luwin": {
+      "name": "Maester Luwin",
+      "actors": [
+        "Donald Sumpter"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYjk0MmZiNmUtMTljMy00MmY1LTg1ODgtY2FkMjczMjI4ZWQzXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1342.7,
+      "y": 1376.8
+    },
+    "Melisandre": {
+      "name": "Melisandre",
+      "actors": [
+        "Carice van Houten"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk0MjI5NjQ2OV5BMl5BanBnXkFtZTcwODI4NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1390.8,
+      "y": 1312.9
+    },
+    "Mandon Moore": {
+      "name": "Mandon Moore",
+      "actors": [
+        "James Doran"
+      ],
+      "x": 1345.1,
+      "y": 1028.1
+    },
+    "Shireen Baratheon": {
+      "name": "Shireen Baratheon",
+      "house": "Baratheon",
+      "actors": [
+        "Kerry Ingram"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZjUzNmYzZDktZGY4ZS00ZDA1LWE1MGItMDAwM2E1ZGVlODg1XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1422.1,
+      "y": 1386.5
+    },
+    "Merchant Captain": {
+      "name": "Merchant Captain",
+      "actors": [
+        "Gary Pillai"
+      ],
+      "x": 712.5,
+      "y": 601.3
+    },
+    "Syrio Forel": {
+      "name": "Syrio Forel",
+      "actors": [
+        "Miltos Yerolemou"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2OTA3NDY5Nl5BMl5BanBnXkFtZTcwMDg0ODg5NA@@._V1._SX100_SY140_.jpg",
+      "x": 1458.2,
+      "y": 762.8
+    },
+    "Mycah": {
+      "name": "Mycah",
+      "actors": [
+        "Rhodri Hosking"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMmE5NjdjMzktZTYwNy00MzdhLWI2MjktNTUwNjA4OTA4MTAxXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1185.4,
+      "y": 441.7
+    },
+    "Myranda": {
+      "name": "Myranda",
+      "actors": [
+        "Charlotte Hope"
+      ],
+      "x": 726.9,
+      "y": 812.7
+    },
+    "Ned Umber": {
+      "name": "Ned Umber",
+      "house": "Umber",
+      "actors": [
+        "Harry Grasby"
+      ],
+      "x": 1044.4,
+      "y": 851.7
+    },
+    "Ramsay Snow": {
+      "name": "Ramsay Snow",
+      "house": "Bolton",
+      "actors": [
+        "Iwan Rheon"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzM5Nzk3NTU5N15BMl5BanBnXkFtZTgwNzczMjk5NTE@._V1._SX100_SY140_.jpg",
+      "x": 1297.0,
+      "y": 1092.0
+    },
+    "Spice King": {
+      "name": "Spice King",
+      "actors": [
+        "Nicholas Blane"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYTA4NWE5ZDgtNjQ0Ni00YmUxLWJhZTgtOTRmY2U0YzI3YmE2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 582.6,
+      "y": 1004.3
+    },
+    "Silk King": {
+      "name": "Silk King",
+      "actors": [
+        "Slavko Juraga"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYTA3YTFlMDAtNzIxNy00NGQzLWJlMjYtZGY3MjdmNThjMGIwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 534.4,
+      "y": 1068.2
+    },
+    "Pypar": {
+      "name": "Pypar",
+      "actors": [
+        "Josef Altin"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTFiNTIxY2MtY2ExOC00NjM1LTg0MGEtYzUzYzA0YzIyY2VjXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 830.9,
+      "y": 1594.0
+    },
+    "Roose Bolton": {
+      "name": "Roose Bolton",
+      "house": "Bolton",
+      "actors": [
+        "Michael McElhatton"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQyMjE3MTExN15BMl5BanBnXkFtZTcwMTI3NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 1251.3,
+      "y": 807.3
+    },
+    "Rattleshirt": {
+      "name": "Rattleshirt",
+      "actors": [
+        "Edward Dogliani",
+        "Ross O'Hennessy"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYzk1ZDA3YjktMWZhMi00MTA4LTk0YjItY2ZmMDRlZDY3MmM2XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 677.5,
+      "y": 529.4
+    },
+    "Tormund Giantsbane": {
+      "name": "Tormund Giantsbane",
+      "actors": [
+        "Kristofer Hivju"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc1OTU3NjUzNF5BMl5BanBnXkFtZTcwNDE0NzE5OQ@@._V1._SX100_SY140_.jpg",
+      "x": 757.4,
+      "y": 532.9
+    },
+    "Wallen": {
+      "name": "Wallen",
+      "actors": [
+        "Barry O'Connor"
+      ],
+      "x": 1171.9,
+      "y": 797.6
+    },
+    "Robin Arryn": {
+      "name": "Robin Arryn",
+      "actors": [
+        "Lino Facioli"
+      ],
+      "x": 1359.5,
+      "y": 1239.3
+    },
+    "Rodrik Cassel": {
+      "name": "Rodrik Cassel",
+      "actors": [
+        "Ron Donachie"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc4NDk5MjAwMF5BMl5BanBnXkFtZTcwNTk1NDk4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 979.4,
+      "y": 1053.1
+    },
+    "Walda Bolton": {
+      "name": "Walda Bolton",
+      "house": [
+        "Bolton",
+        "Frey"
+      ],
+      "actors": [
+        "Elizabeth Webster"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTZiNWE2YTYtZDA2Ny00ZmUwLTk4ZWUtZjFkM2JkYjFiNjE3XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1123.8,
+      "y": 861.5
+    },
+    "Ryger Rivers": {
+      "name": "Ryger Rivers",
+      "actors": [
+        "Bryan McCaugherty"
+      ],
+      "x": 1520.8,
+      "y": 910.1
+    },
+    "Thenn Warg": {
+      "name": "Thenn Warg",
+      "actors": [
+        "Joseph Gatt"
+      ],
+      "x": 327.9,
+      "y": 1109.4
+    },
+    "Selyse Baratheon": {
+      "name": "Selyse Baratheon",
+      "house": "Baratheon",
+      "actors": [
+        "Tara Fitzgerald",
+        "Sarah MacKeever"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZGZjNDA5YWUtZjE5OC00NGE2LWI3Y2UtOTQ1Yjg1MDc3MTk4L2ltYWdlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1294.6,
+      "y": 1440.7
+    },
+    "Lannister Guardsman": {
+      "name": "Lannister Guardsman",
+      "actors": [
+        "Conor Delaney"
+      ],
+      "x": 1369.8,
+      "y": 269.8
+    },
+    "Septa Mordane": {
+      "name": "Septa Mordane",
+      "actors": [
+        "Susan Brown"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzc5ZTY2MTEtYzZiNy00MGExLWI0MjctOTcxMjdlZmU3OWM5XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1354.6,
+      "y": 191.3
+    },
+    "Shae": {
+      "name": "Shae",
+      "actors": [
+        "Sibel Kekilli"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkwMTA0NTY5NF5BMl5BanBnXkFtZTcwNjk2ODg4OQ@@._V1._SX100_SY140_.jpg",
+      "x": 916.9,
+      "y": 905.8
+    },
+    "Stiv": {
+      "name": "Stiv",
+      "actors": [
+        "Stephen Don"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYjFhYzE5NGYtMWM5Zi00YjAyLWI4YTktNDhhYTE1NGFhZjgwXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 678.8,
+      "y": 876.6
+    },
+    "Three-Eyed Raven": {
+      "name": "Three-Eyed Raven",
+      "actors": [
+        "Struan Rodger",
+        "Max von Sydow"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BOGI4NGRiNTUtM2ZlYy00ZjhlLWJlYWItMjgzNWIzYWQwZWY0XkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 1220.0,
+      "y": 733.7
+    },
+    "Goldcloak": {
+      "name": "Goldcloak",
+      "actors": [
+        "Sam Callis"
+      ],
+      "x": 1185.2,
+      "y": 167.9
+    },
+    "Varly": {
+      "name": "Varly",
+      "actors": [
+        "Graham Charles"
+      ],
+      "x": 1260.2,
+      "y": 195.6
+    },
+    "Waymar Royce": {
+      "name": "Waymar Royce",
+      "actors": [
+        "Rob Ostlere"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BYzE1Y2EwN2QtMzMzZS00MDZkLTg4ZjItN2NkNGNkYjAzZGVlXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 390.0,
+      "y": 1259.8
+    },
+    "Yohn Royce": {
+      "name": "Yohn Royce",
+      "actors": [
+        "Rupert Vansittart"
+      ],
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/M/MV5BZjgwNDc4NGQtMmQyMS00YjMyLWFhZWUtZmM0MjRkYmNmNGExXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1._SX100_SY140_.jpg",
+      "x": 421.2,
+      "y": 1333.5
+    }
+  },
+  "links": [
+    [
+      "Aegon Targaryen",
+      "Elia Martell"
+    ],
+    [
+      "Aegon Targaryen",
+      "Rhaegar Targaryen"
+    ],
+    [
+      "Aegon Targaryen",
+      "Rhaenys Targaryen"
+    ],
+    [
+      "Aegon Targaryen",
+      "Jon Snow"
+    ],
+    [
+      "Aegon Targaryen",
+      "Gregor Clegane"
+    ],
+    [
+      "Aeron Greyjoy",
+      "Balon Greyjoy"
+    ],
+    [
+      "Aeron Greyjoy",
+      "Euron Greyjoy"
+    ],
+    [
+      "Aerys II Targaryen",
+      "Brandon Stark"
+    ],
+    [
+      "Aerys II Targaryen",
+      "Rickard Stark"
+    ],
+    [
+      "Aerys II Targaryen",
+      "Arthur Dayne"
+    ],
+    [
+      "Aerys II Targaryen",
+      "Jaime Lannister"
+    ],
+    [
+      "Aerys II Targaryen",
+      "Daenerys Targaryen"
+    ],
+    [
+      "Aerys II Targaryen",
+      "Rhaegar Targaryen"
+    ],
+    [
+      "Aerys II Targaryen",
+      "Viserys Targaryen"
+    ],
+    [
+      "Aerys II Targaryen",
+      "Rhaella Targaryen"
+    ],
+    [
+      "Akho",
+      "Daario Naharis"
+    ],
+    [
+      "Alliser Thorne",
+      "Jon Snow"
+    ],
+    [
+      "Alton Lannister",
+      "Jaime Lannister"
+    ],
+    [
+      "Alys Karstark",
+      "Harald Karstark"
+    ],
+    [
+      "Amory Lorch",
+      "Yoren"
+    ],
+    [
+      "Amory Lorch",
+      "Jaqen H'ghar"
+    ],
+    [
+      "Areo Hotah",
+      "Tyene Sand"
+    ],
+    [
+      "Areo Hotah",
+      "Doran Martell"
+    ],
+    [
+      "Arthur Dayne",
+      "Howland Reed"
+    ],
+    [
+      "Arthur Dayne",
+      "Eddard Stark"
+    ],
+    [
+      "Arya Stark",
+      "Robb Stark"
+    ],
+    [
+      "Arya Stark",
+      "Sansa Stark"
+    ],
+    [
+      "Arya Stark",
+      "Bran Stark"
+    ],
+    [
+      "Arya Stark",
+      "Rickon Stark"
+    ],
+    [
+      "Arya Stark",
+      "Red Keep Stableboy"
+    ],
+    [
+      "Arya Stark",
+      "Polliver"
+    ],
+    [
+      "Arya Stark",
+      "Rorge"
+    ],
+    [
+      "Arya Stark",
+      "Meryn Trant"
+    ],
+    [
+      "Arya Stark",
+      "The Waif"
+    ],
+    [
+      "Arya Stark",
+      "Black Walder Rivers"
+    ],
+    [
+      "Arya Stark",
+      "Lothar Frey"
+    ],
+    [
+      "Arya Stark",
+      "Walder Frey"
+    ],
+    [
+      "Arya Stark",
+      "Petyr Baelish"
+    ],
+    [
+      "Arya Stark",
+      "The Night King"
+    ],
+    [
+      "Arya Stark",
+      "White Walker"
+    ],
+    [
+      "Arya Stark",
+      "Viserion"
+    ],
+    [
+      "Arya Stark",
+      "Eddard Stark"
+    ],
+    [
+      "Arya Stark",
+      "Catelyn Stark"
+    ],
+    [
+      "Arya Stark",
+      "Nymeria"
+    ],
+    [
+      "Baby Sam",
+      "Samwell Tarly"
+    ],
+    [
+      "Baby Sam",
+      "Gilly"
+    ],
+    [
+      "Balon Greyjoy",
+      "Euron Greyjoy"
+    ],
+    [
+      "Balon Greyjoy",
+      "Yara Greyjoy"
+    ],
+    [
+      "Balon Greyjoy",
+      "Theon Greyjoy"
+    ],
+    [
+      "Barristan Selmy",
+      "Daenerys Targaryen"
+    ],
+    [
+      "Benjen Stark",
+      "Rickard Stark"
+    ],
+    [
+      "Benjen Stark",
+      "Brandon Stark"
+    ],
+    [
+      "Benjen Stark",
+      "Lyanna Stark"
+    ],
+    [
+      "Benjen Stark",
+      "Eddard Stark"
+    ],
+    [
+      "Beric Dondarrion",
+      "Sandor Clegane"
+    ],
+    [
+      "Biter",
+      "Sandor Clegane"
+    ],
+    [
+      "Black Walder Rivers",
+      "Catelyn Stark"
+    ],
+    [
+      "Black Walder Rivers",
+      "Walder Frey"
+    ],
+    [
+      "Bowen Marsh",
+      "Jon Snow"
+    ],
+    [
+      "Brandon Stark",
+      "Rickard Stark"
+    ],
+    [
+      "Brandon Stark",
+      "Lyanna Stark"
+    ],
+    [
+      "Brandon Stark",
+      "Eddard Stark"
+    ],
+    [
+      "Bran Stark",
+      "Robb Stark"
+    ],
+    [
+      "Bran Stark",
+      "Sansa Stark"
+    ],
+    [
+      "Bran Stark",
+      "Rickon Stark"
+    ],
+    [
+      "Bran Stark",
+      "Eddard Stark"
+    ],
+    [
+      "Bran Stark",
+      "Catelyn Stark"
+    ],
+    [
+      "Bran Stark",
+      "Summer"
+    ],
+    [
+      "Brienne of Tarth",
+      "Stannis Baratheon"
+    ],
+    [
+      "Brienne of Tarth",
+      "Renly Baratheon"
+    ],
+    [
+      "Brienne of Tarth",
+      "Catelyn Stark"
+    ],
+    [
+      "Brienne of Tarth",
+      "Sansa Stark"
+    ],
+    [
+      "Bran Stark",
+      "Brienne of Tarth"
+    ],
+    [
+      "Brienne of Tarth",
+      "Podrick Payne"
+    ],
+    [
+      "Bronn",
+      "Vardis Egen"
+    ],
+    [
+      "Bronn",
+      "Matthos Seaworth"
+    ],
+    [
+      "Bronn",
+      "Lead Dornish Guard"
+    ],
+    [
+      "Bronn",
+      "Lollys Stokeworth"
+    ],
+    [
+      "Brother Ray",
+      "Lem Lemoncloak"
+    ],
+    [
+      "Brynden Tully",
+      "Hoster Tully"
+    ],
+    [
+      "Catelyn Stark",
+      "Joyeuse Erenford"
+    ],
+    [
+      "Catelyn Stark",
+      "Hoster Tully"
+    ],
+    [
+      "Catelyn Stark",
+      "Robb Stark"
+    ],
+    [
+      "Catelyn Stark",
+      "Sansa Stark"
+    ],
+    [
+      "Catelyn Stark",
+      "Rickon Stark"
+    ],
+    [
+      "Catelyn Stark",
+      "Lysa Arryn"
+    ],
+    [
+      "Catelyn Stark",
+      "Edmure Tully"
+    ],
+    [
+      "Catelyn Stark",
+      "Eddard Stark"
+    ],
+    [
+      "Brandon Stark",
+      "Catelyn Stark"
+    ],
+    [
+      "Catspaw Assassin",
+      "Summer"
+    ],
+    [
+      "Cersei Lannister",
+      "Tywin Lannister"
+    ],
+    [
+      "Cersei Lannister",
+      "Joffrey Baratheon"
+    ],
+    [
+      "Cersei Lannister",
+      "Myrcella Baratheon"
+    ],
+    [
+      "Cersei Lannister",
+      "Tommen Baratheon"
+    ],
+    [
+      "Cersei Lannister",
+      "Jaime Lannister"
+    ],
+    [
+      "Cersei Lannister",
+      "Tyrion Lannister"
+    ],
+    [
+      "Cersei Lannister",
+      "Robert Baratheon"
+    ],
+    [
+      "Cersei Lannister",
+      "Lancel Lannister"
+    ],
+    [
+      "Cersei Lannister",
+      "High Sparrow"
+    ],
+    [
+      "Cersei Lannister",
+      "Loras Tyrell"
+    ],
+    [
+      "Cersei Lannister",
+      "Mace Tyrell"
+    ],
+    [
+      "Cersei Lannister",
+      "Margaery Tyrell"
+    ],
+    [
+      "Cersei Lannister",
+      "Kevan Lannister"
+    ],
+    [
+      "Cersei Lannister",
+      "Tyene Sand"
+    ],
+    [
+      "Craster",
+      "Karl Tanner"
+    ],
+    [
+      "Daario Naharis",
+      "Mero"
+    ],
+    [
+      "Daario Naharis",
+      "Prendahl na Ghezn"
+    ],
+    [
+      "Daario Naharis",
+      "Mossador"
+    ],
+    [
+      "Daario Naharis",
+      "Daenerys Targaryen"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Rhaella Targaryen"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Rhaegar Targaryen"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Viserys Targaryen"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Khal Drogo"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Mirri Maz Duur"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Doreah"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Xaro Xhoan Daxos"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Khal Rhalko"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Khal Moro"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Dothraki Bloodrider #1"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Dothraki Bloodrider #2"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Randyll Tarly"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Dickon Tarly"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Lord Varys"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Grey Worm"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Jorah Mormont"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Missandei"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Tyrion Lannister"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Rhaego"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Drogon"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Rhaegal"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Viserion"
+    ],
+    [
+      "Daenerys Targaryen",
+      "Jon Snow"
+    ],
+    [
+      "Davos Seaworth",
+      "Stannis Baratheon"
+    ],
+    [
+      "Davos Seaworth",
+      "Jon Snow"
+    ],
+    [
+      "Davos Seaworth",
+      "Matthos Seaworth"
+    ],
+    [
+      "Dickon Tarly",
+      "Randyll Tarly"
+    ],
+    [
+      "Dickon Tarly",
+      "Melessa Tarly"
+    ],
+    [
+      "Dickon Tarly",
+      "Samwell Tarly"
+    ],
+    [
+      "Dickon Tarly",
+      "Talla Tarly"
+    ],
+    [
+      "Dongo the Giant",
+      "Night's Watchman"
+    ],
+    [
+      "Dontos Hollard",
+      "Petyr Baelish"
+    ],
+    [
+      "Doran Martell",
+      "Ellaria Sand"
+    ],
+    [
+      "Doran Martell",
+      "Trystane Martell"
+    ],
+    [
+      "Doran Martell",
+      "Elia Martell"
+    ],
+    [
+      "Doran Martell",
+      "Oberyn Martell"
+    ],
+    [
+      "Doreah",
+      "Irri"
+    ],
+    [
+      "Drennan",
+      "Osha"
+    ],
+    [
+      "Drogon",
+      "Rhaegal"
+    ],
+    [
+      "Drogon",
+      "Viserion"
+    ],
+    [
+      "Drogon",
+      "Pyat Pree"
+    ],
+    [
+      "Drogon",
+      "Kraznys mo Nakloz"
+    ],
+    [
+      "Eddard Stark",
+      "Jon Snow"
+    ],
+    [
+      "Eddard Stark",
+      "Lyanna Stark"
+    ],
+    [
+      "Eddard Stark",
+      "Rickard Stark"
+    ],
+    [
+      "Eddard Stark",
+      "Will"
+    ],
+    [
+      "Eddard Stark",
+      "Lady"
+    ],
+    [
+      "Eddard Stark",
+      "Gerold Hightower"
+    ],
+    [
+      "Eddard Stark",
+      "Howland Reed"
+    ],
+    [
+      "Eddard Stark",
+      "Robert Baratheon"
+    ],
+    [
+      "Eddard Stark",
+      "Jon Arryn"
+    ],
+    [
+      "Eddard Stark",
+      "Ilyn Payne"
+    ],
+    [
+      "Eddard Stark",
+      "Robb Stark"
+    ],
+    [
+      "Eddard Stark",
+      "Sansa Stark"
+    ],
+    [
+      "Eddard Stark",
+      "Rickon Stark"
+    ],
+    [
+      "Edmure Tully",
+      "Roslin Frey"
+    ],
+    [
+      "Edmure Tully",
+      "Lysa Arryn"
+    ],
+    [
+      "Ellaria Sand",
+      "Myrcella Baratheon"
+    ],
+    [
+      "Ellaria Sand",
+      "Tyene Sand"
+    ],
+    [
+      "Ellaria Sand",
+      "Oberyn Martell"
+    ],
+    [
+      "Elia Martell",
+      "Rhaegar Targaryen"
+    ],
+    [
+      "Elia Martell",
+      "Rhaenys Targaryen"
+    ],
+    [
+      "Elia Martell",
+      "Gregor Clegane"
+    ],
+    [
+      "Elia Martell",
+      "Oberyn Martell"
+    ],
+    [
+      "Euron Greyjoy",
+      "Obara Sand"
+    ],
+    [
+      "Euron Greyjoy",
+      "Nymeria Sand"
+    ],
+    [
+      "Euron Greyjoy",
+      "Rhaegal"
+    ],
+    [
+      "Euron Greyjoy",
+      "Jaime Lannister"
+    ],
+    [
+      "Gared",
+      "White Walker"
+    ],
+    [
+      "Gatins",
+      "Sandor Clegane"
+    ],
+    [
+      "Gendry",
+      "Robert Baratheon"
+    ],
+    [
+      "Ghost",
+      "Grey Wind"
+    ],
+    [
+      "Ghost",
+      "Lady"
+    ],
+    [
+      "Ghost",
+      "Nymeria"
+    ],
+    [
+      "Ghost",
+      "Summer"
+    ],
+    [
+      "Ghost",
+      "Shaggydog"
+    ],
+    [
+      "Ghost",
+      "Jon Snow"
+    ],
+    [
+      "Ghost",
+      "Rast"
+    ],
+    [
+      "Gilly",
+      "Samwell Tarly"
+    ],
+    [
+      "Craster",
+      "Gilly"
+    ],
+    [
+      "Great Master #1",
+      "Viserion"
+    ],
+    [
+      "Great Master #1",
+      "Rhaegal"
+    ],
+    [
+      "Greatjon Umber",
+      "Smalljon Umber"
+    ],
+    [
+      "Gregor Clegane",
+      "Tywin Lannister"
+    ],
+    [
+      "Cersei Lannister",
+      "Gregor Clegane"
+    ],
+    [
+      "Gregor Clegane",
+      "Rhaenys Targaryen"
+    ],
+    [
+      "Gregor Clegane",
+      "Hugh of the Vale"
+    ],
+    [
+      "Gregor Clegane",
+      "Oberyn Martell"
+    ],
+    [
+      "Gregor Clegane",
+      "Missandei"
+    ],
+    [
+      "Gregor Clegane",
+      "Qyburn"
+    ],
+    [
+      "Gregor Clegane",
+      "Sandor Clegane"
+    ],
+    [
+      "Grenn",
+      "Mag the Mighty"
+    ],
+    [
+      "Grey Wind",
+      "Lady"
+    ],
+    [
+      "Grey Wind",
+      "Nymeria"
+    ],
+    [
+      "Grey Wind",
+      "Summer"
+    ],
+    [
+      "Grey Wind",
+      "Shaggydog"
+    ],
+    [
+      "Grey Wind",
+      "Robb Stark"
+    ],
+    [
+      "Grey Worm",
+      "Razdal mo Eraz"
+    ],
+    [
+      "Grey Worm",
+      "Harry Strickland"
+    ],
+    [
+      "Harald Karstark",
+      "Rickard Karstark"
+    ],
+    [
+      "Hodor",
+      "Locke"
+    ],
+    [
+      "Howland Reed",
+      "Jojen Reed"
+    ],
+    [
+      "Howland Reed",
+      "Meera Reed"
+    ],
+    [
+      "Jafer Flowers",
+      "White Walker"
+    ],
+    [
+      "Jaime Lannister",
+      "Tywin Lannister"
+    ],
+    [
+      "Jaime Lannister",
+      "Joffrey Baratheon"
+    ],
+    [
+      "Jaime Lannister",
+      "Myrcella Baratheon"
+    ],
+    [
+      "Jaime Lannister",
+      "Tommen Baratheon"
+    ],
+    [
+      "Jaime Lannister",
+      "Robert Baratheon"
+    ],
+    [
+      "Jaime Lannister",
+      "Jory Cassel"
+    ],
+    [
+      "Jaime Lannister",
+      "Olenna Tyrell"
+    ],
+    [
+      "Jaime Lannister",
+      "Tyrion Lannister"
+    ],
+    [
+      "Janos Slynt",
+      "Jon Snow"
+    ],
+    [
+      "Jaqen H'ghar",
+      "The Tickler"
+    ],
+    [
+      "Jeor Mormont",
+      "Rast"
+    ],
+    [
+      "Jeor Mormont",
+      "Jorah Mormont"
+    ],
+    [
+      "Joffrey Baratheon",
+      "Robert Baratheon"
+    ],
+    [
+      "Joffrey Baratheon",
+      "Myrcella Baratheon"
+    ],
+    [
+      "Joffrey Baratheon",
+      "Tommen Baratheon"
+    ],
+    [
+      "Joffrey Baratheon",
+      "Sansa Stark"
+    ],
+    [
+      "Joffrey Baratheon",
+      "Margaery Tyrell"
+    ],
+    [
+      "Joffrey Baratheon",
+      "Ros"
+    ],
+    [
+      "Joffrey Baratheon",
+      "Petyr Baelish"
+    ],
+    [
+      "Joffrey Baratheon",
+      "Olenna Tyrell"
+    ],
+    [
+      "Jojen Reed",
+      "Meera Reed"
+    ],
+    [
+      "Jon Arryn",
+      "Robert Baratheon"
+    ],
+    [
+      "Jon Arryn",
+      "Lysa Arryn"
+    ],
+    [
+      "Jon Snow",
+      "Rhaegar Targaryen"
+    ],
+    [
+      "Jon Snow",
+      "Lyanna Stark"
+    ],
+    [
+      "Jon Snow",
+      "Othor"
+    ],
+    [
+      "Jon Snow",
+      "Qhorin Halfhand"
+    ],
+    [
+      "Jon Snow",
+      "Orell"
+    ],
+    [
+      "Jon Snow",
+      "Karl Tanner"
+    ],
+    [
+      "Jon Snow",
+      "Styr"
+    ],
+    [
+      "Jon Snow",
+      "Mance Rayder"
+    ],
+    [
+      "Jon Snow",
+      "White Walker"
+    ],
+    [
+      "Jon Snow",
+      "Othell Yarwyck"
+    ],
+    [
+      "Jon Snow",
+      "Olly"
+    ],
+    [
+      "Jon Snow",
+      "Ygritte"
+    ],
+    [
+      "Jorah Mormont",
+      "Qotho"
+    ],
+    [
+      "Eddard Stark",
+      "Jory Cassel"
+    ],
+    [
+      "Joyeuse Erenford",
+      "Walder Frey"
+    ],
+    [
+      "Kevan Lannister",
+      "Tywin Lannister"
+    ],
+    [
+      "Kevan Lannister",
+      "Lancel Lannister"
+    ],
+    [
+      "Kevan Lannister",
+      "Martyn Lannister"
+    ],
+    [
+      "Kevan Lannister",
+      "Willem Lannister"
+    ],
+    [
+      "Khal Drogo",
+      "Viserys Targaryen"
+    ],
+    [
+      "Khal Drogo",
+      "Mago"
+    ],
+    [
+      "Khal Drogo",
+      "Rhaego"
+    ],
+    [
+      "King's Landing Rioter #1",
+      "Sandor Clegane"
+    ],
+    [
+      "King's Landing Rioter #2",
+      "Sandor Clegane"
+    ],
+    [
+      "King's Landing Rioter #3",
+      "Sandor Clegane"
+    ],
+    [
+      "Kitty Frey",
+      "Walder Frey"
+    ],
+    [
+      "Lady",
+      "Nymeria"
+    ],
+    [
+      "Lady",
+      "Summer"
+    ],
+    [
+      "Lady",
+      "Shaggydog"
+    ],
+    [
+      "Lady",
+      "Sansa Stark"
+    ],
+    [
+      "Lady Crane",
+      "The Waif"
+    ],
+    [
+      "Lancel Lannister",
+      "Martyn Lannister"
+    ],
+    [
+      "Lancel Lannister",
+      "Willem Lannister"
+    ],
+    [
+      "Lem Lemoncloak",
+      "Sandor Clegane"
+    ],
+    [
+      "Loboda",
+      "White Walker"
+    ],
+    [
+      "Lommy Greenhands",
+      "Polliver"
+    ],
+    [
+      "Loras Tyrell",
+      "Margaery Tyrell"
+    ],
+    [
+      "Loras Tyrell",
+      "Mace Tyrell"
+    ],
+    [
+      "Lothar Frey",
+      "Talisa Maegyr"
+    ],
+    [
+      "Lothar Frey",
+      "Walder Frey"
+    ],
+    [
+      "Lyanna Mormont",
+      "Wun Wun"
+    ],
+    [
+      "Lyanna Stark",
+      "Rickard Stark"
+    ],
+    [
+      "Lyanna Stark",
+      "Robert Baratheon"
+    ],
+    [
+      "Lyanna Stark",
+      "Rhaegar Targaryen"
+    ],
+    [
+      "Lysa Arryn",
+      "Petyr Baelish"
+    ],
+    [
+      "Hoster Tully",
+      "Lysa Arryn"
+    ],
+    [
+      "Mace Tyrell",
+      "Margaery Tyrell"
+    ],
+    [
+      "Maester Cressen",
+      "Maester Cressen"
+    ],
+    [
+      "Maester Luwin",
+      "Osha"
+    ],
+    [
+      "Mance Rayder",
+      "Melisandre"
+    ],
+    [
+      "Mandon Moore",
+      "Podrick Payne"
+    ],
+    [
+      "Margaery Tyrell",
+      "Renly Baratheon"
+    ],
+    [
+      "Margaery Tyrell",
+      "Tommen Baratheon"
+    ],
+    [
+      "Martyn Lannister",
+      "Rickard Karstark"
+    ],
+    [
+      "Martyn Lannister",
+      "Willem Lannister"
+    ],
+    [
+      "Meera Reed",
+      "White Walker"
+    ],
+    [
+      "Melessa Tarly",
+      "Randyll Tarly"
+    ],
+    [
+      "Melessa Tarly",
+      "Samwell Tarly"
+    ],
+    [
+      "Melessa Tarly",
+      "Talla Tarly"
+    ],
+    [
+      "Melisandre",
+      "Renly Baratheon"
+    ],
+    [
+      "Melisandre",
+      "Shireen Baratheon"
+    ],
+    [
+      "Merchant Captain",
+      "Obara Sand"
+    ],
+    [
+      "Meryn Trant",
+      "Syrio Forel"
+    ],
+    [
+      "Mirri Maz Duur",
+      "Rhaego"
+    ],
+    [
+      "Mycah",
+      "Sandor Clegane"
+    ],
+    [
+      "Myranda",
+      "Theon Greyjoy"
+    ],
+    [
+      "Myrcella Baratheon",
+      "Robert Baratheon"
+    ],
+    [
+      "Myrcella Baratheon",
+      "Tommen Baratheon"
+    ],
+    [
+      "Myrcella Baratheon",
+      "Trystane Martell"
+    ],
+    [
+      "Ned Umber",
+      "The Night King"
+    ],
+    [
+      "Nymeria",
+      "Summer"
+    ],
+    [
+      "Nymeria",
+      "Shaggydog"
+    ],
+    [
+      "Nymeria Sand",
+      "Oberyn Martell"
+    ],
+    [
+      "Obara Sand",
+      "Trystane Martell"
+    ],
+    [
+      "Obara Sand",
+      "Oberyn Martell"
+    ],
+    [
+      "Oberyn Martell",
+      "Tyene Sand"
+    ],
+    [
+      "Mace Tyrell",
+      "Olenna Tyrell"
+    ],
+    [
+      "Olly",
+      "Ygritte"
+    ],
+    [
+      "Osha",
+      "Ramsay Snow"
+    ],
+    [
+      "Othor",
+      "White Walker"
+    ],
+    [
+      "Podrick Payne",
+      "Tyrion Lannister"
+    ],
+    [
+      "Bran Stark",
+      "Podrick Payne"
+    ],
+    [
+      "Pyat Pree",
+      "Spice King"
+    ],
+    [
+      "Pyat Pree",
+      "Silk King"
+    ],
+    [
+      "Pyat Pree",
+      "Viserion"
+    ],
+    [
+      "Pyat Pree",
+      "Rhaegal"
+    ],
+    [
+      "Pypar",
+      "Ygritte"
+    ],
+    [
+      "Cersei Lannister",
+      "Qyburn"
+    ],
+    [
+      "Ramsay Snow",
+      "Roose Bolton"
+    ],
+    [
+      "Ramsay Snow",
+      "Rickon Stark"
+    ],
+    [
+      "Ramsay Snow",
+      "Wun Wun"
+    ],
+    [
+      "Ramsay Snow",
+      "Sansa Stark"
+    ],
+    [
+      "Randyll Tarly",
+      "Samwell Tarly"
+    ],
+    [
+      "Randyll Tarly",
+      "Talla Tarly"
+    ],
+    [
+      "Rattleshirt",
+      "Tormund Giantsbane"
+    ],
+    [
+      "Renly Baratheon",
+      "Robert Baratheon"
+    ],
+    [
+      "Renly Baratheon",
+      "Stannis Baratheon"
+    ],
+    [
+      "Rhaegal",
+      "Viserion"
+    ],
+    [
+      "Rhaegar Targaryen",
+      "Rhaella Targaryen"
+    ],
+    [
+      "Rhaegar Targaryen",
+      "Viserys Targaryen"
+    ],
+    [
+      "Rhaegar Targaryen",
+      "Robert Baratheon"
+    ],
+    [
+      "Rhaegar Targaryen",
+      "Rhaenys Targaryen"
+    ],
+    [
+      "Rhaella Targaryen",
+      "Viserys Targaryen"
+    ],
+    [
+      "Jon Snow",
+      "Rhaenys Targaryen"
+    ],
+    [
+      "Rickard Karstark",
+      "Willem Lannister"
+    ],
+    [
+      "Rickard Karstark",
+      "Robb Stark"
+    ],
+    [
+      "Rickon Stark",
+      "Robb Stark"
+    ],
+    [
+      "Rickon Stark",
+      "Sansa Stark"
+    ],
+    [
+      "Rickon Stark",
+      "Shaggydog"
+    ],
+    [
+      "Robb Stark",
+      "Sansa Stark"
+    ],
+    [
+      "Robb Stark",
+      "Wallen"
+    ],
+    [
+      "Robb Stark",
+      "Roslin Frey"
+    ],
+    [
+      "Robb Stark",
+      "Talisa Maegyr"
+    ],
+    [
+      "Robb Stark",
+      "Roose Bolton"
+    ],
+    [
+      "Robert Baratheon",
+      "Tywin Lannister"
+    ],
+    [
+      "Robert Baratheon",
+      "Tommen Baratheon"
+    ],
+    [
+      "Robert Baratheon",
+      "Stannis Baratheon"
+    ],
+    [
+      "Jon Arryn",
+      "Robin Arryn"
+    ],
+    [
+      "Lysa Arryn",
+      "Robin Arryn"
+    ],
+    [
+      "Rodrik Cassel",
+      "Theon Greyjoy"
+    ],
+    [
+      "Eddard Stark",
+      "Rodrik Cassel"
+    ],
+    [
+      "Roose Bolton",
+      "Walda Bolton"
+    ],
+    [
+      "Roslin Frey",
+      "Walder Frey"
+    ],
+    [
+      "Ryger Rivers",
+      "Walder Frey"
+    ],
+    [
+      "Samwell Tarly",
+      "White Walker"
+    ],
+    [
+      "Samwell Tarly",
+      "Thenn Warg"
+    ],
+    [
+      "Samwell Tarly",
+      "Talla Tarly"
+    ],
+    [
+      "Sandor Clegane",
+      "Sandor Clegane"
+    ],
+    [
+      "Sansa Stark",
+      "Tyrion Lannister"
+    ],
+    [
+      "Selyse Baratheon",
+      "Selyse Baratheon"
+    ],
+    [
+      "Selyse Baratheon",
+      "Stannis Baratheon"
+    ],
+    [
+      "Selyse Baratheon",
+      "Shireen Baratheon"
+    ],
+    [
+      "Lannister Guardsman",
+      "Septa Mordane"
+    ],
+    [
+      "Shae",
+      "Tyrion Lannister"
+    ],
+    [
+      "Shaggydog",
+      "Summer"
+    ],
+    [
+      "Shaggydog",
+      "Smalljon Umber"
+    ],
+    [
+      "Shireen Baratheon",
+      "Stannis Baratheon"
+    ],
+    [
+      "Smalljon Umber",
+      "Tormund Giantsbane"
+    ],
+    [
+      "Stiv",
+      "Theon Greyjoy"
+    ],
+    [
+      "The Night King",
+      "Three-Eyed Raven"
+    ],
+    [
+      "The Night King",
+      "Viserion"
+    ],
+    [
+      "The Night King",
+      "Theon Greyjoy"
+    ],
+    [
+      "Theon Greyjoy",
+      "Yara Greyjoy"
+    ],
+    [
+      "Tommen Baratheon",
+      "Tommen Baratheon"
+    ],
+    [
+      "Tyrion Lannister",
+      "Tywin Lannister"
+    ],
+    [
+      "Goldcloak",
+      "Varly"
+    ],
+    [
+      "Waymar Royce",
+      "White Walker"
+    ],
+    [
+      "Waymar Royce",
+      "Yohn Royce"
+    ]
+  ]
+}
