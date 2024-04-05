@@ -1,0 +1,50 @@
+{
+  "green": {
+    "x": 0,
+    "y": 0,
+    "width": 128,
+    "height": 128,
+    "anchorX": 20,
+    "anchorY": 128
+  },
+  "red": {
+    "x": 0,
+    "y": 128,
+    "width": 128,
+    "height": 128,
+    "anchorX": 20,
+    "anchorY": 128
+  },
+  "checker": {
+    "x": 128,
+    "y": 0,
+    "width": 128,
+    "height": 128,
+    "anchorX": 20,
+    "anchorY": 128
+  },
+  "blue": {
+    "x": 128,
+    "y": 128,
+    "width": 128,
+    "height": 128,
+    "anchorX": 20,
+    "anchorY": 128
+  },
+  "white": {
+    "x": 256,
+    "y": 0,
+    "width": 128,
+    "height": 128,
+    "anchorX": 20,
+    "anchorY": 128
+  },
+  "yellow": {
+    "x": 256,
+    "y": 128,
+    "width": 128,
+    "height": 128,
+    "anchorX": 20,
+    "anchorY": 128
+  }
+}
