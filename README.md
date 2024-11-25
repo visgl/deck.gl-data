@@ -13,6 +13,13 @@ Large static data files used by the websites of various vis.gl repositories, to 
 
 ## Attributions / Licenses / Data Sources
 
+### LAZ
+
+#### `examples/point-cloud-laz`
+- https://github.com/PDAL/data/blob/master/liblas/SerpentMound_LAS14_ExtraDims.laz
+- The license for the repo is CC-BY-4.0 - https://github.com/PDAL/data/blob/master/LICENSE
+
+
 ### 3D Tiles
 
 #### `3d-tiles/RoyalExhibitionBuilding`
