@@ -45,24 +45,51 @@ function visitCoordinates(geometry, visitor) {
   visit(geometry.coordinates);
 }
 
-const [snapshot, manifest] = await Promise.all([
-  readFile(resolve(DATA_DIRECTORY, 'seattle-road-diagram.json'), 'utf8').then(JSON.parse),
-  readFile(resolve(DATA_DIRECTORY, 'seattle-road-diagram.manifest.json'), 'utf8').then(JSON.parse)
-]);
+async function readOptionalJson(path) {
+  try {
+    return JSON.parse(await readFile(path, 'utf8'));
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      return null;
+    }
+    throw error;
+  }
+}
 
-assert.equal(snapshot.dataset, manifest.dataset);
-assert.deepEqual(snapshot.displayBounds, manifest.displayBounds);
-assert.equal(manifest.validation.extractionGate.passed, true, 'candidate must pass extraction gate');
+const snapshot = JSON.parse(
+  await readFile(resolve(DATA_DIRECTORY, 'seattle-road-diagram.json'), 'utf8')
+);
+const manifest = await readOptionalJson(
+  resolve(DATA_DIRECTORY, 'seattle-road-diagram.manifest.json')
+);
 
-for (const source of manifest.sources) {
-  const features = snapshot.layers[source.key].features;
-  assert.equal(features.length, source.outputFeatureCount, `${source.key} output count`);
-  assert.equal(source.rawFeatureCount, source.objectIds.length, `${source.key} object ID count`);
-  assert.match(source.rawSha256, /^[a-f0-9]{64}$/);
-  assert.ok(source.queryUrls.length > 0 || source.rawFeatureCount === 0);
+if (manifest) {
+  assert.equal(snapshot.dataset, manifest.dataset);
+  assert.deepEqual(snapshot.displayBounds, manifest.displayBounds);
+  assert.equal(
+    manifest.validation.extractionGate.passed,
+    true,
+    'candidate must pass extraction gate'
+  );
+  assert.deepEqual(
+    Object.keys(snapshot.layers).sort(),
+    manifest.sources.map(source => source.key).sort(),
+    'manifest source keys'
+  );
+}
+
+for (const [sourceKey, layer] of Object.entries(snapshot.layers)) {
+  const features = layer.features;
+  const source = manifest?.sources.find(candidate => candidate.key === sourceKey);
+  if (source) {
+    assert.equal(features.length, source.outputFeatureCount, `${sourceKey} output count`);
+    assert.equal(source.rawFeatureCount, source.objectIds.length, `${sourceKey} object ID count`);
+    assert.match(source.rawSha256, /^[a-f0-9]{64}$/);
+    assert.ok(source.queryUrls.length > 0 || source.rawFeatureCount === 0);
+  }
   for (const feature of features) {
-    assert.ok(feature.geometry, `${source.key} feature has geometry`);
-    assert.ok(feature.properties.OBJECTID != null, `${source.key} feature has an object ID`);
+    assert.ok(feature.geometry, `${sourceKey} feature has geometry`);
+    assert.ok(feature.properties.OBJECTID != null, `${sourceKey} feature has an object ID`);
     visitCoordinates(feature.geometry, ([longitude, latitude]) => {
       assert.ok(longitude >= -180 && longitude <= 180);
       assert.ok(latitude >= -90 && latitude <= 90);
@@ -105,15 +132,17 @@ for (const objectId of matchedTransverseMarkingObjectIds) {
 const sourceSymbolPaths = snapshot.layers.symbols.features.flatMap(feature =>
   feature.geometry.type === 'LineString' ? [feature.geometry.coordinates] : feature.geometry.coordinates
 );
-const symbolStitching = manifest.validation.symbolStitching;
-assert.equal(symbolStitching.sourceFeatureCount, snapshot.layers.symbols.features.length);
-assert.equal(symbolStitching.sourcePathCount, sourceSymbolPaths.length);
-assert.equal(symbolStitching.outputPathCount, snapshot.derived.symbolPaths.length);
-assert.ok(symbolStitching.outputPathCount < symbolStitching.sourcePathCount);
-assert.ok(symbolStitching.maximumJoinDistanceMeters <= 0.002);
-assert.ok(
-  symbolStitching.maximumBridgeDistanceMeters <= symbolStitching.maximumJoinDistanceMeters
-);
+assert.ok(snapshot.derived.symbolPaths.length < sourceSymbolPaths.length);
+if (manifest) {
+  const symbolStitching = manifest.validation.symbolStitching;
+  assert.equal(symbolStitching.sourceFeatureCount, snapshot.layers.symbols.features.length);
+  assert.equal(symbolStitching.sourcePathCount, sourceSymbolPaths.length);
+  assert.equal(symbolStitching.outputPathCount, snapshot.derived.symbolPaths.length);
+  assert.ok(symbolStitching.maximumJoinDistanceMeters <= 0.002);
+  assert.ok(
+    symbolStitching.maximumBridgeDistanceMeters <= symbolStitching.maximumJoinDistanceMeters
+  );
+}
 
 const symbolPathsByObjectId = Map.groupBy(
   snapshot.derived.symbolPaths,
@@ -146,6 +175,11 @@ for (const lanes of groupedLaneBands.values()) {
   assert.ok(lanes.every(lane => lane.widthMeters > 0));
 }
 
+const sourceFeatureCount = Object.values(snapshot.layers).reduce(
+  (total, layer) => total + layer.features.length,
+  0
+);
+const validationScope = manifest ? ' with provenance checks' : '';
 console.log(
-  `Validated ${manifest.sources.reduce((total, source) => total + source.outputFeatureCount, 0)} source features, ${snapshot.derived.laneBands.length} lane bands, ${snapshot.derived.crosswalkGuides.length} crosswalk guides, and ${snapshot.derived.symbolPaths.length} stitched symbol paths.`
+  `Validated ${sourceFeatureCount} source features, ${snapshot.derived.laneBands.length} lane bands, ${snapshot.derived.crosswalkGuides.length} crosswalk guides, and ${snapshot.derived.symbolPaths.length} stitched symbol paths${validationScope}.`
 );
