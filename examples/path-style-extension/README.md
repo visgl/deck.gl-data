@@ -13,7 +13,8 @@ ignored because they are reproducible and are not used by the example.
 
 The runtime snapshot contains only the normalized geometry, styles, tooltip fields, and source
 links consumed by deck.gl. Raw ArcGIS responses are queried and validated during extraction but are
-not shipped to the website.
+not shipped to the website. Roads and sidewalks share one ordered surface collection, while curbs
+and pavement symbols share one ordered detail collection.
 
 From the repository root, validate the checked-in snapshot with:
 

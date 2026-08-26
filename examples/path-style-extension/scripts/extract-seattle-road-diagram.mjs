@@ -604,12 +604,16 @@ function createRenderAssets(resultsByKey, {laneBands, crosswalkGuides, symbolPat
     omitSourceProperties({
       ...asset,
       style: {
-        widthMeters: Number(asset.sourceProperties.SURFACEWIDTH || 0) * FEET_TO_METERS
+        widthMeters: Number(asset.sourceProperties.SURFACEWIDTH || 0) * FEET_TO_METERS,
+        colorRole: 'asphalt'
       }
     })
   );
   const sidewalks = createSourcePaths(resultsByKey, 'sidewalks', 'Sidewalk')
-    .map(asset => ({...asset, style: {widthMeters: getSidewalkWidthMeters(asset)}}))
+    .map(asset => ({
+      ...asset,
+      style: {widthMeters: getSidewalkWidthMeters(asset), colorRole: 'sidewalk'}
+    }))
     .filter(asset => getPathLengthMeters(asset.path) >= asset.style.widthMeters * 2)
     .map(omitSourceProperties);
   const backgroundPaths = createSourcePaths(
@@ -671,11 +675,20 @@ function createRenderAssets(resultsByKey, {laneBands, crosswalkGuides, symbolPat
     resultsByKey,
     'verticalElements',
     'Curb or separator'
-  ).map(omitSourceProperties);
+  ).map(asset =>
+    omitSourceProperties({...asset, style: {widthMeters: 0.12, colorRole: 'curb'}})
+  );
+  const symbols = symbolPaths.map(symbol => ({
+    id: symbol.id,
+    label: symbol.label,
+    path: symbol.path,
+    source: symbol.source,
+    details: createDetails(symbol.properties),
+    style: {widthMeters: 0.1, colorRole: 'pavementSymbol'}
+  }));
 
   return {
-    roadSurfaces,
-    sidewalks,
+    surfacePaths: [...roadSurfaces, ...sidewalks],
     backgroundPaths,
     laneBands: laneBands.map(lane => ({
       id: lane.id,
@@ -705,14 +718,7 @@ function createRenderAssets(resultsByKey, {laneBands, crosswalkGuides, symbolPat
     transversePolygons,
     transversePaths,
     longitudinalMarkings,
-    curbs,
-    symbols: symbolPaths.map(symbol => ({
-      id: symbol.id,
-      label: symbol.label,
-      path: symbol.path,
-      source: symbol.source,
-      details: createDetails(symbol.properties)
-    }))
+    detailPaths: [...curbs, ...symbols]
   };
 }
 
@@ -1101,7 +1107,8 @@ export async function extractRoadDiagram(outputDirectory) {
         outputFeatureCount: crosswalkGuides.length
       },
       {
-        output: 'assets.symbols',
+        output: 'assets.detailPaths',
+        outputFilter: {colorRole: 'pavementSymbol'},
         operation: 'endpoint-connected CAD fragment stitching',
         sourceKeys: ['symbols'],
         parameters: {maximumJoinDistanceMeters: SYMBOL_JOIN_TOLERANCE_METERS},

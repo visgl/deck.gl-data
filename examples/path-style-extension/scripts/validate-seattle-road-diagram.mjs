@@ -20,8 +20,7 @@ const DATA_DIRECTORY = process.argv[2]
   : resolve(SCRIPT_DIRECTORY, '../data');
 
 const ASSET_GEOMETRY = {
-  roadSurfaces: 'path',
-  sidewalks: 'path',
+  surfacePaths: 'path',
   backgroundPaths: 'path',
   laneBands: 'path',
   bikePanels: 'polygon',
@@ -29,8 +28,7 @@ const ASSET_GEOMETRY = {
   transversePolygons: 'polygon',
   transversePaths: 'path',
   longitudinalMarkings: 'path',
-  curbs: 'path',
-  symbols: 'path'
+  detailPaths: 'path'
 };
 
 function visitCoordinates(coordinates, visitor) {
@@ -66,7 +64,14 @@ function validateStyle(asset, assetKey) {
   }
   if (asset.style.colorRole !== undefined) {
     assert.ok(
-      ['whiteMarking', 'yellowMarking'].includes(asset.style.colorRole),
+      [
+        'asphalt',
+        'sidewalk',
+        'curb',
+        'pavementSymbol',
+        'whiteMarking',
+        'yellowMarking'
+      ].includes(asset.style.colorRole),
       `${asset.id} color role`
     );
   }
@@ -136,7 +141,14 @@ for (const [assetKey, geometryKey] of Object.entries(ASSET_GEOMETRY)) {
 
 assert.ok(snapshot.assets.laneBands.length >= 8);
 assert.ok(snapshot.assets.crosswalks.length >= 1);
-assert.ok(snapshot.assets.symbols.length > 0);
+assert.deepEqual(
+  new Set(snapshot.assets.surfacePaths.map(asset => asset.style.colorRole)),
+  new Set(['asphalt', 'sidewalk'])
+);
+assert.deepEqual(
+  new Set(snapshot.assets.detailPaths.map(asset => asset.style.colorRole)),
+  new Set(['curb', 'pavementSymbol'])
+);
 assert.ok(
   snapshot.assets.crosswalks.every(
     asset => asset.style.dashJustified && asset.style.dashGapPickable
@@ -204,7 +216,7 @@ if (manifest) {
 
   assert.equal(
     manifest.validation.symbolStitching.outputPathCount,
-    snapshot.assets.symbols.length
+    snapshot.assets.detailPaths.filter(asset => asset.style.colorRole === 'pavementSymbol').length
   );
   assert.ok(
     manifest.validation.symbolStitching.outputPathCount <
