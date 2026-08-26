@@ -91,6 +91,10 @@ const IMPORTANT_FIELDS = [
   'DataConfidence'
 ];
 const FEET_TO_METERS = 0.3048;
+const INCHES_TO_METERS = 0.0254;
+const DEFAULT_MARKING_WIDTH_METERS = 0.15;
+const DEFAULT_MARKING_WIDTH_PIXELS = 2;
+const CROSSWALK_WIDTH_PIXELS = 18;
 const APPROACH_LANE_WIDTH_FEET = 12;
 const APPROACH_LANE_WIDTH_METERS = APPROACH_LANE_WIDTH_FEET * FEET_TO_METERS;
 export const SYMBOL_JOIN_TOLERANCE_METERS = 0.002;
@@ -235,6 +239,24 @@ function getBounds(features) {
     });
   }
   return Number.isFinite(bounds[0]) ? bounds : null;
+}
+
+function validateQueriedSources(resultsByKey) {
+  for (const [sourceKey, result] of Object.entries(resultsByKey)) {
+    for (const feature of result.featureCollection.features) {
+      if (!feature.geometry) {
+        throw new Error(`${sourceKey} feature is missing geometry`);
+      }
+      if (feature.properties.OBJECTID == null) {
+        throw new Error(`${sourceKey} feature is missing an object ID`);
+      }
+      visitCoordinates(feature.geometry, ([longitude, latitude]) => {
+        if (longitude < -180 || longitude > 180 || latitude < -90 || latitude > 90) {
+          throw new Error(`${sourceKey} feature has an invalid coordinate`);
+        }
+      });
+    }
+  }
 }
 
 function getDistinctValues(features, field) {
@@ -495,7 +517,202 @@ function getSourceRef(source, feature) {
     itemId: source.itemId,
     layerId: source.layerId,
     layerName: source.layerName,
-    objectId: feature.properties.OBJECTID
+    objectId: feature.properties.OBJECTID,
+    url: `${source.serviceUrl}/${source.layerId}/${encodeURIComponent(feature.properties.OBJECTID)}`
+  };
+}
+
+export function parseDashPattern(value) {
+  if (!value || /^solid$/i.test(String(value).trim())) {
+    return [0, 0];
+  }
+  const match = String(value)
+    .trim()
+    .match(/^(\d+(?:\.\d+)?)'\s*(?:dash)?\s*[,\/]?\s*(\d+(?:\.\d+)?)'\s*(?:skip|pattern)$/i);
+  if (!match) {
+    throw new Error(`Unsupported dash pattern: ${value}`);
+  }
+  return [Number(match[1]) * FEET_TO_METERS, Number(match[2]) * FEET_TO_METERS];
+}
+
+export function getScreenDashPattern(pattern) {
+  if (!pattern[0] || !pattern[1]) {
+    return [0, 0];
+  }
+  const dashPixels = pattern[0] <= 0.7 ? 4 : 6;
+  return [dashPixels, dashPixels * (pattern[1] / pattern[0])];
+}
+
+export function parseMarkingWidth(value) {
+  if (typeof value === 'number' && value > 0) {
+    return value * INCHES_TO_METERS;
+  }
+  const match = String(value || '').match(/^(\d+(?:\.\d+)?)\s*(?:"|in)$/i);
+  return match ? Number(match[1]) * INCHES_TO_METERS : null;
+}
+
+function getPathLengthMeters(path) {
+  let lengthMeters = 0;
+  for (let index = 1; index < path.length; index++) {
+    lengthMeters += getDistanceMeters(path[index - 1], path[index]);
+  }
+  return lengthMeters;
+}
+
+function getSidewalkWidthMeters(asset) {
+  return Math.max(1.5, Number(asset.sourceProperties.SW_WIDTH || 72) * INCHES_TO_METERS);
+}
+
+function createDetails(properties) {
+  return [
+    ['Type', properties.Type || properties.MARKING_TYPE],
+    ['Color', properties.Color],
+    ['Width', properties.Width],
+    ['Material', properties.Material]
+  ]
+    .filter(([, value]) => value !== null && value !== undefined && value !== '')
+    .map(([label, value]) => ({label, value}));
+}
+
+function createSourcePaths(resultsByKey, sourceKey, label) {
+  const source = SOURCES.find(candidate => candidate.key === sourceKey);
+  return resultsByKey[sourceKey].featureCollection.features.flatMap(feature =>
+    getLinePaths(feature.geometry).map((path, pathIndex) => ({
+      id: `${sourceKey}-${feature.properties.OBJECTID}-${pathIndex}`,
+      label,
+      path,
+      source: [getSourceRef(source, feature)],
+      details: createDetails(feature.properties),
+      sourceProperties: feature.properties
+    }))
+  );
+}
+
+function createSourcePolygons(resultsByKey, sourceKey, label) {
+  return createSourcePaths(resultsByKey, sourceKey, label)
+    .filter(asset => isClosedPath(asset.path))
+    .map(({path, ...asset}) => ({...asset, polygon: path}));
+}
+
+function omitSourceProperties(asset) {
+  const {sourceProperties, ...renderAsset} = asset;
+  return renderAsset;
+}
+
+function createRenderAssets(resultsByKey, {laneBands, crosswalkGuides, symbolPaths}) {
+  const roadSurfaces = createSourcePaths(resultsByKey, 'streets', 'Street surface').map(asset =>
+    omitSourceProperties({
+      ...asset,
+      style: {
+        widthMeters: Number(asset.sourceProperties.SURFACEWIDTH || 0) * FEET_TO_METERS
+      }
+    })
+  );
+  const sidewalks = createSourcePaths(resultsByKey, 'sidewalks', 'Sidewalk')
+    .map(asset => ({...asset, style: {widthMeters: getSidewalkWidthMeters(asset)}}))
+    .filter(asset => getPathLengthMeters(asset.path) >= asset.style.widthMeters * 2)
+    .map(omitSourceProperties);
+  const backgroundPaths = createSourcePaths(
+    resultsByKey,
+    'background',
+    'Source drafting line'
+  ).map(omitSourceProperties);
+  const bikePanels = createSourcePolygons(
+    resultsByKey,
+    'panelMarkings',
+    'Bicycle panel'
+  ).map(omitSourceProperties);
+  const longitudinalMarkings = createSourcePaths(
+    resultsByKey,
+    'longitudinalMarkings',
+    'Longitudinal marking'
+  ).map(asset => {
+    const dashMeters = parseDashPattern(asset.sourceProperties.Type);
+    return omitSourceProperties({
+      ...asset,
+      style: {
+        widthMeters:
+          parseMarkingWidth(asset.sourceProperties.Width) || DEFAULT_MARKING_WIDTH_METERS,
+        widthPixels: DEFAULT_MARKING_WIDTH_PIXELS,
+        colorRole:
+          asset.sourceProperties.Color === 'Yellow' ? 'yellowMarking' : 'whiteMarking',
+        dashMeters,
+        dashPixels: getScreenDashPattern(dashMeters),
+        dashMode: 'path',
+        dashJustified: false,
+        dashGapPickable: true
+      }
+    });
+  });
+  const replacedTransverseMarkingObjectIdList = crosswalkGuides.flatMap(
+    crosswalk => crosswalk.transverseMarkingObjectIds
+  );
+  const replacedTransverseMarkingObjectIds = new Set(replacedTransverseMarkingObjectIdList);
+  if (replacedTransverseMarkingObjectIds.size !== replacedTransverseMarkingObjectIdList.length) {
+    throw new Error('A transverse marking was matched to more than one crosswalk');
+  }
+  const transversePolygons = createSourcePolygons(
+    resultsByKey,
+    'transverseMarkings',
+    'Transverse marking'
+  )
+    .filter(asset => !replacedTransverseMarkingObjectIds.has(asset.source[0].objectId))
+    .map(omitSourceProperties);
+  const transversePaths = createSourcePaths(
+    resultsByKey,
+    'transverseMarkings',
+    'Transverse marking'
+  )
+    .filter(asset => !isClosedPath(asset.path))
+    .map(asset =>
+      omitSourceProperties({...asset, style: {widthMeters: DEFAULT_MARKING_WIDTH_METERS}})
+    );
+  const curbs = createSourcePaths(
+    resultsByKey,
+    'verticalElements',
+    'Curb or separator'
+  ).map(omitSourceProperties);
+
+  return {
+    roadSurfaces,
+    sidewalks,
+    backgroundPaths,
+    laneBands: laneBands.map(lane => ({
+      id: lane.id,
+      label: 'Vehicle lane',
+      path: lane.path,
+      source: lane.source,
+      details: [],
+      style: {widthMeters: lane.widthMeters, offset: lane.offsetWidths}
+    })),
+    bikePanels,
+    crosswalks: crosswalkGuides.map(crosswalk => ({
+      id: crosswalk.id,
+      label: 'Crosswalk',
+      path: crosswalk.path,
+      source: crosswalk.source,
+      details: createDetails(crosswalk.properties),
+      style: {
+        widthMeters: crosswalk.widthMeters,
+        widthPixels: CROSSWALK_WIDTH_PIXELS,
+        dashMeters: crosswalk.dashMeters,
+        dashPixels: crosswalk.dashPixels,
+        dashMode: 'path',
+        dashJustified: true,
+        dashGapPickable: true
+      }
+    })),
+    transversePolygons,
+    transversePaths,
+    longitudinalMarkings,
+    curbs,
+    symbols: symbolPaths.map(symbol => ({
+      id: symbol.id,
+      label: symbol.label,
+      path: symbol.path,
+      source: symbol.source,
+      details: createDetails(symbol.properties)
+    }))
   };
 }
 
@@ -534,7 +751,7 @@ function createStitchedSymbolPaths(resultsByKey) {
             maximumBridgeDistanceMeters: Math.max(0, ...stitched.bridgeDistancesMeters)
           },
           representation:
-            'topology-repaired display path; source coordinates retained and raw geometry remains pinned'
+            'topology-repaired display path; every source coordinate is retained'
         }
       });
     }
@@ -551,6 +768,24 @@ function createStitchedSymbolPaths(resultsByKey) {
       maximumBridgeDistanceMeters
     }
   };
+}
+
+function validateSymbolCoordinates(resultsByKey, symbolPaths) {
+  const pathsByObjectId = Map.groupBy(symbolPaths, path => path.source[0].objectId);
+  for (const feature of resultsByKey.symbols.featureCollection.features) {
+    const stitchedPaths = pathsByObjectId.get(feature.properties.OBJECTID);
+    if (!stitchedPaths?.length) {
+      throw new Error(`Symbol ${feature.properties.OBJECTID} has no render path`);
+    }
+    const stitchedCoordinates = new Set(
+      stitchedPaths.flatMap(path => path.path.map(coordinate => JSON.stringify(coordinate)))
+    );
+    visitCoordinates(feature.geometry, coordinate => {
+      if (!stitchedCoordinates.has(JSON.stringify(coordinate))) {
+        throw new Error(`Symbol ${feature.properties.OBJECTID} lost a source coordinate`);
+      }
+    });
+  }
 }
 
 function createLaneBands(resultsByKey) {
@@ -674,7 +909,7 @@ function createCrosswalkGuides(resultsByKey) {
           gapWidthMeters: 0.6
         },
         representation:
-          'cartographic crosswalk extent replacing matched SDOT stripe polygons in the display; raw linework remains pinned'
+          'cartographic crosswalk extent replacing matched SDOT stripe polygons in the runtime assets'
       }
     };
   });
@@ -753,18 +988,17 @@ ${gateRows}
     .join(', ')} meters
 
 The channelization records around Dexter and Thomas preserve authoritative geometry and dash class,
-but most descriptive asset fields are null in this CAD-derived crop. The example reports those nulls
-instead of inventing values. Longitudinal stroke widths therefore use an explicitly labeled
-cartographic fallback while dash/skip lengths come directly from the source \`Type\` values.
+but most descriptive asset fields are null in this CAD-derived crop. Longitudinal stroke widths use
+a cartographic fallback while dash/skip lengths come directly from the source \`Type\` values.
 
 ## Transformations
 
 - Requested a bounded EPSG:4326 snapshot and paged by sorted object ID.
-- Preserved all returned source properties and geometry.
+- Preserved returned source data while producing the render-ready asset snapshot.
 - Derived continuous pavement-symbol paths by joining source fragment endpoints within ${manifest.validation.symbolStitching.maximumJoinDistanceMeters} meters; no source vertex was moved.
 - Derived equal-width lane bands from official street centerlines plus the nearest 12-foot lane-width annotations.
-- Derived two crosswalk guides from official in-service inventory points and official street surface widths; matched source stripe polygons remain pinned but are not double-painted.
-- Did not simplify, manually redraw, or snap the pinned official channelization geometry.
+- Derived two crosswalk guides from official in-service inventory points and official street surface widths; matched source stripe polygons are omitted from the runtime assets.
+- Did not simplify, manually redraw, or snap official channelization geometry.
 
 ## License and limitations
 
@@ -780,9 +1014,12 @@ export async function extractRoadDiagram(outputDirectory) {
   const resultsByKey = Object.fromEntries(
     SOURCES.map((source, index) => [source.key, queriedSources[index]])
   );
+  validateQueriedSources(resultsByKey);
   const {laneBands, spatialJoins} = createLaneBands(resultsByKey);
   const crosswalkGuides = createCrosswalkGuides(resultsByKey);
   const {symbolPaths, summary: symbolStitching} = createStitchedSymbolPaths(resultsByKey);
+  validateSymbolCoordinates(resultsByKey, symbolPaths);
+  const assets = createRenderAssets(resultsByKey, {laneBands, crosswalkGuides, symbolPaths});
   const extractionGate = createGateValidation(resultsByKey);
   const generatorCommit = getGeneratorCommit();
 
@@ -791,10 +1028,7 @@ export async function extractRoadDiagram(outputDirectory) {
     generatedAt,
     candidate: CANDIDATE_NAME,
     displayBounds: DISPLAY_BOUNDS,
-    layers: Object.fromEntries(
-      SOURCES.map(source => [source.key, resultsByKey[source.key].featureCollection])
-    ),
-    derived: {laneBands, crosswalkGuides, symbolPaths}
+    assets
   };
 
   const manifestSources = SOURCES.map(source => {
@@ -851,13 +1085,13 @@ export async function extractRoadDiagram(outputDirectory) {
     sources: manifestSources,
     derivations: [
       {
-        output: 'laneBands',
+        output: 'assets.laneBands',
         operation: 'centered equal-width offsets',
         sourceKeys: ['streets', 'laneWidths'],
         outputFeatureCount: laneBands.length
       },
       {
-        output: 'crosswalkGuides',
+        output: 'assets.crosswalks',
         operation: 'perpendicular baseline across official surface width',
         sourceKeys: ['crosswalks', 'streets'],
         matchedTransverseMarkingCount: crosswalkGuides.reduce(
@@ -867,7 +1101,7 @@ export async function extractRoadDiagram(outputDirectory) {
         outputFeatureCount: crosswalkGuides.length
       },
       {
-        output: 'symbolPaths',
+        output: 'assets.symbols',
         operation: 'endpoint-connected CAD fragment stitching',
         sourceKeys: ['symbols'],
         parameters: {maximumJoinDistanceMeters: SYMBOL_JOIN_TOLERANCE_METERS},
@@ -877,6 +1111,9 @@ export async function extractRoadDiagram(outputDirectory) {
     validation: {
       extractionGate,
       symbolStitching,
+      renderAssetCounts: Object.fromEntries(
+        Object.entries(assets).map(([key, value]) => [key, value.length])
+      ),
       spatialAlignment: {
         laneWidthToStreetResidualMeters: spatialJoins.map(join => join.residualMeters),
         spatialJoins

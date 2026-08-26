@@ -14,10 +14,13 @@ node examples/path-style-extension/scripts/validate-seattle-road-diagram.mjs
 
 The scripts read and write the adjacent `examples/path-style-extension/data` directory by default.
 
-The extractor pages a bounded query by sorted object ID, requests WGS84 GeoJSON, preserves every
-returned source property, records the exact page URLs and hashes, and writes a machine-readable
-manifest plus a human-readable audit report. It also creates two documented cartographic
-derivations and one topology-repaired display representation:
+The extractor pages a bounded query by sorted object ID, requests WGS84 GeoJSON, and records the
+exact page URLs and hashes in a machine-readable manifest and human-readable audit report. It
+publishes a compact runtime snapshot whose path and polygon collections already contain the
+geometry, dimensions, dash patterns, tooltip fields, and source links consumed by the example.
+
+The render-ready output includes two documented cartographic derivations and one topology-repaired
+display representation:
 
 - equal-width approach lane bands from Seattle Streets centerlines and nearby 12-foot `LaneWidth`
   records;
@@ -27,9 +30,10 @@ derivations and one topology-repaired display representation:
 - continuous pavement-symbol paths by joining CAD fragment endpoints no more than 2 millimeters
   apart. Every source coordinate is retained, and any nonzero bridge is recorded in the manifest.
 
-Raw source geometry is preserved without simplification, manual redrawing, or snapping. The
-checked-in snapshot is for demonstrating deck.gl and is not suitable for engineering,
-construction, legal interpretation, or navigation.
+Source geometry used by the runtime assets is not simplified, manually redrawn, or snapped. Raw
+source layers remain reproducible through the recorded queries but are not included in the
+checked-in runtime snapshot. The snapshot is for demonstrating deck.gl and is not suitable for
+engineering, construction, legal interpretation, or navigation.
 
 ## Sources
 
