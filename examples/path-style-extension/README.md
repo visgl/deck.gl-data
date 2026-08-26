@@ -8,13 +8,15 @@ street-design example at Dexter Avenue N and Thomas Street.
 - `data/seattle-road-diagram.json` contains the source features and derived display geometry.
 - `data/seattle-road-diagram.manifest.json` records source services, queries, hashes,
   transformations, validation results, and licensing.
-- `data/seattle-road-diagram-report.md` is the human-readable extraction report.
-- `../../scripts/path-style-extension` contains the reproducible extraction and validation tools.
+- `scripts` contains the reproducible extraction and validation tools.
+
+The extractor also writes `data/seattle-road-diagram-report.md`, a human-readable rendering of the
+manifest. It is ignored because it contains no additional information.
 
 From the repository root, validate the checked-in snapshot with:
 
 ```bash
-node scripts/path-style-extension/validate-seattle-road-diagram.mjs
+node examples/path-style-extension/scripts/validate-seattle-road-diagram.mjs
 ```
 
 City of Seattle Department of Transportation data is used under the Public Domain Dedication and

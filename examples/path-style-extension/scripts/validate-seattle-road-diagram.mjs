@@ -8,11 +8,10 @@ import {dirname, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const SCRIPT_DIRECTORY = dirname(fileURLToPath(import.meta.url));
-const REPOSITORY_ROOT = resolve(SCRIPT_DIRECTORY, '../..');
-const DATA_DIRECTORY = resolve(
-  REPOSITORY_ROOT,
-  process.argv[2] || 'examples/path-style-extension/data'
-);
+const REPOSITORY_ROOT = resolve(SCRIPT_DIRECTORY, '../../..');
+const DATA_DIRECTORY = process.argv[2]
+  ? resolve(REPOSITORY_ROOT, process.argv[2])
+  : resolve(SCRIPT_DIRECTORY, '../data');
 
 export function parseLengthFeet(value) {
   const match = String(value).trim().match(/^(\d+(?:\.\d+)?)\s*(?:'|ft)$/i);

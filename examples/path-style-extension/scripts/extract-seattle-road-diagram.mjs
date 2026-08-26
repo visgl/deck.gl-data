@@ -9,7 +9,8 @@ import {dirname, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const SCRIPT_DIRECTORY = dirname(fileURLToPath(import.meta.url));
-const REPOSITORY_ROOT = resolve(SCRIPT_DIRECTORY, '../..');
+const REPOSITORY_ROOT = resolve(SCRIPT_DIRECTORY, '../../..');
+const DEFAULT_DATA_DIRECTORY = resolve(SCRIPT_DIRECTORY, '../data');
 
 export const DISPLAY_BOUNDS = [-122.3431, 47.62025, -122.3415, 47.6215];
 export const CANDIDATE_NAME = 'Dexter Avenue N and Thomas Street, Seattle, Washington';
@@ -907,10 +908,9 @@ export async function extractRoadDiagram(outputDirectory) {
 
 const isMainModule = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMainModule) {
-  const outputDirectory = resolve(
-    REPOSITORY_ROOT,
-    process.argv[2] || 'examples/path-style-extension/data'
-  );
+  const outputDirectory = process.argv[2]
+    ? resolve(REPOSITORY_ROOT, process.argv[2])
+    : DEFAULT_DATA_DIRECTORY;
   const {manifest} = await extractRoadDiagram(outputDirectory);
   console.log(
     `Wrote ${manifest.sources.reduce((total, source) => total + source.outputFeatureCount, 0)} source features to ${outputDirectory}`

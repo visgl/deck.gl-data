@@ -7,12 +7,12 @@ The website never queries the live City of Seattle ArcGIS services.
 From the repository root:
 
 ```bash
-node scripts/path-style-extension/score-candidate-sites.mjs
-node scripts/path-style-extension/extract-seattle-road-diagram.mjs
-node scripts/path-style-extension/validate-seattle-road-diagram.mjs
+node examples/path-style-extension/scripts/score-candidate-sites.mjs
+node examples/path-style-extension/scripts/extract-seattle-road-diagram.mjs
+node examples/path-style-extension/scripts/validate-seattle-road-diagram.mjs
 ```
 
-The generated files are written to `examples/path-style-extension/data`.
+The scripts read and write the adjacent `examples/path-style-extension/data` directory by default.
 
 The extractor pages a bounded query by sorted object ID, requests WGS84 GeoJSON, preserves every
 returned source property, records the exact page URLs and hashes, and writes a machine-readable
