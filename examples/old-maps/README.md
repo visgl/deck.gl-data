@@ -1,5 +1,7 @@
 # Old Maps
 
+![Preview](preview.jpg)
+
 Historical maps for the deck.gl [BitmapLayer example](https://deck.gl/examples/bitmap-layer).
 
 Each image is a scanned map georeferenced by the community on [Map Warper](https://mapwarper.net), downloaded once as a warped Web Mercator (EPSG:3857) image covering the map's bounding box, and converted to WebP. Files are named by Map Warper map id.
