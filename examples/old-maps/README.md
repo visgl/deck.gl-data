@@ -4,7 +4,7 @@
 
 Historical maps for the deck.gl [BitmapLayer example](https://deck.gl/examples/bitmap-layer).
 
-Each image is a scanned map georeferenced by the community on [Map Warper](https://mapwarper.net), downloaded once as a warped Web Mercator (EPSG:3857) image covering the map's bounding box, and converted to WebP. Files are named by Map Warper map id.
+Each image is a scanned map georeferenced by the community on [Map Warper](https://mapwarper.net), downloaded once as a warped Web Mercator (EPSG:3857) image covering the map's bounding box, at up to 4096px on the long side (close to native scan resolution), and converted to WebP. Files are named by Map Warper map id.
 
 | File | Map | Bounds [west, south, east, north] | Original source |
 | --- | --- | --- | --- |
