@@ -6,6 +6,8 @@ Historical maps for the deck.gl [BitmapLayer example](https://deck.gl/examples/b
 
 Each image is a scanned map georeferenced by the community on [Map Warper](https://mapwarper.net), downloaded once as a warped Web Mercator (EPSG:3857) image covering the map's bounding box, at up to 4096px on the long side (close to native scan resolution), and converted to WebP. Files are named by Map Warper map id.
 
+The exception is `17575.webp` (Peking). Its Map Warper control points only cover a narrow strip down the middle of the scan, so the 2nd-order polynomial warp Map Warper applied bends the map badly towards its edges. That warp was undone and the image re-warped with an affine fit of the same control points (excluding one ~110 m outlier), which lines up with the modern basemap to within about 35 m RMS.
+
 | File | Map | Bounds [west, south, east, north] | Original source |
 | --- | --- | --- | --- |
 | `85408.webp` | [Boston, 1775](https://mapwarper.net/maps/85408) | -71.0828189, 42.3335189, -71.0395962, 42.3774796 | Unknown |
@@ -14,5 +16,5 @@ Each image is a scanned map georeferenced by the community on [Map Warper](https
 | `73718.webp` | [Amsterdam, Daniel Stalpaert & Nicolaes Visscher, mid-17th century](https://mapwarper.net/maps/73718) | 4.8545034, 52.3464006, 4.945947, 52.3980841 | Unknown |
 | `76801.webp` | [Iconografica rappresentatione della inclita città di Venezia, Lodovico Ughi, 1729](https://mapwarper.net/maps/76801) | 12.3058565, 45.4199097, 12.3662522, 45.4515513 | Unknown |
 | `9175.webp` | [Nuova pianta di Roma, Giambattista Nolli, 1748](https://mapwarper.net/maps/9175) | 12.4413659, 41.8626281, 12.5268237, 41.9211831 | Unknown |
-| `17575.webp` | [Peking, 1914](https://mapwarper.net/maps/17575) | 116.3503962, 39.8510207, 116.4574079, 39.9857523 | Unknown |
+| `17575.webp` | [Peking, 1914](https://mapwarper.net/maps/17575) | 116.3392079, 39.8654237, 116.4388368, 39.9517812 | Unknown |
 | `21028.webp` | [Central Edo (Tokyo), 1858](https://mapwarper.net/maps/21028) | 139.7283079, 35.6495956, 139.7562121, 35.6697272 | Unknown |
