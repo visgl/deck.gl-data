@@ -19,18 +19,24 @@ exact page URLs and hashes in a machine-readable manifest and human-readable aud
 publishes a compact runtime snapshot whose path and polygon collections already contain the
 geometry, dimensions, dash patterns, tooltip fields, and source links consumed by the example.
 
-The render-ready output includes two documented cartographic derivations and one topology-repaired
-display representation:
+The render-ready output includes three documented cartographic derivations and one
+topology-repaired display representation:
 
 - equal-width approach lane bands from Seattle Streets centerlines and nearby 12-foot `LaneWidth`
   records;
-- justified crosswalk guides from in-service Marked Crosswalk points and Seattle Streets surface
-  widths. The extractor records which source stripe polygons each guide replaces in the display so
-  the same crosswalk is not painted twice.
+- dashed crossing rows from bicycle-crossing blocks and crosswalk bars. Equal rectangles repeated
+  at a constant spacing become one dashed path that starts and ends on a rectangle, and
+  crosswalk bars that come in pairs become two such paths. Rows side by side share a center path
+  and are drawn at different offsets. Rows near an in-service Marked Crosswalk point carry its
+  fields, and the source polygons they replace are omitted from the display;
+- double yellow lines. Pairs of parallel yellow lines become one center path drawn twice at
+  opposite offsets, when both copies stay within 4 centimeters of their source lines for at least
+  10 meters. The rest of each line is kept as it is;
 - continuous pavement-symbol paths by joining CAD fragment endpoints no more than 2 millimeters
   apart. Every source coordinate is retained, and any nonzero bridge is recorded in the manifest.
 
-Source geometry used by the runtime assets is not simplified, manually redrawn, or snapped. Raw
+The manifest records the rows and pairs each derivation produced. Other source geometry used by
+the runtime assets is not simplified, manually redrawn, or snapped. Raw
 source layers remain reproducible through the recorded queries but are not included in the
 checked-in runtime snapshot. The snapshot is for demonstrating deck.gl and is not suitable for
 engineering, construction, legal interpretation, or navigation.

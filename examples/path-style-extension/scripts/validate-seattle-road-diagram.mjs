@@ -24,7 +24,7 @@ const ASSET_GEOMETRY = {
   backgroundPaths: 'path',
   laneBands: 'path',
   bikePanels: 'polygon',
-  crosswalks: 'path',
+  crossings: 'path',
   transversePolygons: 'polygon',
   transversePaths: 'path',
   longitudinalMarkings: 'path',
@@ -70,7 +70,8 @@ function validateStyle(asset, assetKey) {
         'curb',
         'pavementSymbol',
         'whiteMarking',
-        'yellowMarking'
+        'yellowMarking',
+        'bikePanel'
       ].includes(asset.style.colorRole),
       `${asset.id} color role`
     );
@@ -88,9 +89,10 @@ function validateStyle(asset, assetKey) {
     assert.ok(asset.style.dashMeters, `${asset.id} meter dash pattern`);
     assert.ok(asset.style.dashPixels, `${asset.id} pixel dash pattern`);
   }
-  if (assetKey === 'longitudinalMarkings') {
+  if (assetKey === 'longitudinalMarkings' || assetKey === 'crossings') {
     assert.ok(asset.style.widthMeters && asset.style.widthPixels, `${asset.id} marking widths`);
     assert.ok(asset.style.colorRole, `${asset.id} marking color`);
+    assert.equal(typeof asset.style.offset, 'number', `${asset.id} marking offset`);
   }
 }
 
@@ -140,7 +142,7 @@ for (const [assetKey, geometryKey] of Object.entries(ASSET_GEOMETRY)) {
 }
 
 assert.ok(snapshot.assets.laneBands.length >= 8);
-assert.ok(snapshot.assets.crosswalks.length >= 1);
+assert.ok(snapshot.assets.crossings.some(asset => asset.label === 'Crosswalk'));
 assert.deepEqual(
   new Set(snapshot.assets.surfacePaths.map(asset => asset.style.colorRole)),
   new Set(['asphalt', 'sidewalk'])
@@ -150,15 +152,27 @@ assert.deepEqual(
   new Set(['curb', 'pavementSymbol'])
 );
 assert.ok(
-  snapshot.assets.crosswalks.every(
-    asset => asset.style.dashJustified && asset.style.dashGapPickable
-  )
-);
-assert.ok(
-  snapshot.assets.longitudinalMarkings.every(
+  [...snapshot.assets.crossings, ...snapshot.assets.longitudinalMarkings].every(
     asset => !asset.style.dashJustified && asset.style.dashGapPickable
   )
 );
+
+// Rows drawn side by side, and pairs of parallel lines, share a center path at different offsets
+for (const assetKey of ['crossings', 'longitudinalMarkings']) {
+  assert.ok(
+    snapshot.assets[assetKey].some(asset => asset.style.offset !== 0),
+    `${assetKey} offsets`
+  );
+  const offsetsByPath = Map.groupBy(
+    snapshot.assets[assetKey].filter(asset => asset.style.offset !== 0),
+    asset => JSON.stringify(asset.path)
+  );
+  for (const assets of offsetsByPath.values()) {
+    assert.ok(assets.length >= 2, `${assets[0].id} shares its path with an offset copy`);
+    const offsets = assets.map(asset => asset.style.offset * asset.style.widthMeters);
+    assert.ok(Math.min(...offsets) < 0 && Math.max(...offsets) > 0, `${assets[0].id} offsets on both sides`);
+  }
+}
 
 const groupedLaneBands = Map.groupBy(
   snapshot.assets.laneBands,
