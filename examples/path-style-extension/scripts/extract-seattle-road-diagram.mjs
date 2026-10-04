@@ -442,17 +442,24 @@ export function stitchLinePaths(paths, maximumDistanceMeters = SYMBOL_JOIN_TOLER
   return stitchedPaths;
 }
 
+// Meters per degree of the Earth circumference that deck.gl uses for meter units, so that lengths
+// measured here match dashes drawn in meters
+const METERS_PER_DEGREE = 40.03e6 / 360;
+
 function toLocalMeters([longitude, latitude], origin) {
   const latitudeRadians = (origin[1] * Math.PI) / 180;
   return [
-    (longitude - origin[0]) * 111320 * Math.cos(latitudeRadians),
-    (latitude - origin[1]) * 110540
+    (longitude - origin[0]) * METERS_PER_DEGREE * Math.cos(latitudeRadians),
+    (latitude - origin[1]) * METERS_PER_DEGREE
   ];
 }
 
 function fromLocalMeters([x, y], origin) {
   const latitudeRadians = (origin[1] * Math.PI) / 180;
-  return [origin[0] + x / (111320 * Math.cos(latitudeRadians)), origin[1] + y / 110540];
+  return [
+    origin[0] + x / (METERS_PER_DEGREE * Math.cos(latitudeRadians)),
+    origin[1] + y / METERS_PER_DEGREE
+  ];
 }
 
 function getPointToSegmentDistance(point, start, end) {
@@ -1234,6 +1241,51 @@ function overlapsInterval(intervals, [from, to]) {
   );
 }
 
+// A dashed path restarts its pattern at its first vertex. Trims a pair to whole dash periods of
+// its dashed line and runs the shared path in that line's direction, so every piece of the line
+// continues its original pattern. The trimmed ends stay with the source lines.
+function alignPairToDashes(run) {
+  const {shorter, longer, distance, closed} = run;
+  const center = offsetPolyline(run.points, distance / 2, closed);
+  const intervals = [run.shorterInterval, run.longerInterval];
+  const dashedIndices = [shorter, longer]
+    .map((line, index) => (line.asset.style.dashMeters?.[0] > 0 ? index : -1))
+    .filter(index => index >= 0);
+  if (!dashedIndices.length) {
+    return {center, intervals, direction: 1};
+  }
+  if (closed || dashedIndices.length > 1) {
+    return null;
+  }
+
+  const dashedIndex = dashedIndices[0];
+  const dashed = [shorter, longer][dashedIndex];
+  const partner = [shorter, longer][1 - dashedIndex];
+  const [dash, gap] = dashed.asset.style.dashMeters;
+  const period = dash + gap;
+  const [from, to] = intervals[dashedIndex];
+  const dashedFrom = Math.ceil(from / period - 1e-6) * period;
+  const dashedTo = Math.floor(to / period + 1e-6) * period;
+  if (dashedTo - dashedFrom < MINIMUM_DOUBLE_LINE_LENGTH_METERS) {
+    return null;
+  }
+
+  const centerLength = getLocalPathLength(center);
+  const forward =
+    getArcPosition(center[0], dashed.points) < getArcPosition(center.at(-1), dashed.points);
+  const [centerFrom, centerTo] = [dashedFrom, dashedTo]
+    .map(position => ((forward ? position - from : to - position) / (to - from)) * centerLength)
+    .sort((positionA, positionB) => positionA - positionB);
+  const trimmed = slicePath(center, center, centerFrom, centerTo);
+  const trimmedCenter = forward ? trimmed : trimmed.reverse();
+  intervals[dashedIndex] = [dashedFrom, dashedTo];
+  intervals[1 - dashedIndex] = [trimmedCenter[0], trimmedCenter.at(-1)]
+    .map(point => getArcPosition(point, partner.points))
+    .sort((positionA, positionB) => positionA - positionB);
+  // Reversing the shared path swaps which side is right of it
+  return {center: trimmedCenter, intervals, direction: forward ? 1 : -1};
+}
+
 // Redraws pairs of parallel yellow lines, such as a solid line beside a dashed one, as one shared
 // center path drawn twice with opposite offsets. The parts of each line outside the pair are kept.
 function createDoubleLines(markings) {
@@ -1300,12 +1352,16 @@ function createDoubleLines(markings) {
     ) {
       continue;
     }
-    shorter.consumed.push(run.shorterInterval);
-    longer.consumed.push(run.longerInterval);
-    const path = offsetPolyline(run.points, run.distance / 2, run.closed).map(toLngLat);
+    const aligned = alignPairToDashes(run);
+    if (!aligned) {
+      continue;
+    }
+    shorter.consumed.push(aligned.intervals[0]);
+    longer.consumed.push(aligned.intervals[1]);
+    const path = aligned.center.map(toLngLat);
     for (const [line, sign] of [
-      [shorter, -1],
-      [longer, 1]
+      [shorter, -aligned.direction],
+      [longer, aligned.direction]
     ]) {
       line.copies.push({
         ...line.asset,
@@ -1321,7 +1377,7 @@ function createDoubleLines(markings) {
       shorterId: shorter.asset.id,
       longerId: longer.asset.id,
       separationMeters: roundNumber(Math.abs(run.distance), 3),
-      lengthMeters: roundNumber(run.lengthMeters, 1),
+      lengthMeters: roundNumber(getLocalPathLength(aligned.center), 1),
       closed: run.closed
     });
   }
