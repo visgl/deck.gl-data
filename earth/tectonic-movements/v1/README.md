@@ -7,10 +7,10 @@ and the adjacent [license text](./LICENSE.CC-BY-4.0.txt).
 
 | Model | Source revision | Files | Total size | Ages before present | Frame |
 | --- | --- | --- | ---: | --- | --- |
-| [Cao et al. (2024)](https://zenodo.org/records/13628813) | 2.4 | `tectonic.parquet` | 1,580,095 bytes | 0–1800 Ma | Paleomagnetic |
-| [Müller et al. (2022)](https://zenodo.org/records/13636799) | 1.2.4 | `geometry.parquet` + `rotations.parquet` | 1,912,215 bytes | 0–1000 Ma | Optimised mantle |
+| [Cao et al. (2024)](https://zenodo.org/records/13628813) | 2.4 | `tectonic.parquet` | 1,590,691 bytes | 0–1800 Ma | Paleomagnetic |
+| [Müller et al. (2022)](https://zenodo.org/records/13636799) | 1.2.4 | `geometry.parquet` + `rotations.parquet` | 1,927,854 bytes | 0–1000 Ma | Optimised mantle |
 
-The three files total **3,492,310 bytes** (3.49 MB), with **ZSTD level 6** compression.
+The three files total **3,518,545 bytes** (3.52 MB), with **ZSTD level 6** compression.
 Git LFS stores the Parquet files following this repository’s `.gitattributes` policy.
 The manifest records sizes, SHA-256 hashes, source archive/file hashes, schemas,
 source revisions, licenses and conversion tool versions.
@@ -65,6 +65,15 @@ All plates for an age stay together. Cao’s two source rotation files are compl
 only `optimisation/1000_0_rotfile_MantleOpt.rot`; its paleomagnetic file covers the
 same interval in an alternative frame and must not be merged with it.
 
+Each file also embeds `math.gl.tectonic.manifest`: source and archive checksums,
+model revision, authors/license, reference frame, coordinate conventions, sampling,
+polygon/plate counts, conversion tools and verification details. Its `file` section
+contains the current file’s schema and row-group inventory. Consumers can recover
+these from the footer without the sidecar. The external manifest additionally records
+finished-file sizes and SHA-256 hashes; those cannot be embedded in the same file
+without changing the bytes they describe. It also exposes the full multi-file
+inventory before a reader fetches any Parquet footer.
+
 Each file’s footer contains a JSON `math.gl.tectonic.rowGroups` index with
 `rowGroup`, `recordType`, `rows`, `minAge` and `maxAge`. The same index appears in
 the manifest, so consumers can choose groups before fetching the footer. Geometry
@@ -115,7 +124,7 @@ curl --fail --location https://zenodo.org/api/records/13636799/files/Muller_etal
 /tmp/tectonic-converter/bin/python scripts/validate-source-rotations.py --cao /tmp/cao2024-v2.4.zip --muller /tmp/muller2022-v1.2.4.zip
 ```
 
-Validation reads every file and checks checksums, schemas, actual column compression,
+Validation reads every file and checks checksums, schemas, embedded provenance, actual column compression,
 GeoParquet metadata, polygon coordinates/rings, age statistics, complete plate sets,
 unit quaternions, streaming column reads, indexed 100 Ma windows and missing-value
 conventions. The independent source validator checks every rotation sample against

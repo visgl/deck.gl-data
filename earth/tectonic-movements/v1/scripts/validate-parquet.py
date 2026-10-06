@@ -64,7 +64,16 @@ def validate(root):
             require(metadata['model'] == manifest['model'] and metadata['version'] == manifest['version'],
                     'Model revision mismatch')
             require(metadata['referenceFrame'] == manifest['referenceFrame'], 'Frame mismatch')
+            embedded = json.loads(table.schema.metadata[b'math.gl.tectonic.manifest'])
+            file_info = embedded.pop('file')
+            require(embedded == {key: value for key, value in manifest.items() if key != 'files'},
+                    'Embedded manifest provenance mismatch')
+            require(file_info['path'] == path.name and file_info['rows'] == table.num_rows,
+                    'Embedded file inventory mismatch')
+            require(file_info['fields'] == [{'name': field.name, 'type': str(field.type), 'nullable': field.nullable}
+                                            for field in table.schema], 'Embedded schema mismatch')
             index = json.loads(table.schema.metadata[b'math.gl.tectonic.rowGroups'])
+            require(file_info['rowGroups'] == index, 'Embedded manifest row group index mismatch')
             require(index == record['rowGroupIndex'], 'Footer/manifest row group index mismatch')
             require(len(index) == parquet.num_row_groups, 'Incomplete row group index')
             for number, entry in enumerate(index):

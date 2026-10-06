@@ -142,8 +142,13 @@ def write_table(path, table, groups):
                        else ('rotation' if ages else 'geometry'))
         index.append({'rowGroup': number, 'recordType': record_type, 'rows': group.num_rows,
                       'minAge': min(ages) if ages else None, 'maxAge': max(ages) if ages else None})
+    embedded = json.loads(table.schema.metadata[b'math.gl.tectonic.manifest'])
+    embedded['file'] = {'path': path.name, 'rows': table.num_rows, 'rowGroups': index,
+                        'fields': [{'name': field.name, 'type': str(field.type), 'nullable': field.nullable}
+                                   for field in table.schema]}
     table = table.replace_schema_metadata({**table.schema.metadata,
-        b'math.gl.tectonic.rowGroups': json.dumps(index, sort_keys=True).encode()})
+        b'math.gl.tectonic.rowGroups': json.dumps(index, sort_keys=True).encode(),
+        b'math.gl.tectonic.manifest': json.dumps(embedded, sort_keys=True, ensure_ascii=False).encode()})
     # Writing one supplied chunk at a time preserves geometry/age boundaries.
     with pq.ParquetWriter(path, table.schema, compression='zstd', compression_level=6,
                           write_statistics=True) as writer:
@@ -207,26 +212,6 @@ def convert(model_id, archive_path, output):
                         raise ValueError('Non-unit quaternion')
                     q = [value / norm for value in q]
                 all_rows.append(dict(zip(rotation_schema.names, [age, pid, rotation is not None, *q])))
-        rotation_table = pa.Table.from_pylist(all_rows, schema=rotation_schema)
-        if model_id == 'CAO2024':
-            # A tagged union stores each template once, followed by rotation samples.
-            # Geometry first makes the templates usable before the full timeline loads.
-            combined_schema = pa.schema([
-                ('recordType', pa.string()), *geometry_schema,
-                *[field for field in rotation_schema if field.name != 'plateId'],
-            ], metadata=geometry_schema.metadata)
-            geometry_records = pa.Table.from_pylist(
-                [dict(recordType='geometry', **row) for row in geometry], schema=combined_schema)
-            rotation_records = pa.Table.from_pylist(
-                [dict(recordType='rotation', **row) for row in all_rows], schema=combined_schema)
-            table = pa.concat_tables([geometry_records, rotation_records])
-            groups = [geometry_records, *age_groups(rotation_records, len(ids), model['maxAge'])]
-            files = [write_table(dest / 'tectonic.parquet', table, groups)]
-        else:
-            files = [write_table(dest / 'geometry.parquet', geometry_table,
-                                 split_groups(geometry_table, 10)),
-                     write_table(dest / 'rotations.parquet', rotation_table,
-                                 age_groups(rotation_table, len(ids), model['maxAge']))]
         # Check nontrivial quaternion orientation against pyGPlates' independent point rotation.
         reference_checks = 0
         point = pygplates.PointOnSphere(10, 20)
@@ -257,8 +242,34 @@ def convert(model_id, archive_path, output):
         'verification': {'roundTrip': 'Every Parquet table equals its pre-write Arrow table',
                          'pointRotationChecks': reference_checks, 'unitQuaternionTolerance': 1e-12},
         'polygonRows': len(geometry), 'plateCount': len(ids), 'skippedSourceMembers': skipped,
-        'files': files,
     }
+    embedded = json.dumps(manifest, sort_keys=True, ensure_ascii=False).encode()
+    geometry_schema = geometry_schema.with_metadata({**geometry_schema.metadata,
+        b'math.gl.tectonic.manifest': embedded})
+    rotation_schema = rotation_schema.with_metadata({**rotation_schema.metadata,
+        b'math.gl.tectonic.manifest': embedded})
+    geometry_table = pa.Table.from_pylist(geometry, schema=geometry_schema)
+    rotation_table = pa.Table.from_pylist(all_rows, schema=rotation_schema)
+    if model_id == 'CAO2024':
+        # A tagged union stores each template once, followed by rotation samples.
+        # Geometry first makes the templates usable before the full timeline loads.
+        combined_schema = pa.schema([
+            ('recordType', pa.string()), *geometry_schema,
+            *[field for field in rotation_schema if field.name != 'plateId'],
+        ], metadata=geometry_schema.metadata)
+        geometry_records = pa.Table.from_pylist(
+            [dict(recordType='geometry', **row) for row in geometry], schema=combined_schema)
+        rotation_records = pa.Table.from_pylist(
+            [dict(recordType='rotation', **row) for row in all_rows], schema=combined_schema)
+        table = pa.concat_tables([geometry_records, rotation_records])
+        groups = [geometry_records, *age_groups(rotation_records, len(ids), model['maxAge'])]
+        files = [write_table(dest / 'tectonic.parquet', table, groups)]
+    else:
+        files = [write_table(dest / 'geometry.parquet', geometry_table,
+                             split_groups(geometry_table, 10)),
+                 write_table(dest / 'rotations.parquet', rotation_table,
+                             age_groups(rotation_table, len(ids), model['maxAge']))]
+    manifest['files'] = files
     (dest / 'manifest.json').write_text(json.dumps(manifest, indent=2, ensure_ascii=False)+'\n')
     pairing = ('Geometry and rotations share one tagged Parquet file.' if model_id == 'CAO2024'
                else 'Geometry and rotations must stay paired. Only the complete optimised mantle rotation model is used; the alternative paleomagnetic model is excluded.')

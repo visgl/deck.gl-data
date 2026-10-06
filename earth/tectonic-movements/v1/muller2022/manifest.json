@@ -50,11 +50,11 @@
   "files": [
     {
       "path": "geometry.parquet",
-      "bytes": 1369985,
-      "sha256": "e641e14341f34dda797481efd86713cee641dee759ad62cb25ffab03fa7429d1",
+      "bytes": 1377858,
+      "sha256": "8d3dba1f663b34b7925bd2bbff3ba07ca65165ba64225c9c24ee714a32a47d86",
       "rows": 2937,
       "rowGroups": 10,
-      "schema": "featureId: string\npolygonIndex: int32\nplateId: int32\nname: string\nbeginAge: double\nendAge: double\ngeometry: binary\n-- schema metadata --\nmath.gl.tectonic: '{\"ageUnit\": \"Ma before present\", \"anchorPlateId\": 0, \"' + 443\ngeo: '{\"version\": \"1.1.0\", \"primary_column\": \"geometry\", \"columns\": {\"geo' + 82\nmath.gl.tectonic.rowGroups: '[{\"maxAge\": null, \"minAge\": null, \"recordTyp' + 836",
+      "schema": "featureId: string\npolygonIndex: int32\nplateId: int32\nname: string\nbeginAge: double\nendAge: double\ngeometry: binary\n-- schema metadata --\nmath.gl.tectonic: '{\"ageUnit\": \"Ma before present\", \"anchorPlateId\": 0, \"' + 443\ngeo: '{\"version\": \"1.1.0\", \"primary_column\": \"geometry\", \"columns\": {\"geo' + 82\nmath.gl.tectonic.manifest: '{\"ages\": {\"max\": 1000, \"min\": 0, \"step\": 10, ' + 3285\nmath.gl.tectonic.rowGroups: '[{\"maxAge\": null, \"minAge\": null, \"recordTyp' + 836",
       "compression": "ZSTD",
       "compressionLevel": 6,
       "rowGroupIndex": [
@@ -132,11 +132,11 @@
     },
     {
       "path": "rotations.parquet",
-      "bytes": 542230,
-      "sha256": "be8be101c290e478a5c580317bf862e9bf8c7b0ce1dbe3edc3af7b10a6805546",
+      "bytes": 549996,
+      "sha256": "5e5717d1456fb738a00da6be5d93c67d714e2df70e349b7ce9e755f0f8eac31c",
       "rows": 39794,
       "rowGroups": 10,
-      "schema": "age: int16\nplateId: int32\navailable: bool\nw: double\nx: double\ny: double\nz: double\n-- schema metadata --\nmath.gl.tectonic: '{\"ageUnit\": \"Ma before present\", \"anchorPlateId\": 0, \"' + 443\nmath.gl.tectonic.rowGroups: '[{\"maxAge\": 90, \"minAge\": 0, \"recordType\": \"' + 824",
+      "schema": "age: int16\nplateId: int32\navailable: bool\nw: double\nx: double\ny: double\nz: double\n-- schema metadata --\nmath.gl.tectonic: '{\"ageUnit\": \"Ma before present\", \"anchorPlateId\": 0, \"' + 443\nmath.gl.tectonic.manifest: '{\"ages\": {\"max\": 1000, \"min\": 0, \"step\": 10, ' + 3242\nmath.gl.tectonic.rowGroups: '[{\"maxAge\": 90, \"minAge\": 0, \"recordType\": \"' + 824",
       "compression": "ZSTD",
       "compressionLevel": 6,
       "rowGroupIndex": [
