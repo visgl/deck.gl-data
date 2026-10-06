@@ -1,0 +1,72 @@
+{
+  "model": "CAO2024",
+  "version": "2.4",
+  "dataset": "https://zenodo.org/records/13628813",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "credit": "Xianzhi Cao, Alan Collins, Sergei Pisarevsky, Nicolas Flament, Sanzhong Li, Derrick Hasterok and Dietmar Müller (2024)",
+  "archiveMD5": "4a032d3ab46e6023d14add8a54b6a541",
+  "archiveSHA256": "4ae9158a29c597b46f687f8c3f0f5a4a55df5ab69bde18e24257a17d358d8592",
+  "sourceFilesSHA256": {
+    "1.8Ga_model_GSF/shapes_continents.gpmlz": "6e30de73967f81a403f46370295dec5c0d7ed3ffd80c73d47df926461d949616",
+    "1.8Ga_model_GSF/1000_0_rotfile.rot": "e13c16ef5b2f8f116f598635e42a126b016b2c615358b499bcc3433f4a3c735c",
+    "1.8Ga_model_GSF/1800_1000_rotfile.rot": "db2a57a8b7c7a08891c19840b6334ffb9c279b6a991a2c2eed099edb23445785"
+  },
+  "referenceFrame": "Paleomagnetic",
+  "anchorPlateId": 0,
+  "quaternionOrder": [
+    "w",
+    "x",
+    "y",
+    "z"
+  ],
+  "cartesianAxes": "X at lon=0 lat=0, Y at lon=90 lat=0, Z at North Pole",
+  "ages": {
+    "unit": "Ma before present",
+    "min": 0,
+    "max": 1800,
+    "step": 10
+  },
+  "geometry": "Unreconstructed present-day source templates; WKB Polygon lon/lat degrees; spherical edges; holes retained; no simplification",
+  "missingRotations": "available=false and null quaternion; no fabricated identity rotation",
+  "changes": [
+    "GPML templates converted to GeoParquet",
+    "Equivalent total rotations computed relative to anchor plate 0 at 10 Ma intervals",
+    "Raw source vertices retained; explicit ring closure added when absent",
+    "No plate topology, paleogeographic shoreline or future reconstruction exported"
+  ],
+  "tools": {
+    "pygplates": "1.0.0",
+    "pyarrow": "23.0.1"
+  },
+  "verification": {
+    "roundTrip": "Every Parquet table equals its pre-write Arrow table",
+    "pointRotationChecks": 1277,
+    "unitQuaternionTolerance": 1e-12
+  },
+  "polygonRows": 877,
+  "plateCount": 445,
+  "skippedSourceMembers": 0,
+  "files": [
+    {
+      "path": "geometry.parquet",
+      "bytes": 904504,
+      "sha256": "f11a470f1ebe5271a7669576c23995ab4b43461b7f6e81940d3a86464d5b2998",
+      "rows": 877,
+      "rowGroups": 4,
+      "schema": "featureId: string\npolygonIndex: int32\nplateId: int32\nname: string\nbeginAge: double\nendAge: double\ngeometry: binary\n-- schema metadata --\nmath.gl.tectonic: '{\"ageUnit\": \"Ma before present\", \"anchorPlateId\": 0, \"' + 343\ngeo: '{\"version\": \"1.1.0\", \"primary_column\": \"geometry\", \"columns\": {\"geo' + 82",
+      "compression": "ZSTD",
+      "compressionLevel": 6
+    },
+    {
+      "path": "rotations.parquet",
+      "bytes": 1220467,
+      "sha256": "25ef203fee1d02f1bde3b293fc554b8d655228a22261a854bde84738b58aa2cd",
+      "rows": 80545,
+      "rowGroups": 181,
+      "schema": "age: int16\nplateId: int32\navailable: bool\nw: double\nx: double\ny: double\nz: double\n-- schema metadata --\nmath.gl.tectonic: '{\"ageUnit\": \"Ma before present\", \"anchorPlateId\": 0, \"' + 343",
+      "compression": "ZSTD",
+      "compressionLevel": 6
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "model": "MULLER2022",
+  "version": "1.2.4",
+  "dataset": "https://zenodo.org/records/13636799",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "credit": "R. Dietmar Müller, Nicolas Flament, John Cannon, Michael G. Tetley, Simon E. Williams, Xianzhi Cao, Ömer F. Bodur, Sabin Zahirovic and Andrew Merdith (2022); coastline templates after Merdith et al. (2021)",
+  "archiveMD5": "1f409e19e42128a8cf245ce54b75f1ae",
+  "archiveSHA256": "add1f4975360ecd259517b99860f4fb0d176170d909333387e8022c69255bbcd",
+  "sourceFilesSHA256": {
+    "Coastlines/shapes_coastlines_Merdith_etal.gpmlz": "e57285e77c96b2f40926c652b10d832f24933d214cdf1ce8ca40ff9f89d7e01a",
+    "Rotations/1000_0_rotfile.rot": "9ab561d7185c268bca654246240d21189be8d8b85ae1344cac6854305a6f2624",
+    "optimisation/1000_0_rotfile_MantleOpt.rot": "09ddb15a4bcfabc43e363d0582445d42cf06dd31ed39e5cbd528f304e1a3759f"
+  },
+  "referenceFrame": "Optimised mantle",
+  "anchorPlateId": 0,
+  "quaternionOrder": [
+    "w",
+    "x",
+    "y",
+    "z"
+  ],
+  "cartesianAxes": "X at lon=0 lat=0, Y at lon=90 lat=0, Z at North Pole",
+  "ages": {
+    "unit": "Ma before present",
+    "min": 0,
+    "max": 1000,
+    "step": 10
+  },
+  "geometry": "Unreconstructed present-day source templates; WKB Polygon lon/lat degrees; spherical edges; holes retained; no simplification",
+  "missingRotations": "available=false and null quaternion; no fabricated identity rotation",
+  "changes": [
+    "GPML templates converted to GeoParquet",
+    "Equivalent total rotations computed relative to anchor plate 0 at 10 Ma intervals",
+    "Raw source vertices retained; explicit ring closure added when absent",
+    "No plate topology, paleogeographic shoreline or future reconstruction exported"
+  ],
+  "tools": {
+    "pygplates": "1.0.0",
+    "pyarrow": "23.0.1"
+  },
+  "verification": {
+    "roundTrip": "Every Parquet table equals its pre-write Arrow table",
+    "pointRotationChecks": 1203,
+    "unitQuaternionTolerance": 1e-12
+  },
+  "polygonRows": 2937,
+  "plateCount": 394,
+  "skippedSourceMembers": 0,
+  "files": [
+    {
+      "path": "geometry.parquet",
+      "bytes": 1364087,
+      "sha256": "b037f0149e26422bc4b81ef8a565bbe4788b0a27e677f6abe33aee91fc2485f9",
+      "rows": 2937,
+      "rowGroups": 12,
+      "schema": "featureId: string\npolygonIndex: int32\nplateId: int32\nname: string\nbeginAge: double\nendAge: double\ngeometry: binary\n-- schema metadata --\nmath.gl.tectonic: '{\"ageUnit\": \"Ma before present\", \"anchorPlateId\": 0, \"' + 443\ngeo: '{\"version\": \"1.1.0\", \"primary_column\": \"geometry\", \"columns\": {\"geo' + 82",
+      "compression": "ZSTD",
+      "compressionLevel": 6
+    },
+    {
+      "path": "rotations.parquet",
+      "bytes": 774806,
+      "sha256": "21c09b03381ba61f75abd64b814594a26a8d1bcdaeff9b4bd2474a31ba44b363",
+      "rows": 39794,
+      "rowGroups": 101,
+      "schema": "age: int16\nplateId: int32\navailable: bool\nw: double\nx: double\ny: double\nz: double\n-- schema metadata --\nmath.gl.tectonic: '{\"ageUnit\": \"Ma before present\", \"anchorPlateId\": 0, \"' + 443",
+      "compression": "ZSTD",
+      "compressionLevel": 6
+    }
+  ]
+}
