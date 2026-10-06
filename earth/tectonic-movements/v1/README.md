@@ -22,16 +22,16 @@ The URLs below pin the data snapshot commit
 Parquet:
 
 ```text
-https://media.githubusercontent.com/media/visgl/deck.gl-data/0446448b0b017fd5b91ec1fde0bbe05af11aa7aa/examples/tectonic-time-machine/v1/cao2024/geometry.parquet
-https://media.githubusercontent.com/media/visgl/deck.gl-data/0446448b0b017fd5b91ec1fde0bbe05af11aa7aa/examples/tectonic-time-machine/v1/cao2024/rotations.parquet
-https://media.githubusercontent.com/media/visgl/deck.gl-data/0446448b0b017fd5b91ec1fde0bbe05af11aa7aa/examples/tectonic-time-machine/v1/muller2022/geometry.parquet
-https://media.githubusercontent.com/media/visgl/deck.gl-data/0446448b0b017fd5b91ec1fde0bbe05af11aa7aa/examples/tectonic-time-machine/v1/muller2022/rotations.parquet
+https://media.githubusercontent.com/media/visgl/deck.gl-data/0446448b0b017fd5b91ec1fde0bbe05af11aa7aa/earth/tectonic-movements/v1/cao2024/geometry.parquet
+https://media.githubusercontent.com/media/visgl/deck.gl-data/0446448b0b017fd5b91ec1fde0bbe05af11aa7aa/earth/tectonic-movements/v1/cao2024/rotations.parquet
+https://media.githubusercontent.com/media/visgl/deck.gl-data/0446448b0b017fd5b91ec1fde0bbe05af11aa7aa/earth/tectonic-movements/v1/muller2022/geometry.parquet
+https://media.githubusercontent.com/media/visgl/deck.gl-data/0446448b0b017fd5b91ec1fde0bbe05af11aa7aa/earth/tectonic-movements/v1/muller2022/rotations.parquet
 ```
 
 Use `raw.githubusercontent.com/visgl/deck.gl-data/0446448b0b017fd5b91ec1fde0bbe05af11aa7aa/...` for manifests and
 attribution. Raw URLs for LFS-backed Parquet may return a small LFS pointer instead
 of the data. With Git, install Git LFS and run `git lfs pull` with an include filter
-for `examples/tectonic-time-machine/v1/**/*.parquet`.
+for `earth/tectonic-movements/v1/**/*.parquet`.
 
 ## Data conventions
 

@@ -10,13 +10,13 @@ Large static data files used by the websites of various vis.gl repositories, to 
 * `images/docs` - Larger images and GIFs used inline in docs
 * `luma.gl` - assets for luma.gl
 * `3d-tiles` - 3D Tilesets
-* [`examples/tectonic-time-machine/v1`](examples/tectonic-time-machine/v1) - paired CC-BY-4.0 tectonic geometry and rotation Parquet snapshots
+* [`earth/tectonic-movements/v1`](earth/tectonic-movements/v1) - paired CC-BY-4.0 tectonic geometry and rotation Parquet snapshots
 
 ## Attributions / Licenses / Data Sources
 
 ### Tectonic reconstruction snapshots
 
-[`examples/tectonic-time-machine/v1`](examples/tectonic-time-machine/v1) contains
+[`earth/tectonic-movements/v1`](earth/tectonic-movements/v1) contains
 Cao et al. (2024), revision 2.4, and Müller et al. (2022), revision 1.2.4, converted
 from their pinned Zenodo datasets. These files retain **CC-BY-4.0**, with author
 credits, source links, changes and checksums documented beside each model. They are
