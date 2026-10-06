@@ -29,6 +29,7 @@
   },
   "geometry": "Unreconstructed present-day source templates; WKB Polygon lon/lat degrees; spherical edges; holes retained; no simplification",
   "missingRotations": "available=false and null quaternion; no fabricated identity rotation",
+  "rowGroupLayout": "100 Ma rotation windows, final endpoint included in last group; Cao geometry first; Muller geometry in 10 groups",
   "changes": [
     "GPML templates converted to GeoParquet",
     "Equivalent total rotations computed relative to anchor plate 0 at 10 Ma intervals",
@@ -49,24 +50,149 @@
   "skippedSourceMembers": 0,
   "files": [
     {
-      "path": "geometry.parquet",
-      "bytes": 904504,
-      "sha256": "f11a470f1ebe5271a7669576c23995ab4b43461b7f6e81940d3a86464d5b2998",
-      "rows": 877,
-      "rowGroups": 4,
-      "schema": "featureId: string\npolygonIndex: int32\nplateId: int32\nname: string\nbeginAge: double\nendAge: double\ngeometry: binary\n-- schema metadata --\nmath.gl.tectonic: '{\"ageUnit\": \"Ma before present\", \"anchorPlateId\": 0, \"' + 343\ngeo: '{\"version\": \"1.1.0\", \"primary_column\": \"geometry\", \"columns\": {\"geo' + 82",
+      "path": "tectonic.parquet",
+      "bytes": 1580095,
+      "sha256": "d8d75934659a34cb3b7873057ed614a550d22f2eeb85410057a8f7a471a051da",
+      "rows": 81422,
+      "rowGroups": 19,
+      "schema": "recordType: string\nfeatureId: string\npolygonIndex: int32\nplateId: int32\nname: string\nbeginAge: double\nendAge: double\ngeometry: binary\nage: int16\navailable: bool\nw: double\nx: double\ny: double\nz: double\n-- schema metadata --\nmath.gl.tectonic: '{\"ageUnit\": \"Ma before present\", \"anchorPlateId\": 0, \"' + 343\ngeo: '{\"version\": \"1.1.0\", \"primary_column\": \"geometry\", \"columns\": {\"geo' + 82\nmath.gl.tectonic.rowGroups: '[{\"maxAge\": null, \"minAge\": null, \"recordTyp' + 1632",
       "compression": "ZSTD",
-      "compressionLevel": 6
-    },
-    {
-      "path": "rotations.parquet",
-      "bytes": 1220467,
-      "sha256": "25ef203fee1d02f1bde3b293fc554b8d655228a22261a854bde84738b58aa2cd",
-      "rows": 80545,
-      "rowGroups": 181,
-      "schema": "age: int16\nplateId: int32\navailable: bool\nw: double\nx: double\ny: double\nz: double\n-- schema metadata --\nmath.gl.tectonic: '{\"ageUnit\": \"Ma before present\", \"anchorPlateId\": 0, \"' + 343",
-      "compression": "ZSTD",
-      "compressionLevel": 6
+      "compressionLevel": 6,
+      "rowGroupIndex": [
+        {
+          "rowGroup": 0,
+          "recordType": "geometry",
+          "rows": 877,
+          "minAge": null,
+          "maxAge": null
+        },
+        {
+          "rowGroup": 1,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 0,
+          "maxAge": 90
+        },
+        {
+          "rowGroup": 2,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 100,
+          "maxAge": 190
+        },
+        {
+          "rowGroup": 3,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 200,
+          "maxAge": 290
+        },
+        {
+          "rowGroup": 4,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 300,
+          "maxAge": 390
+        },
+        {
+          "rowGroup": 5,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 400,
+          "maxAge": 490
+        },
+        {
+          "rowGroup": 6,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 500,
+          "maxAge": 590
+        },
+        {
+          "rowGroup": 7,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 600,
+          "maxAge": 690
+        },
+        {
+          "rowGroup": 8,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 700,
+          "maxAge": 790
+        },
+        {
+          "rowGroup": 9,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 800,
+          "maxAge": 890
+        },
+        {
+          "rowGroup": 10,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 900,
+          "maxAge": 990
+        },
+        {
+          "rowGroup": 11,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 1000,
+          "maxAge": 1090
+        },
+        {
+          "rowGroup": 12,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 1100,
+          "maxAge": 1190
+        },
+        {
+          "rowGroup": 13,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 1200,
+          "maxAge": 1290
+        },
+        {
+          "rowGroup": 14,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 1300,
+          "maxAge": 1390
+        },
+        {
+          "rowGroup": 15,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 1400,
+          "maxAge": 1490
+        },
+        {
+          "rowGroup": 16,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 1500,
+          "maxAge": 1590
+        },
+        {
+          "rowGroup": 17,
+          "recordType": "rotation",
+          "rows": 4450,
+          "minAge": 1600,
+          "maxAge": 1690
+        },
+        {
+          "rowGroup": 18,
+          "recordType": "rotation",
+          "rows": 4895,
+          "minAge": 1700,
+          "maxAge": 1800
+        }
+      ]
     }
   ]
 }

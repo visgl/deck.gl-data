@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: Copyright (c) vis.gl contributors
 # Original offline conversion. Source data retains CC-BY-4.0; pyGPlates is an external tool.
-"""Create paired geometry and finite-rotation Parquet snapshots from pinned model archives.
+"""Create streamable geometry and finite-rotation Parquet snapshots from pinned model archives.
 
 Run in a separate environment: pip install pygplates==1.0.0 pyarrow==23.0.1
 No GPlates implementation is copied into, or shipped with, math.gl.
@@ -35,7 +35,9 @@ MODELS = {
         'record': 'https://zenodo.org/records/13636799',
         'archiveMD5': '1f409e19e42128a8cf245ce54b75f1ae',
         'geometry': 'Coastlines/shapes_coastlines_Merdith_etal.gpmlz',
-        'rotations': ['Rotations/1000_0_rotfile.rot', 'optimisation/1000_0_rotfile_MantleOpt.rot'],
+        # This complete model uses the optimised mantle frame. The paleomagnetic
+        # Rotations/1000_0_rotfile.rot is an alternative, never an extra time slice.
+        'rotations': ['optimisation/1000_0_rotfile_MantleOpt.rot'],
         'credit': 'R. Dietmar Müller, Nicolas Flament, John Cannon, Michael G. Tetley, Simon E. Williams, Xianzhi Cao, Ömer F. Bodur, Sabin Zahirovic and Andrew Merdith (2022); coastline templates after Merdith et al. (2021)',
     },
 }
@@ -114,15 +116,46 @@ def metadata(model_id, model):
     }, sort_keys=True).encode()}
 
 
-def write_table(path, table, row_group_size):
-    pq.write_table(table, path, compression='zstd', compression_level=6,
-                   row_group_size=row_group_size, write_statistics=True)
+def split_groups(table, count, unit=1):
+    """Split complete units (one age's plates for rotations) across exactly count groups."""
+    units = table.num_rows // unit
+    if table.num_rows % unit or units < count:
+        raise ValueError('Cannot split complete units into requested row groups')
+    return [table.slice((i * units // count) * unit,
+                        ((i + 1) * units // count - i * units // count) * unit)
+            for i in range(count)]
+
+
+def age_groups(table, plate_count, max_age):
+    # Half-open 100 Ma windows, with the model's final endpoint in the last group.
+    return [table.slice((start // 10) * plate_count,
+                        ((min(start + 100, max_age) - start) // 10 +
+                         (1 if start + 100 >= max_age else 0)) * plate_count)
+            for start in range(0, max_age, 100)]
+
+
+def write_table(path, table, groups):
+    index = []
+    for number, group in enumerate(groups):
+        ages = group.column('age').drop_null().to_pylist() if 'age' in group.column_names else []
+        record_type = (group.column('recordType')[0].as_py() if 'recordType' in group.column_names
+                       else ('rotation' if ages else 'geometry'))
+        index.append({'rowGroup': number, 'recordType': record_type, 'rows': group.num_rows,
+                      'minAge': min(ages) if ages else None, 'maxAge': max(ages) if ages else None})
+    table = table.replace_schema_metadata({**table.schema.metadata,
+        b'math.gl.tectonic.rowGroups': json.dumps(index, sort_keys=True).encode()})
+    # Writing one supplied chunk at a time preserves geometry/age boundaries.
+    with pq.ParquetWriter(path, table.schema, compression='zstd', compression_level=6,
+                          write_statistics=True) as writer:
+        for group in groups:
+            writer.write_table(group, row_group_size=group.num_rows)
     restored = pq.read_table(path)
     if not restored.equals(table):
         raise ValueError(f'Parquet round-trip mismatch: {path}')
     return {'path': path.name, 'bytes': path.stat().st_size, 'sha256': digest(path),
             'rows': table.num_rows, 'rowGroups': pq.ParquetFile(path).metadata.num_row_groups,
-            'schema': str(table.schema), 'compression': 'ZSTD', 'compressionLevel': 6}
+            'schema': str(table.schema), 'compression': 'ZSTD', 'compressionLevel': 6,
+            'rowGroupIndex': index}
 
 
 def convert(model_id, archive_path, output):
@@ -150,7 +183,7 @@ def convert(model_id, archive_path, output):
         for name in [model['geometry'], *model['rotations']]:
             source_hashes[name] = hashlib.sha256(archive.read(name)).hexdigest()
         geometry, skipped = geometry_rows(archive.read(model['geometry']))
-        files = [write_table(dest / 'geometry.parquet', pa.Table.from_pylist(geometry, schema=geometry_schema), 256)]
+        geometry_table = pa.Table.from_pylist(geometry, schema=geometry_schema)
         ids = sorted({row['plateId'] for row in geometry})
         rotation_paths = []
         for i, name in enumerate(model['rotations']):
@@ -174,8 +207,26 @@ def convert(model_id, archive_path, output):
                         raise ValueError('Non-unit quaternion')
                     q = [value / norm for value in q]
                 all_rows.append(dict(zip(rotation_schema.names, [age, pid, rotation is not None, *q])))
-        # One row group per complete age sample, with age min/max statistics for filtering.
-        files.append(write_table(dest / 'rotations.parquet', pa.Table.from_pylist(all_rows, schema=rotation_schema), len(ids)))
+        rotation_table = pa.Table.from_pylist(all_rows, schema=rotation_schema)
+        if model_id == 'CAO2024':
+            # A tagged union stores each template once, followed by rotation samples.
+            # Geometry first makes the templates usable before the full timeline loads.
+            combined_schema = pa.schema([
+                ('recordType', pa.string()), *geometry_schema,
+                *[field for field in rotation_schema if field.name != 'plateId'],
+            ], metadata=geometry_schema.metadata)
+            geometry_records = pa.Table.from_pylist(
+                [dict(recordType='geometry', **row) for row in geometry], schema=combined_schema)
+            rotation_records = pa.Table.from_pylist(
+                [dict(recordType='rotation', **row) for row in all_rows], schema=combined_schema)
+            table = pa.concat_tables([geometry_records, rotation_records])
+            groups = [geometry_records, *age_groups(rotation_records, len(ids), model['maxAge'])]
+            files = [write_table(dest / 'tectonic.parquet', table, groups)]
+        else:
+            files = [write_table(dest / 'geometry.parquet', geometry_table,
+                                 split_groups(geometry_table, 10)),
+                     write_table(dest / 'rotations.parquet', rotation_table,
+                                 age_groups(rotation_table, len(ids), model['maxAge']))]
         # Check nontrivial quaternion orientation against pyGPlates' independent point rotation.
         reference_checks = 0
         point = pygplates.PointOnSphere(10, 20)
@@ -200,6 +251,7 @@ def convert(model_id, archive_path, output):
         'ages': {'unit': 'Ma before present', 'min': 0, 'max': model['maxAge'], 'step': 10},
         'geometry': 'Unreconstructed present-day source templates; WKB Polygon lon/lat degrees; spherical edges; holes retained; no simplification',
         'missingRotations': 'available=false and null quaternion; no fabricated identity rotation',
+        'rowGroupLayout': '100 Ma rotation windows, final endpoint included in last group; Cao geometry first; Muller geometry in 10 groups',
         'changes': ['GPML templates converted to GeoParquet', 'Equivalent total rotations computed relative to anchor plate 0 at 10 Ma intervals', 'Raw source vertices retained; explicit ring closure added when absent', 'No plate topology, paleogeographic shoreline or future reconstruction exported'],
         'tools': {'pygplates': pygplates.__version__, 'pyarrow': pa.__version__},
         'verification': {'roundTrip': 'Every Parquet table equals its pre-write Arrow table',
@@ -208,7 +260,9 @@ def convert(model_id, archive_path, output):
         'files': files,
     }
     (dest / 'manifest.json').write_text(json.dumps(manifest, indent=2, ensure_ascii=False)+'\n')
-    (dest / 'ATTRIBUTION.md').write_text(f"# {model_id} Parquet snapshot\n\n{model['credit']}.\n\nSource: {model['record']} (version {model['version']}).\n\nLicense: [CC-BY-4.0]({LICENSE}). These data files are not relicensed as MIT.\n\nConverted by math.gl: present-day GPML polygons to GeoParquet, and finite rotations to 10 Ma quaternion samples. No source geometry simplification. See manifest.json for input/output checksums, exact frame, schemas, missing-data policy and conversion tools.\n\nThis snapshot represents this pinned model revision, not the mutable live GPlates service. Geometry and rotations must stay paired.\n")
+    pairing = ('Geometry and rotations share one tagged Parquet file.' if model_id == 'CAO2024'
+               else 'Geometry and rotations must stay paired. Only the complete optimised mantle rotation model is used; the alternative paleomagnetic model is excluded.')
+    (dest / 'ATTRIBUTION.md').write_text(f"# {model_id} Parquet snapshot\n\n{model['credit']}.\n\nSource: {model['record']} (version {model['version']}).\n\nLicense: [CC-BY-4.0]({LICENSE}). These data files are not relicensed as MIT.\n\nConverted by math.gl: present-day GPML polygons to GeoParquet, and finite rotations to 10 Ma quaternion samples. No source geometry simplification. See manifest.json for input/output checksums, exact frame, schemas, missing-data policy and conversion tools.\n\nThis snapshot represents this pinned model revision, not the mutable live GPlates service. {pairing}\n")
     print(model_id, json.dumps({'plates':len(ids), 'polygons':len(geometry), 'rotationRows':len(all_rows), 'files':[(f['path'],f['bytes']) for f in files]}, indent=2), flush=True)
 
 

@@ -10,7 +10,7 @@ Large static data files used by the websites of various vis.gl repositories, to 
 * `images/docs` - Larger images and GIFs used inline in docs
 * `luma.gl` - assets for luma.gl
 * `3d-tiles` - 3D Tilesets
-* [`earth/tectonic-movements/v1`](earth/tectonic-movements/v1) - paired CC-BY-4.0 tectonic geometry and rotation Parquet snapshots
+* [`earth/tectonic-movements/v1`](earth/tectonic-movements/v1) - streamable CC-BY-4.0 tectonic geometry and rotation Parquet snapshots
 
 ## Attributions / Licenses / Data Sources
 

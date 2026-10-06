@@ -1,7 +1,7 @@
 # deck.gl-data
 # SPDX-License-Identifier: MIT
 # SPDX-FileCopyrightText: Copyright (c) vis.gl contributors
-"""Validate the paired Parquet snapshots and their provenance manifests."""
+"""Validate the streamable Parquet snapshots and their provenance manifests."""
 import argparse
 import hashlib
 import json
@@ -21,6 +21,9 @@ ROTATIONS = pa.schema([
     ('w', pa.float64()), ('x', pa.float64()), ('y', pa.float64()), ('z', pa.float64()),
 ])
 
+COMBINED = pa.schema([('recordType', pa.string()), *GEOMETRY,
+                      *[field for field in ROTATIONS if field.name != 'plateId']])
+
 
 def require(condition, message):
     if not condition:
@@ -28,7 +31,7 @@ def require(condition, message):
 
 
 def validate(root):
-    total = 0
+    total = file_count = 0
     for name in ('cao2024', 'muller2022'):
         model = root / name
         manifest = json.loads((model / 'manifest.json').read_text())
@@ -39,7 +42,7 @@ def validate(root):
         tables = {}
         for record in manifest['files']:
             path = model / record['path']
-            require(path.name in ('geometry.parquet', 'rotations.parquet'), 'Unexpected snapshot file')
+            require(path.name in ('geometry.parquet', 'rotations.parquet', 'tectonic.parquet'), 'Unexpected snapshot file')
             data = path.read_bytes()
             require(data[:4] == b'PAR1' and data[-4:] == b'PAR1', 'Not binary Parquet')
             require(len(data) == record['bytes'], 'File size mismatch')
@@ -54,16 +57,59 @@ def validate(root):
                 for column in range(row_group.num_columns):
                     require(row_group.column(column).compression == 'ZSTD', 'Uncompressed column')
             table = parquet.read()
-            expected = GEOMETRY if path.name == 'geometry.parquet' else ROTATIONS
+            expected = {'geometry.parquet': GEOMETRY, 'rotations.parquet': ROTATIONS,
+                        'tectonic.parquet': COMBINED}[path.name]
             require(table.schema.remove_metadata().equals(expected), 'Column schema mismatch')
             metadata = json.loads(table.schema.metadata[b'math.gl.tectonic'])
             require(metadata['model'] == manifest['model'] and metadata['version'] == manifest['version'],
                     'Model revision mismatch')
             require(metadata['referenceFrame'] == manifest['referenceFrame'], 'Frame mismatch')
+            index = json.loads(table.schema.metadata[b'math.gl.tectonic.rowGroups'])
+            require(index == record['rowGroupIndex'], 'Footer/manifest row group index mismatch')
+            require(len(index) == parquet.num_row_groups, 'Incomplete row group index')
+            for number, entry in enumerate(index):
+                group = parquet.read_row_group(number)
+                require(entry['rowGroup'] == number and entry['rows'] == group.num_rows,
+                        'Incorrect indexed row group')
+                if 'recordType' in group.column_names:
+                    require(set(group.column('recordType').to_pylist()) == {entry['recordType']},
+                            'Mixed record types in row group')
+                ages_in_group = group.column('age').drop_null().to_pylist() if 'age' in group.column_names else []
+                require(entry['minAge'] == (min(ages_in_group) if ages_in_group else None) and
+                        entry['maxAge'] == (max(ages_in_group) if ages_in_group else None),
+                        'Indexed age range mismatch')
+                if entry['recordType'] == 'rotation':
+                    stats = parquet.metadata.row_group(number).column(group.schema.get_field_index('age')).statistics
+                    require(stats is not None and stats.min == entry['minAge'] and stats.max == entry['maxAge'],
+                            'Missing age range statistics')
+                elif 'age' in group.column_names:
+                    require(group.column('age').null_count == group.num_rows, 'Geometry age must be null')
+            # Exercise incremental decoding with column pruning, including boundaries within row groups.
+            streamed = pa.Table.from_batches(parquet.iter_batches(batch_size=1024, columns=['plateId']))
+            require(streamed.column('plateId').equals(table.column('plateId')), 'Streamed column mismatch')
             tables[path.name] = table
             total += len(data)
+            file_count += 1
 
-        geometry = tables['geometry.parquet']
+        expected_files = {'tectonic.parquet'} if name == 'cao2024' else {'geometry.parquet', 'rotations.parquet'}
+        require(set(tables) == expected_files, 'Snapshot layout mismatch')
+        if 'tectonic.parquet' in tables:
+            combined = tables['tectonic.parquet']
+            rows = combined.to_pylist()
+            require(all(row['recordType'] in ('geometry', 'rotation') for row in rows), 'Unknown record type')
+            polygons = [row for row in rows if row['recordType'] == 'geometry']
+            rotation_rows = [row for row in rows if row['recordType'] == 'rotation']
+            require(all(all(row[field] is None for field in ROTATIONS.names if field != 'plateId')
+                        for row in polygons), 'Geometry record has rotation fields')
+            require(all(all(row[field] is None for field in GEOMETRY.names if field != 'plateId')
+                        for row in rotation_rows), 'Rotation record has geometry fields')
+            geometry = pa.Table.from_pylist(polygons, schema=GEOMETRY.with_metadata(combined.schema.metadata))
+            rotation_file = 'tectonic.parquet'
+        else:
+            geometry = tables['geometry.parquet']
+            rotation_rows = tables['rotations.parquet'].to_pylist()
+            rotation_file = 'rotations.parquet'
+            require(pq.ParquetFile(model / 'geometry.parquet').num_row_groups == 10, 'Expected 10 geometry groups')
         geo = json.loads(geometry.schema.metadata[b'geo'])
         require(geo['version'] == '1.1.0' and geo['primary_column'] == 'geometry', 'GeoParquet metadata mismatch')
         require(geo['columns']['geometry'] == {
@@ -96,31 +142,34 @@ def validate(root):
                 offset += 16 * count
             require(offset == len(data), 'Trailing WKB bytes')
 
-        rotation_path = model / 'rotations.parquet'
-        parquet = pq.ParquetFile(rotation_path)
         ages = manifest['ages']
         expected_ages = list(range(ages['min'], ages['max'] + 1, ages['step']))
-        require(parquet.metadata.num_row_groups == len(expected_ages), 'Age group count mismatch')
+        rows_by_age = {}
         missing = 0
-        for index, age in enumerate(expected_ages):
-            group = parquet.metadata.row_group(index)
-            stats = group.column(0).statistics
-            require(stats is not None and stats.min == stats.max == age, 'Missing or incorrect age statistics')
-            rows = parquet.read_row_group(index).to_pylist()
-            require(len(rows) == len(ids), 'Incomplete age group')
-            require({row['plateId'] for row in rows} == ids, 'Unexpected or duplicate plates')
-            for row in rows:
-                require(row['age'] == age, 'Mixed ages in row group')
-                q = [row[component] for component in 'wxyz']
-                if row['available']:
-                    require(all(value is not None and math.isfinite(value) for value in q), 'Invalid quaternion')
-                    require(abs(sum(value * value for value in q) - 1) <= 1e-12, 'Non-unit quaternion')
-                else:
-                    require(q == [None] * 4, 'Missing rotation must not be fabricated')
-                    missing += 1
+        for row in rotation_rows:
+            rows_by_age.setdefault(row['age'], []).append(row)
+            q = [row[component] for component in 'wxyz']
+            if row['available']:
+                require(all(value is not None and math.isfinite(value) for value in q), 'Invalid quaternion')
+                require(abs(sum(value * value for value in q) - 1) <= 1e-12, 'Non-unit quaternion')
+            else:
+                require(row['available'] is False and q == [None] * 4, 'Missing rotation must not be fabricated')
+                missing += 1
+        require(sorted(rows_by_age) == expected_ages, 'Missing or unexpected sample ages')
+        for rows in rows_by_age.values():
+            require(len(rows) == len(ids) and {row['plateId'] for row in rows} == ids, 'Incomplete age sample')
+        rotation_record = next(record for record in manifest['files'] if record['path'] == rotation_file)
+        groups = [entry for entry in rotation_record['rowGroupIndex'] if entry['recordType'] == 'rotation']
+        require(len(groups) == math.ceil(ages['max'] / 100), 'Unexpected number of rotation windows')
+        for index, group in enumerate(groups):
+            start = index * 100
+            final = start + 100 >= ages['max']
+            last = ages['max'] if final else start + 90
+            require(group['minAge'] == start and group['maxAge'] == last, 'Unexpected 100 Ma window')
+            require(group['rows'] == len(range(start, last + 1, 10)) * len(ids), 'Incomplete window')
         print(f'{name}: {len(polygons)} polygons, {vertices} vertices, {holes} holes, '
               f'{len(expected_ages)} complete age groups, {missing} unavailable rotations')
-    print(f'Validated all four Parquet files: {total:,} bytes')
+    print(f'Validated all {file_count} Parquet files: {total:,} bytes')
 
 
 if __name__ == '__main__':
