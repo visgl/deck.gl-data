@@ -1,0 +1,78 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "id": "visgl-countries",
+  "title": "Natural Earth / DataHub",
+  "description": "Source rows, WKB geometry and attributes retained exactly. GeoParquet metadata upgraded to 1.1.0; ZSTD level 6. Country GeoJSON is retained separately from the legacy repository and is not claimed to be byte-equivalent to its Parquet geometry. Pinned legacy vector snapshot; geometry conventions follow the source.",
+  "license": "ODC-PDDL-1.0",
+  "providers": [
+    {
+      "name": "Natural Earth / DataHub",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://datahub.io/core/geo-countries"
+    },
+    {
+      "name": "vis.gl",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://github.com/visgl/deck.gl-data"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          83.63410065300012
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-10-07T16:31:40Z",
+          "2026-10-07T16:31:40Z"
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://opendatacommons.org/licenses/pddl/1-0/",
+      "type": "text/html"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://datahub.io/core/geo-countries",
+      "type": "text/html"
+    },
+    {
+      "rel": "item",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ]
+}

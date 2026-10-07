@@ -1,0 +1,113 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-egm2008-snapshot",
+  "collection": "visgl-egm2008",
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          -90
+        ],
+        [
+          180,
+          -90
+        ],
+        [
+          180,
+          90
+        ],
+        [
+          -180,
+          90
+        ],
+        [
+          -180,
+          -90
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-10-07T16:31:40Z",
+    "visgl:source_commit": "eecfffd67766d44de1a240ef548b6c053dcbd62f",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation or measurement time",
+    "visgl:rows": 9335520
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "egm2008-5.parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/geoid/egm2008/v1/egm2008-5.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 46287317,
+      "file:checksum": "1220e953e1335918ea326dc8d51fdef1308b3238782295b71eab267de6595caed168"
+    },
+    "egm2008-5.pgm": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/geoid/egm2008/v1/egm2008-5.pgm",
+      "type": "image/x-portable-graymap",
+      "roles": [
+        "data"
+      ],
+      "file:size": 18671444,
+      "file:checksum": "122096d55e88db186ddae892b00c5f8cc42a37cdac8ddb69b6de00af8c75dffb34a3"
+    },
+    "source.zip": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/geoid/egm2008/v1/source.zip",
+      "type": "application/zip",
+      "roles": [
+        "data"
+      ],
+      "file:size": 16773259,
+      "file:checksum": "1220408f05e0c04a9f2e17b9ea2d27123f936e9dea60128bb3411a272f8ddbe318dd"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/geoid/egm2008/v1/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/geoid/egm2008/v1/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

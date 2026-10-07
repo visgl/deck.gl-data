@@ -1,0 +1,78 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "id": "visgl-egm2008",
+  "title": "NGA EGM2008 5-minute geoid grid",
+  "description": "Original ZIP retained and PGM extracted unchanged. Full native grid converted without decimation; raw uint16 values and scaled float64 meter heights both retained. ZSTD level 6. Geoid undulation N in meters above WGS84; h = H + N. Not terrain elevation.",
+  "license": "other",
+  "providers": [
+    {
+      "name": "NGA; GeographicLib PGM distribution",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://geographiclib.sourceforge.io/C++/doc/geoid.html"
+    },
+    {
+      "name": "vis.gl",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://github.com/visgl/deck.gl-data"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-10-07T16:31:40Z",
+          "2026-10-07T16:31:40Z"
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://raw.githubusercontent.com/OSGeo/PROJ-data/master/us_nga/us_nga_README.txt",
+      "type": "text/plain"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://geographiclib.sourceforge.io/C++/doc/geoid.html",
+      "type": "text/html"
+    },
+    {
+      "rel": "item",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ]
+}
