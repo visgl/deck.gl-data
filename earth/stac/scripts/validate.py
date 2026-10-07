@@ -63,7 +63,7 @@ def validate(downloads=False):
             with urlopen(asset['href']) as response:
                 content = response.read()
             if 'data' in asset['roles']:
-                assert asset['href'].startswith('https://media.githubusercontent.com/media/')
+                assert asset['href'].startswith(('https://media.githubusercontent.com/media/', 'https://raw.githubusercontent.com/'))
                 digest = hashlib.sha256(content).hexdigest()
                 assert asset['file:size'] == len(content)
                 assert asset['file:checksum'] == '1220' + digest
@@ -72,7 +72,7 @@ def validate(downloads=False):
                 assert not content.startswith(b'version https://git-lfs.github.com/spec/v1')
                 assets_checked += 1
     catalog = pystac.Catalog.from_file(str(root))
-    assert len(list(catalog.get_all_items())) == 4
+    assert len(list(catalog.get_all_items())) == 7
     print(f'Validated {len(documents)} STAC documents, schema extensions, and reciprocal links.')
     if downloads:
         print(f'Verified {assets_checked} public data downloads against sizes, checksums, and source manifests.')

@@ -2,10 +2,11 @@
 
 Open [catalog.json](catalog.json) to discover the Earth datasets using a static
 [STAC 1.1.0](https://github.com/radiantearth/stac-spec/tree/v1.1.0) catalog.
-It contains three Collections and four Items:
+It contains six Collections and seven Items:
 
 - **EGM96**: one Item per grid resolution, each with PGM and Parquet assets.
 - **Cao 2024**: one Item with the combined geometry/rotation Parquet snapshot.
+- **Glaciations and climate**: Alpine PISM, PaleoMIST and Köhler 2015; each has a snapshot Item with source files, lossless Parquet and separate display previews.
 - **Müller 2022**: one Item pairing geometry and rotation Parquet assets.
 
 Collection and Item links are relative, so the catalog can be browsed locally or
@@ -25,7 +26,7 @@ in the linked manifests and attribution files.
 The EGM96 snapshot is pinned to the uploaded files in
 [dataset PR #46](https://github.com/visgl/deck.gl-data/pull/46); the catalog does not
 require those files to be merged into master first. Tectonic assets are pinned to
-the master snapshot that merged dataset PR #45. This catalog adds no dataset bytes.
+the master snapshot that merged dataset PR #45. Glaciation assets are pinned to the dataset commit in this PR.
 
 ## Licenses and time conventions
 
@@ -40,7 +41,7 @@ extents reflect those snapshot dates. This convention is explicit on every Item.
 Tectonic age coverage and sampling are separate `tectonic:*` properties in millions
 of years before present; geological times are not forced into Gregorian dates.
 `geoid:*` and `tectonic:*` properties are documented custom fields, not claims of
-compliance with additional STAC extensions.
+compliance with additional STAC extensions. Glaciation `paleo:age_min_ka`, `paleo:age_max_ka` and `paleo:age_unit` use thousands of years before present. Alpine and PaleoMIST data retain CC-BY-4.0; Köhler climate data retains CC-BY-3.0.
 
 ## Regeneration and validation
 

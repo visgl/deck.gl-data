@@ -1,0 +1,124 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-alpine-snapshot",
+  "collection": "visgl-alpine",
+  "bbox": [
+    4.229902267456055,
+    43.33127975463867,
+    16.476024627685547,
+    48.93292999267578
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          4.229902267456055,
+          43.33127975463867
+        ],
+        [
+          16.476024627685547,
+          43.33127975463867
+        ],
+        [
+          16.476024627685547,
+          48.93292999267578
+        ],
+        [
+          4.229902267456055,
+          48.93292999267578
+        ],
+        [
+          4.229902267456055,
+          43.33127975463867
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-10-07T14:04:06Z",
+    "visgl:source_commit": "2e1309718bbf225704d426ed785fe4988a4f6843",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
+    "paleo:age_min_ka": -0.0,
+    "paleo:age_max_ka": 119.0,
+    "paleo:age_unit": "ka before present"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "source.nc": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/alpine/source.nc",
+      "type": "application/x-netcdf",
+      "roles": [
+        "data"
+      ],
+      "file:size": 115047649,
+      "file:checksum": "1220d1aff41ff4147ce2804294679057443c07cb6644ee936f8d36f7384c59614dbb"
+    },
+    "grids.parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/alpine/grids.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 320932516,
+      "file:checksum": "122041e52a935a70e0c5d139917336f5f8892fe8c642a135416f1da44ee9d87f1f34"
+    },
+    "alpine.bin.gz": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/alpine/alpine.bin.gz",
+      "type": "application/gzip",
+      "roles": [
+        "data"
+      ],
+      "file:size": 959184,
+      "file:checksum": "122002e72bd17e032a0a97cc3e46dd55f70792083617db8f1cc5e310a90ec58b649f"
+    },
+    "preview-manifest.json": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/alpine/preview-manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 7772,
+      "file:checksum": "1220068dc0f99533bc9168ae50296a02cbfeaa5f7c88d0929612766ce6e70c77612f"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/alpine/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/alpine/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

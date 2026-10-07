@@ -1,0 +1,281 @@
+{
+  "id": "paleomist",
+  "credit": "Gowan et al. (2021)",
+  "dataset": "https://doi.pangaea.de/10.1594/PANGAEA.905800",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "ageUnit": "ka before present",
+  "ages": [
+    80.0,
+    77.5,
+    75.0,
+    72.5,
+    70.0,
+    67.5,
+    65.0,
+    62.5,
+    60.0,
+    57.5,
+    55.0,
+    52.5,
+    50.0,
+    47.5,
+    45.0,
+    42.5,
+    40.0,
+    37.5,
+    35.0,
+    32.5,
+    30.0,
+    27.5,
+    25.0,
+    22.5,
+    20.0,
+    17.5,
+    15.0,
+    12.5,
+    10.0,
+    7.5,
+    5.0,
+    2.5,
+    -0.0
+  ],
+  "sourceSha256": "ab6f74541339f5be44dd630dfb9c41189a6c1dfaf58fce6fc3c356430b539037",
+  "columns": [
+    "ice_thickness",
+    "base_topography",
+    "paleo_topography",
+    "sea_level"
+  ],
+  "sourceAttributes": {
+    "CDI": "Climate Data Interface version 1.9.9rc1 (https://mpimet.mpg.de/cdi)",
+    "Conventions": "CF-1.7",
+    "history": "Fri Apr 16 16:26:25 2021: cdo -O mergetime temp/0_1.nc temp/2500_1.nc temp/5000_1.nc temp/7500_1.nc temp/10000_1.nc temp/12500_1.nc temp/15000_1.nc temp/17500_1.nc temp/20000_1.nc temp/22500_1.nc temp/25000_1.nc temp/27500_1.nc temp/30000_1.nc temp/32500_1.nc temp/35000_1.nc temp/37500_1.nc temp/40000_1.nc temp/42500_1.nc temp/45000_1.nc temp/47500_1.nc temp/50000_1.nc temp/52500_1.nc temp/55000_1.nc temp/57500_1.nc temp/60000_1.nc temp/62500_1.nc temp/65000_1.nc temp/67500_1.nc temp/70000_1.nc temp/72500_1.nc temp/75000_1.nc temp/77500_1.nc temp/80000_1.nc reconstruction_1_degree.nc\nFri Apr 16 16:00:54 2021: cdo -O merge temp/paleo_topography_time2.nc temp/sea_level_time2.nc temp/base_topography_time2.nc temp/ice_thickness_time2.nc temp/0_1.nc\nFri Apr 16 16:00:54 2021: ncatted -O -a long_name,paleo_topography,o,c,topography accounting for ice thickness, sea level change and deformation temp/paleo_topography_time2.nc\nFri Apr 16 16:00:54 2021: ncatted -O -a units,paleo_topography,o,c,m temp/paleo_topography_time2.nc\nFri Apr 16 16:00:54 2021: ncrename -O -v z,paleo_topography temp/paleo_topography_time2.nc\nFri Apr 16 16:00:54 2021: ncecat -O -u time temp/paleo_topography_time.nc temp/paleo_topography_time2.nc\nFri Apr 16 16:00:54 2021: ncap2 -O -s defdim(\"time\",1);time[time]=-0.0;time@long_name=\"Time\";time@units=\"years since 1950-01-1;\";time@calendar=\"365_day\" temp/paleo_topography_0_1.nc temp/paleo_topography_time.nc\ngrdmath temp/ice_thickness_1.nc temp/deform_base_topo_1.nc ADD = temp/paleo_topography_0_1.nc",
+    "title": "Produced by grdmath",
+    "GMT_version": "6.1.1 [64-bit]",
+    "NCO": "netCDF Operators version 4.9.1 (Homepage = http://nco.sf.net, Code = http://github.com/nco/nco)",
+    "CDO": "Climate Data Operators version 1.9.9rc1 (https://mpimet.mpg.de/cdo)"
+  },
+  "variableAttributes": {
+    "ice_thickness": {
+      "long_name": "grounded ice thickness",
+      "units": "m",
+      "_FillValue": "nan",
+      "missing_value": "nan",
+      "actual_range": "[-4.82907444e-02  4.06673340e+03]"
+    },
+    "base_topography": {
+      "long_name": "deformed base topography excluding ice sheets",
+      "units": "m",
+      "_FillValue": "nan",
+      "missing_value": "nan",
+      "actual_range": "[-9210.83691406  5870.59814453]"
+    },
+    "paleo_topography": {
+      "long_name": "topography accounting for ice thickness, sea level change and deformation",
+      "units": "m",
+      "_FillValue": "nan",
+      "missing_value": "nan",
+      "actual_range": "[-9210.83691406  5870.59814453]"
+    },
+    "sea_level": {
+      "long_name": "calculated sea level excluding topography",
+      "units": "m",
+      "_FillValue": "nan",
+      "missing_value": "nan",
+      "actual_range": "[-376.41891479  301.30130005]"
+    }
+  },
+  "coordinateSystem": "OGC:CRS84",
+  "mapping": null,
+  "conversion": "Full native grid, all source ages and selected scientific variables; no interpolation, rounding or decimation. Masked values are null.",
+  "files": [
+    {
+      "path": "source.nc",
+      "bytes": 34538868,
+      "sha256": "ab6f74541339f5be44dd630dfb9c41189a6c1dfaf58fce6fc3c356430b539037"
+    },
+    {
+      "path": "grids.parquet",
+      "bytes": 36658476,
+      "sha256": "189579bdc7df92d3514f2c530bebf432e45a6c1a76bca52cb07ca7e35fc2df5b"
+    },
+    {
+      "path": "global.bin.gz",
+      "bytes": 4212526,
+      "sha256": "c61734223ec27dbefc98a9c16bb183124004699704eba80549007a53b96d1e6f"
+    },
+    {
+      "path": "preview-manifest.json",
+      "bytes": 2631,
+      "sha256": "edb0cdb2f0c3a80b7e7d7a7ac24277fb167b2db9e32b8d3efbc05041bf062ae4"
+    }
+  ],
+  "rowGroupIndex": [
+    {
+      "rowGroup": 0,
+      "ageKa": 80.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 1,
+      "ageKa": 77.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 2,
+      "ageKa": 75.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 3,
+      "ageKa": 72.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 4,
+      "ageKa": 70.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 5,
+      "ageKa": 67.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 6,
+      "ageKa": 65.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 7,
+      "ageKa": 62.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 8,
+      "ageKa": 60.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 9,
+      "ageKa": 57.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 10,
+      "ageKa": 55.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 11,
+      "ageKa": 52.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 12,
+      "ageKa": 50.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 13,
+      "ageKa": 47.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 14,
+      "ageKa": 45.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 15,
+      "ageKa": 42.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 16,
+      "ageKa": 40.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 17,
+      "ageKa": 37.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 18,
+      "ageKa": 35.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 19,
+      "ageKa": 32.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 20,
+      "ageKa": 30.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 21,
+      "ageKa": 27.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 22,
+      "ageKa": 25.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 23,
+      "ageKa": 22.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 24,
+      "ageKa": 20.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 25,
+      "ageKa": 17.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 26,
+      "ageKa": 15.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 27,
+      "ageKa": 12.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 28,
+      "ageKa": 10.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 29,
+      "ageKa": 7.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 30,
+      "ageKa": 5.0,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 31,
+      "ageKa": 2.5,
+      "rows": 65341
+    },
+    {
+      "rowGroup": 32,
+      "ageKa": -0.0,
+      "rows": 65341
+    }
+  ]
+}
