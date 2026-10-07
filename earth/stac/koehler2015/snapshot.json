@@ -1,0 +1,142 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-koehler2015-snapshot",
+  "collection": "visgl-koehler2015",
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          -90
+        ],
+        [
+          180,
+          -90
+        ],
+        [
+          180,
+          90
+        ],
+        [
+          -180,
+          90
+        ],
+        [
+          -180,
+          -90
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-10-07T14:04:06Z",
+    "visgl:source_commit": "2e1309718bbf225704d426ed785fe4988a4f6843",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
+    "paleo:age_min_ka": 0,
+    "paleo:age_max_ka": 5000,
+    "paleo:age_unit": "ka before present"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "source.zip": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/koehler2015/source.zip",
+      "type": "application/zip",
+      "roles": [
+        "data"
+      ],
+      "file:size": 80955,
+      "file:checksum": "12200f256898ea93d07dac22f1eeea9cf1bf4c2a77d525058cacde3900b3f837d050"
+    },
+    "temperature.dat": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/koehler2015/temperature.dat",
+      "type": "text/plain",
+      "roles": [
+        "data"
+      ],
+      "file:size": 183959,
+      "file:checksum": "1220a37ea1992947b8b7f57099f52936255a72e1baec5aca97e18d15a83ec9590de1"
+    },
+    "temperature.parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/koehler2015/temperature.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 152598,
+      "file:checksum": "1220d9b7e8f6ca08984fa97f00e561ac43290a54c48cf64f0c183a3ec1ddda532253"
+    },
+    "albedo.dat": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/koehler2015/albedo.dat",
+      "type": "text/plain",
+      "roles": [
+        "data"
+      ],
+      "file:size": 56695,
+      "file:checksum": "12204db6f4fb50c9bd9a0eb46d4288539965a61bc707939e46e2d1eb343c03620ffc"
+    },
+    "albedo.parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/koehler2015/albedo.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 50819,
+      "file:checksum": "1220ca957a9bf9a0bb1a1f895b1526b0336d2911a148935f88a7db7544b387eded02"
+    },
+    "climate.json": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/koehler2015/climate.json",
+      "type": "application/json",
+      "roles": [
+        "data"
+      ],
+      "file:size": 11002,
+      "file:checksum": "1220756b93fd16c9a3d5576b6736eedf4368eafcae21bda36794b5f5ef10af2644d9"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/koehler2015/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/2e1309718bbf225704d426ed785fe4988a4f6843/earth/glaciations/v1/koehler2015/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

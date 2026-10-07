@@ -1,0 +1,856 @@
+{
+  "id": "alpine",
+  "credit": "Julien Seguinot and colleagues (2018)",
+  "dataset": "https://doi.org/10.5281/zenodo.7802275",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "ageUnit": "ka before present",
+  "ages": [
+    119.0,
+    118.0,
+    117.0,
+    116.0,
+    115.0,
+    114.0,
+    113.0,
+    112.0,
+    111.0,
+    110.0,
+    109.0,
+    108.0,
+    107.0,
+    106.0,
+    105.0,
+    104.0,
+    103.0,
+    102.0,
+    101.0,
+    100.0,
+    99.0,
+    98.0,
+    97.0,
+    96.0,
+    95.0,
+    94.0,
+    93.0,
+    92.0,
+    91.0,
+    90.0,
+    89.0,
+    88.0,
+    87.0,
+    86.0,
+    85.0,
+    84.0,
+    83.0,
+    82.0,
+    81.0,
+    80.0,
+    79.0,
+    78.0,
+    77.0,
+    76.0,
+    75.0,
+    74.0,
+    73.0,
+    72.0,
+    71.0,
+    70.0,
+    69.0,
+    68.0,
+    67.0,
+    66.0,
+    65.0,
+    64.0,
+    63.0,
+    62.0,
+    61.0,
+    60.0,
+    59.0,
+    58.0,
+    57.0,
+    56.0,
+    55.0,
+    54.0,
+    53.0,
+    52.0,
+    51.0,
+    50.0,
+    49.0,
+    48.0,
+    47.0,
+    46.0,
+    45.0,
+    44.0,
+    43.0,
+    42.0,
+    41.0,
+    40.0,
+    39.0,
+    38.0,
+    37.0,
+    36.0,
+    35.0,
+    34.0,
+    33.0,
+    32.0,
+    31.0,
+    30.0,
+    29.0,
+    28.0,
+    27.0,
+    26.0,
+    25.0,
+    24.0,
+    23.0,
+    22.0,
+    21.0,
+    20.0,
+    19.0,
+    18.0,
+    17.0,
+    16.0,
+    15.0,
+    14.0,
+    13.0,
+    12.0,
+    11.0,
+    10.0,
+    9.0,
+    8.0,
+    7.0,
+    6.0,
+    5.0,
+    4.0,
+    3.0,
+    2.0,
+    1.0,
+    -0.0
+  ],
+  "sourceSha256": "d1aff41ff4147ce2804294679057443c07cb6644ee936f8d36f7384c59614dbb",
+  "columns": [
+    "thk",
+    "topg",
+    "tempicethk_basal",
+    "temppabase",
+    "uvelbase",
+    "uvelsurf",
+    "vvelbase",
+    "vvelsurf"
+  ],
+  "sourceAttributes": {
+    "Conventions": "CF-1.5",
+    "command": "julien@altair 2020-01-09 17:48:51 UTC: ./postprocess_alpcyc_cts.py\n",
+    "history": "julien@altair 2020-01-09 17:48:51 UTC: ./postprocess_alpcyc_cts.py\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i y0110000.nc -o y0120000.nc -ys -10000 -ye 0 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0120000-ts.nc -ts_times 10 -extra_file y0120000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid01039 2017-06-08 21:44:59 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\njsegu@nid00018 2017-06-08 20:03:47 CEST: PISM done.  Performance stats: 5.8189 wall clock hours, 837.9251 proc.-hours, 11.9263 model years per proc.-hour, PETSc MFlops = 393172281.28.\njsegu@nid00018 2017-06-08 19:14:39 CEST: PISM automatic backup at -12737.160, 5.000 hours after the beginning of the run\n\njsegu@nid00018 2017-06-08 18:14:39 CEST: PISM automatic backup at -14951.676, 4.000 hours after the beginning of the run\n\njsegu@nid00018 2017-06-08 17:14:39 CEST: PISM automatic backup at -16042.602, 3.000 hours after the beginning of the run\n\njsegu@nid00018 2017-06-08 16:14:39 CEST: PISM automatic backup at -17256.668, 2.000 hours after the beginning of the run\n\njsegu@nid00018 2017-06-08 15:14:39 CEST: PISM automatic backup at -18530.764, 1.000 hours after the beginning of the run\n\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i y0100000.nc -o y0110000.nc -ys -20000 -ye -10000 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0110000-ts.nc -ts_times 10 -extra_file y0110000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid00018 2017-06-08 14:14:39 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\njsegu@nid00210 2017-06-08 10:32:38 CEST: PISM done.  Performance stats: 9.9004 wall clock hours, 1425.6508 proc.-hours, 7.0097 model years per proc.-hour, PETSc MFlops = 362350217.32.\njsegu@nid00210 2017-06-08 09:38:37 CEST: PISM automatic backup at -20960.925, 9.000 hours after the beginning of the run\n\njsegu@nid00210 2017-06-08 08:38:37 CEST: PISM automatic backup at -22151.773, 8.000 hours after the beginning of the run\n\njsegu@nid00210 2017-06-08 07:38:37 CEST: PISM automatic backup at -23022.440, 7.000 hours after the beginning of the run\n\njsegu@nid00210 2017-06-08 06:38:36 CEST: PISM automatic backup at -23736.050, 6.000 hours after the beginning of the run\n\njsegu@nid00210 2017-06-08 05:38:36 CEST: PISM automatic backup at -24589.972, 5.000 hours after the beginning of the run\n\njsegu@nid00210 2017-06-08 04:38:36 CEST: PISM automatic backup at -25601.719, 4.000 hours after the beginning of the run\n\njsegu@nid00210 2017-06-08 03:38:36 CEST: PISM automatic backup at -26636.513, 3.000 hours after the beginning of the run\n\njsegu@nid00210 2017-06-08 02:38:36 CEST: PISM automatic backup at -27719.525, 2.000 hours after the beginning of the run\n\njsegu@nid00210 2017-06-08 01:38:36 CEST: PISM automatic backup at -28940.284, 1.000 hours after the beginning of the run\n\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i y0090000.nc -o y0100000.nc -ys -30000 -ye -20000 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0100000-ts.nc -ts_times 10 -extra_file y0100000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid00210 2017-06-08 00:38:36 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\njsegu@nid00222 2017-06-08 00:18:08 CEST: PISM done.  Performance stats: 9.1478 wall clock hours, 1317.2784 proc.-hours, 7.5864 model years per proc.-hour, PETSc MFlops = 429358527.38.\njsegu@nid00222 2017-06-08 00:09:17 CEST: PISM automatic backup at -30155.000, 9.000 hours after the beginning of the run\n\njsegu@nid00222 2017-06-07 23:09:17 CEST: PISM automatic backup at -31097.717, 8.000 hours after the beginning of the run\n\njsegu@nid00222 2017-06-07 22:09:17 CEST: PISM automatic backup at -32042.445, 7.000 hours after the beginning of the run\n\njsegu@nid00222 2017-06-07 21:09:17 CEST: PISM automatic backup at -33121.149, 6.000 hours after the beginning of the run\n\njsegu@nid00222 2017-06-07 20:09:17 CEST: PISM automatic backup at -34255.733, 5.000 hours after the beginning of the run\n\njsegu@nid00222 2017-06-07 19:09:16 CEST: PISM automatic backup at -35278.904, 4.000 hours after the beginning of the run\n\njsegu@nid00222 2017-06-07 18:09:16 CEST: PISM automatic backup at -36126.411, 3.000 hours after the beginning of the run\n\njsegu@nid00222 2017-06-07 17:09:16 CEST: PISM automatic backup at -37643.174, 2.000 hours after the beginning of the run\n\njsegu@nid00222 2017-06-07 16:09:16 CEST: PISM automatic backup at -38967.685, 1.000 hours after the beginning of the run\n\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i y0080000.nc -o y0090000.nc -ys -40000 -ye -30000 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0090000-ts.nc -ts_times 10 -extra_file y0090000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid00222 2017-06-07 15:09:16 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\njsegu@nid01308 2017-06-07 11:16:02 CEST: PISM done.  Performance stats: 7.6236 wall clock hours, 1097.8003 proc.-hours, 9.1031 model years per proc.-hour, PETSc MFlops = 464494025.08.\njsegu@nid01308 2017-06-07 10:38:37 CEST: PISM automatic backup at -40734.899, 7.000 hours after the beginning of the run\n\njsegu@nid01308 2017-06-07 09:38:37 CEST: PISM automatic backup at -41884.555, 6.000 hours after the beginning of the run\n\njsegu@nid01308 2017-06-07 08:38:37 CEST: PISM automatic backup at -43088.347, 5.000 hours after the beginning of the run\n\njsegu@nid01308 2017-06-07 07:38:37 CEST: PISM automatic backup at -44077.810, 4.000 hours after the beginning of the run\n\njsegu@nid01308 2017-06-07 06:38:37 CEST: PISM automatic backup at -45836.539, 3.000 hours after the beginning of the run\n\njsegu@nid01308 2017-06-07 05:38:37 CEST: PISM automatic backup at -47314.012, 2.000 hours after the beginning of the run\n\njsegu@nid01308 2017-06-07 04:38:37 CEST: PISM automatic backup at -48695.760, 1.000 hours after the beginning of the run\n\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i y0070000.nc -o y0080000.nc -ys -50000 -ye -40000 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0080000-ts.nc -ts_times 10 -extra_file y0080000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid01308 2017-06-07 03:38:37 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\njsegu@nid00074 2017-06-07 00:06:13 CEST: PISM done.  Performance stats: 6.7717 wall clock hours, 975.1205 proc.-hours, 10.2483 model years per proc.-hour, PETSc MFlops = 538512020.52.\njsegu@nid00074 2017-06-06 23:19:55 CEST: PISM automatic backup at -51090.197, 6.000 hours after the beginning of the run\n\njsegu@nid00074 2017-06-06 22:19:55 CEST: PISM automatic backup at -52648.901, 5.000 hours after the beginning of the run\n\njsegu@nid00074 2017-06-06 21:19:55 CEST: PISM automatic backup at -53992.208, 4.000 hours after the beginning of the run\n\njsegu@nid00074 2017-06-06 20:19:55 CEST: PISM automatic backup at -55183.535, 3.000 hours after the beginning of the run\n\njsegu@nid00074 2017-06-06 19:19:55 CEST: PISM automatic backup at -56759.035, 2.000 hours after the beginning of the run\n\njsegu@nid00074 2017-06-06 18:19:55 CEST: PISM automatic backup at -58716.044, 1.000 hours after the beginning of the run\n\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i y0060000.nc -o y0070000.nc -ys -60000 -ye -50000 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0070000-ts.nc -ts_times 10 -extra_file y0070000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid00074 2017-06-06 17:19:54 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\njsegu@nid01275 2017-06-06 16:43:33 CEST: PISM done.  Performance stats: 8.9236 wall clock hours, 1284.9919 proc.-hours, 7.7770 model years per proc.-hour, PETSc MFlops = 442099270.00.\njsegu@nid01275 2017-06-06 15:48:08 CEST: PISM automatic backup at -61154.095, 8.000 hours after the beginning of the run\n\njsegu@nid01275 2017-06-06 14:48:08 CEST: PISM automatic backup at -62172.197, 7.000 hours after the beginning of the run\n\njsegu@nid01275 2017-06-06 13:48:08 CEST: PISM automatic backup at -63288.528, 6.000 hours after the beginning of the run\n\njsegu@nid01275 2017-06-06 12:48:08 CEST: PISM automatic backup at -64430.580, 5.000 hours after the beginning of the run\n\njsegu@nid01275 2017-06-06 11:48:08 CEST: PISM automatic backup at -65395.631, 4.000 hours after the beginning of the run\n\njsegu@nid01275 2017-06-06 10:48:08 CEST: PISM automatic backup at -66474.373, 3.000 hours after the beginning of the run\n\njsegu@nid01275 2017-06-06 09:48:08 CEST: PISM automatic backup at -67636.096, 2.000 hours after the beginning of the run\n\njsegu@nid01275 2017-06-06 08:48:08 CEST: PISM automatic backup at -68621.710, 1.000 hours after the beginning of the run\n\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i y0050000.nc -o y0060000.nc -ys -70000 -ye -60000 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0060000-ts.nc -ts_times 10 -extra_file y0060000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid01275 2017-06-06 07:48:06 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\njsegu@nid00737 2017-06-06 00:38:09 CEST: PISM done.  Performance stats: 6.7551 wall clock hours, 972.7363 proc.-hours, 10.2735 model years per proc.-hour, PETSc MFlops = 525544091.07.\njsegu@nid00737 2017-06-05 23:52:52 CEST: PISM automatic backup at -71118.762, 6.000 hours after the beginning of the run\n\njsegu@nid00737 2017-06-05 22:52:52 CEST: PISM automatic backup at -72084.767, 5.000 hours after the beginning of the run\n\njsegu@nid00737 2017-06-05 21:52:52 CEST: PISM automatic backup at -73973.014, 4.000 hours after the beginning of the run\n\njsegu@nid00737 2017-06-05 20:52:52 CEST: PISM automatic backup at -75344.781, 3.000 hours after the beginning of the run\n\njsegu@nid00737 2017-06-05 19:52:51 CEST: PISM automatic backup at -76672.184, 2.000 hours after the beginning of the run\n\njsegu@nid00737 2017-06-05 18:52:51 CEST: PISM automatic backup at -77985.435, 1.000 hours after the beginning of the run\n\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i y0040000.nc -o y0050000.nc -ys -80000 -ye -70000 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0050000-ts.nc -ts_times 10 -extra_file y0050000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid00737 2017-06-05 17:52:51 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\njsegu@nid00734 2017-06-05 16:48:30 CEST: PISM done.  Performance stats: 5.1399 wall clock hours, 740.1473 proc.-hours, 13.5019 model years per proc.-hour, PETSc MFlops = 480199446.04.\njsegu@nid00734 2017-06-05 16:40:06 CEST: PISM automatic backup at -80257.164, 5.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 15:40:06 CEST: PISM automatic backup at -82207.362, 4.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 14:40:06 CEST: PISM automatic backup at -84499.531, 3.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 13:40:06 CEST: PISM automatic backup at -86302.866, 2.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 12:40:06 CEST: PISM automatic backup at -88062.470, 1.000 hours after the beginning of the run\n\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i y0030000.nc -o y0040000.nc -ys -90000 -ye -80000 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0040000-ts.nc -ts_times 10 -extra_file y0040000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid00734 2017-06-05 11:40:06 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\njsegu@nid00734 2017-06-05 11:39:24 CEST: PISM done.  Performance stats: 5.1845 wall clock hours, 746.5690 proc.-hours, 13.3857 model years per proc.-hour, PETSc MFlops = 505377654.23.\njsegu@nid00734 2017-06-05 11:28:20 CEST: PISM automatic backup at -90297.169, 5.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 10:28:20 CEST: PISM automatic backup at -92198.280, 4.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 09:28:20 CEST: PISM automatic backup at -94110.428, 3.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 08:28:19 CEST: PISM automatic backup at -96126.804, 2.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 07:28:19 CEST: PISM automatic backup at -98095.000, 1.000 hours after the beginning of the run\n\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i y0020000.nc -o y0030000.nc -ys -100000 -ye -90000 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0030000-ts.nc -ts_times 10 -extra_file y0030000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid00734 2017-06-05 06:28:19 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\njsegu@nid00734 2017-06-05 06:27:24 CEST: PISM done.  Performance stats: 5.8071 wall clock hours, 836.2195 proc.-hours, 11.9507 model years per proc.-hour, PETSc MFlops = 557058488.86.\njsegu@nid00734 2017-06-05 05:38:59 CEST: PISM automatic backup at -101593.225, 5.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 04:38:59 CEST: PISM automatic backup at -103047.124, 4.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 03:38:59 CEST: PISM automatic backup at -105051.520, 3.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 02:38:59 CEST: PISM automatic backup at -106980.000, 2.000 hours after the beginning of the run\n\njsegu@nid00734 2017-06-05 01:38:59 CEST: PISM automatic backup at -108268.226, 1.000 hours after the beginning of the run\n\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i y0010000.nc -o y0020000.nc -ys -110000 -ye -100000 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0020000-ts.nc -ts_times 10 -extra_file y0020000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid00734 2017-06-05 00:38:58 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\njsegu@nid00318 2017-06-05 00:37:57 CEST: PISM done.  Performance stats: 3.0542 wall clock hours, 439.8106 proc.-hours, 22.7220 model years per proc.-hour, PETSc MFlops = 282556137.86.\njsegu@nid00318 2017-06-05 00:34:42 CEST: PISM automatic backup at -110078.541, 3.000 hours after the beginning of the run\n\njsegu@nid00318 2017-06-04 23:34:42 CEST: PISM automatic backup at -112035.337, 2.000 hours after the beginning of the run\n\njsegu@nid00318 2017-06-04 22:34:41 CEST: PISM automatic backup at -114375.407, 1.000 hours after the beginning of the run\n\n /users/jsegu/software/opt/pism-e9d2d1f/daint-gnu/bin/pismr -i /users/jsegu/pism/input/boot/alps-srtm+thk+gou11simi-2km.nc -bootstrap -Mx 451 -My 301 -Mz 126 -Mbz 31 -Lz 5000.0 -Lbz 3000.0 -z_spacing equal -o y0010000.nc -ys -120000 -ye -110000 -config_override config.nc -atmosphere given,lapse_rate,delta_T,paleo_precip -atmosphere_given_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_given_period 1 -timestep_hit_multiples 1 -temp_lapse_rate 6.0 -atmosphere_lapse_rate_file /users/jsegu/pism/input/atm/alps-wcnn-2km.dev.nc -atmosphere_delta_T_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -atmosphere_paleo_precip_file /users/jsegu/pism/input/dt/epica3222cool1220.nc -surface pdd -pdd_sd_period 1 -pdd_sd_file /users/jsegu/pism/input/sd/alps-erai-2km.nc -ts_file y0010000-ts.nc -ts_times 10 -extra_file y0010000-extra.nc -extra_times 100 -extra_vars bmelt,bwat,bwatvel,bwp,cell_area,climatic_mass_balance,dbdt,dHdt,diffusivity,lat,lon,mask,rank,taub,tauc,taud,tempicethk_basal,temppabase,tempsurf,thk,tillwat,topg,usurf,velbase,velbase_mag,velsurf,velsurf_mag,wvelbase,wvelsurf\njsegu@nid00318 2017-06-04 21:34:41 CEST: PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900) started on 144 procs.\n2017-05-09 17:36:42 CEST: /home/juliens/code/r.out.pism/r.out.pism.py --o usurf=srtm bheatflx=heatflux_gou11simi thk=thicksum output=alps-srtm+thk+gou11simi-2km.nc",
+    "proj4": "+units=m +proj=utm +no_defs +zone=32 +a=6378137 +rf=298.257223563 +towgs84=0.000,0.000,0.000 +to_meter=1",
+    "source": "PISM (development e9d2d1f committed by Constantine Khroulev on 2017-03-07 14:01:37 -0900)\nCMake 3.6.0.\nPetsc Release Version 3.7.5, Jan, 01, 2017 \nPETSc configure: \nMPI VERSION    : CRAY MPICH version 7.5.0 (ANL base 3.2rc1)\nMPI BUILD INFO : Built Fri Oct 21 13:35:57 2016 by jemison (git hash 1cb66d6) MT-G\nNetCDF 4.4.1 of Jul 19 2016 17:00:05 $.\nFFTW fftw-3.3.5.\nGSL 2.3.\nPROJ.4 Rel. 4.9.3, 15 August 2016.\n",
+    "author": "Julien Seguinot",
+    "title": "Alpine ice sheet glacial cycle simulations spatial diagnostics",
+    "subtitle": "2km EPICA simulation with precipitation reductions",
+    "institution": "ETH Z\u00fcrich, Switzerland and Hokkaido University, Japan"
+  },
+  "variableAttributes": {
+    "thk": {
+      "_FillValue": "nan",
+      "units": "m",
+      "valid_min": "0.0",
+      "coordinates": "time",
+      "long_name": "land ice thickness",
+      "pism_intent": "model_state",
+      "standard_name": "land_ice_thickness",
+      "grid_mapping": "mapping"
+    },
+    "topg": {
+      "_FillValue": "nan",
+      "units": "m",
+      "coordinates": "time",
+      "long_name": "bedrock surface elevation",
+      "pism_intent": "model_state",
+      "standard_name": "bedrock_altitude",
+      "grid_mapping": "mapping"
+    },
+    "tempicethk_basal": {
+      "_FillValue": "-2e+09",
+      "units": "m",
+      "coordinates": "time",
+      "long_name": "thickness of the basal layer of temperate ice",
+      "pism_intent": "diagnostic",
+      "grid_mapping": "mapping"
+    },
+    "temppabase": {
+      "_FillValue": "nan",
+      "units": "Celsius",
+      "coordinates": "time",
+      "long_name": "pressure-adjusted ice temperature at the base of ice",
+      "pism_intent": "diagnostic",
+      "grid_mapping": "mapping"
+    },
+    "uvelbase": {
+      "_FillValue": "-2e+09",
+      "units": "m year-1",
+      "valid_range": "[-1.e+06  1.e+06]",
+      "coordinates": "time",
+      "long_name": "x-component of the horizontal velocity of ice at the base of ice",
+      "pism_intent": "diagnostic",
+      "standard_name": "land_ice_basal_x_velocity",
+      "grid_mapping": "mapping"
+    },
+    "uvelsurf": {
+      "_FillValue": "-2e+09",
+      "units": "m year-1",
+      "valid_range": "[-1.e+06  1.e+06]",
+      "coordinates": "time",
+      "long_name": "x-component of the horizontal velocity of ice at ice surface",
+      "pism_intent": "diagnostic",
+      "standard_name": "land_ice_surface_x_velocity",
+      "grid_mapping": "mapping"
+    },
+    "vvelbase": {
+      "_FillValue": "-2e+09",
+      "units": "m year-1",
+      "valid_range": "[-1.e+06  1.e+06]",
+      "coordinates": "time",
+      "long_name": "y-component of the horizontal velocity of ice at the base of ice",
+      "pism_intent": "diagnostic",
+      "standard_name": "land_ice_basal_y_velocity",
+      "grid_mapping": "mapping"
+    },
+    "vvelsurf": {
+      "_FillValue": "-2e+09",
+      "units": "m year-1",
+      "valid_range": "[-1.e+06  1.e+06]",
+      "coordinates": "time",
+      "long_name": "y-component of the horizontal velocity of ice at ice surface",
+      "pism_intent": "diagnostic",
+      "standard_name": "land_ice_surface_y_velocity",
+      "grid_mapping": "mapping"
+    }
+  },
+  "coordinateSystem": "EPSG:32632",
+  "mapping": "+units=m +proj=utm +no_defs +zone=32 +a=6378137 +rf=298.257223563 +towgs84=0.000,0.000,0.000 +to_meter=1",
+  "conversion": "Full native grid, all source ages and selected scientific variables; no interpolation, rounding or decimation. Masked values are null.",
+  "files": [
+    {
+      "path": "source.nc",
+      "bytes": 115047649,
+      "sha256": "d1aff41ff4147ce2804294679057443c07cb6644ee936f8d36f7384c59614dbb"
+    },
+    {
+      "path": "grids.parquet",
+      "bytes": 320932516,
+      "sha256": "41e52a935a70e0c5d139917336f5f8892fe8c642a135416f1da44ee9d87f1f34"
+    },
+    {
+      "path": "alpine.bin.gz",
+      "bytes": 959184,
+      "sha256": "02e72bd17e032a0a97cc3e46dd55f70792083617db8f1cc5e310a90ec58b649f"
+    },
+    {
+      "path": "preview-manifest.json",
+      "bytes": 7772,
+      "sha256": "068dc0f99533bc9168ae50296a02cbfeaa5f7c88d0929612766ce6e70c77612f"
+    }
+  ],
+  "rowGroupIndex": [
+    {
+      "rowGroup": 0,
+      "ageKa": 119.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 1,
+      "ageKa": 118.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 2,
+      "ageKa": 117.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 3,
+      "ageKa": 116.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 4,
+      "ageKa": 115.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 5,
+      "ageKa": 114.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 6,
+      "ageKa": 113.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 7,
+      "ageKa": 112.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 8,
+      "ageKa": 111.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 9,
+      "ageKa": 110.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 10,
+      "ageKa": 109.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 11,
+      "ageKa": 108.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 12,
+      "ageKa": 107.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 13,
+      "ageKa": 106.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 14,
+      "ageKa": 105.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 15,
+      "ageKa": 104.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 16,
+      "ageKa": 103.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 17,
+      "ageKa": 102.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 18,
+      "ageKa": 101.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 19,
+      "ageKa": 100.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 20,
+      "ageKa": 99.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 21,
+      "ageKa": 98.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 22,
+      "ageKa": 97.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 23,
+      "ageKa": 96.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 24,
+      "ageKa": 95.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 25,
+      "ageKa": 94.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 26,
+      "ageKa": 93.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 27,
+      "ageKa": 92.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 28,
+      "ageKa": 91.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 29,
+      "ageKa": 90.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 30,
+      "ageKa": 89.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 31,
+      "ageKa": 88.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 32,
+      "ageKa": 87.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 33,
+      "ageKa": 86.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 34,
+      "ageKa": 85.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 35,
+      "ageKa": 84.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 36,
+      "ageKa": 83.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 37,
+      "ageKa": 82.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 38,
+      "ageKa": 81.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 39,
+      "ageKa": 80.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 40,
+      "ageKa": 79.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 41,
+      "ageKa": 78.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 42,
+      "ageKa": 77.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 43,
+      "ageKa": 76.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 44,
+      "ageKa": 75.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 45,
+      "ageKa": 74.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 46,
+      "ageKa": 73.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 47,
+      "ageKa": 72.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 48,
+      "ageKa": 71.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 49,
+      "ageKa": 70.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 50,
+      "ageKa": 69.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 51,
+      "ageKa": 68.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 52,
+      "ageKa": 67.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 53,
+      "ageKa": 66.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 54,
+      "ageKa": 65.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 55,
+      "ageKa": 64.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 56,
+      "ageKa": 63.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 57,
+      "ageKa": 62.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 58,
+      "ageKa": 61.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 59,
+      "ageKa": 60.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 60,
+      "ageKa": 59.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 61,
+      "ageKa": 58.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 62,
+      "ageKa": 57.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 63,
+      "ageKa": 56.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 64,
+      "ageKa": 55.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 65,
+      "ageKa": 54.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 66,
+      "ageKa": 53.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 67,
+      "ageKa": 52.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 68,
+      "ageKa": 51.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 69,
+      "ageKa": 50.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 70,
+      "ageKa": 49.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 71,
+      "ageKa": 48.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 72,
+      "ageKa": 47.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 73,
+      "ageKa": 46.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 74,
+      "ageKa": 45.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 75,
+      "ageKa": 44.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 76,
+      "ageKa": 43.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 77,
+      "ageKa": 42.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 78,
+      "ageKa": 41.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 79,
+      "ageKa": 40.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 80,
+      "ageKa": 39.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 81,
+      "ageKa": 38.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 82,
+      "ageKa": 37.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 83,
+      "ageKa": 36.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 84,
+      "ageKa": 35.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 85,
+      "ageKa": 34.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 86,
+      "ageKa": 33.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 87,
+      "ageKa": 32.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 88,
+      "ageKa": 31.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 89,
+      "ageKa": 30.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 90,
+      "ageKa": 29.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 91,
+      "ageKa": 28.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 92,
+      "ageKa": 27.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 93,
+      "ageKa": 26.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 94,
+      "ageKa": 25.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 95,
+      "ageKa": 24.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 96,
+      "ageKa": 23.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 97,
+      "ageKa": 22.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 98,
+      "ageKa": 21.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 99,
+      "ageKa": 20.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 100,
+      "ageKa": 19.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 101,
+      "ageKa": 18.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 102,
+      "ageKa": 17.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 103,
+      "ageKa": 16.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 104,
+      "ageKa": 15.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 105,
+      "ageKa": 14.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 106,
+      "ageKa": 13.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 107,
+      "ageKa": 12.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 108,
+      "ageKa": 11.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 109,
+      "ageKa": 10.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 110,
+      "ageKa": 9.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 111,
+      "ageKa": 8.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 112,
+      "ageKa": 7.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 113,
+      "ageKa": 6.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 114,
+      "ageKa": 5.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 115,
+      "ageKa": 4.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 116,
+      "ageKa": 3.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 117,
+      "ageKa": 2.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 118,
+      "ageKa": 1.0,
+      "rows": 135751
+    },
+    {
+      "rowGroup": 119,
+      "ageKa": -0.0,
+      "rows": 135751
+    }
+  ]
+}

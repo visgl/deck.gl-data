@@ -1,0 +1,89 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "id": "visgl-muller2022",
+  "title": "Müller et al. (2022) tectonic snapshot",
+  "description": "CC-BY-4.0 present-day geometry templates and finite rotations. Geometry is unreconstructed; geologic ages in Ma before present are separate from the STAC snapshot datetime. R. Dietmar Müller, Nicolas Flament, John Cannon, Michael G. Tetley, Simon E. Williams, Xianzhi Cao, Ömer F. Bodur, Sabin Zahirovic and Andrew Merdith (2022); coastline templates after Merdith et al. (2021)",
+  "license": "CC-BY-4.0",
+  "providers": [
+    {
+      "name": "R. Dietmar Müller, Nicolas Flament, John Cannon, Michael G. Tetley, Simon E. Williams, Xianzhi Cao, Ömer F. Bodur, Sabin Zahirovic and Andrew Merdith (2022); coastline templates after Merdith et al. (2021)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://zenodo.org/records/13636799"
+    },
+    {
+      "name": "vis.gl",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://github.com/visgl/deck.gl-data"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-10-06T23:01:40Z",
+          "2026-10-06T23:01:40Z"
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://zenodo.org/records/13636799",
+      "type": "text/html"
+    },
+    {
+      "rel": "item",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "summaries": {
+    "tectonic:model": [
+      "MULLER2022"
+    ],
+    "tectonic:age_min_ma": [
+      0
+    ],
+    "tectonic:age_max_ma": [
+      1000
+    ]
+  }
+}
