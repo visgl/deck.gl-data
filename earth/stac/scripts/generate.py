@@ -122,3 +122,6 @@ if __name__ == '__main__':
     generate()
     from glaciations import generate_glaciations
     generate_glaciations()
+    from reference import generate_reference
+    generate_reference()
+

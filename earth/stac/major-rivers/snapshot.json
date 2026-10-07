@@ -1,0 +1,104 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-major-rivers-snapshot",
+  "collection": "visgl-major-rivers",
+  "bbox": [
+    -164.88743636363637,
+    -36.96944545454546,
+    160.76359563636362,
+    71.39248954545454
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -164.88743636363637,
+          -36.96944545454546
+        ],
+        [
+          160.76359563636362,
+          -36.96944545454546
+        ],
+        [
+          160.76359563636362,
+          71.39248954545454
+        ],
+        [
+          -164.88743636363637,
+          71.39248954545454
+        ],
+        [
+          -164.88743636363637,
+          -36.96944545454546
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-10-07T16:31:40Z",
+    "visgl:source_commit": "eecfffd67766d44de1a240ef548b6c053dcbd62f",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation or measurement time",
+    "visgl:rows": 98
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "major-rivers.parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/hydrography/v1/major-rivers/major-rivers.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 305826,
+      "file:checksum": "1220a24fc1034fa5fb0bb4678100bc98d978dc1b575ae55a77dc69e51d151103528a"
+    },
+    "source.parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/hydrography/v1/major-rivers/source.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 310719,
+      "file:checksum": "12207a2c47f37efcafaa6146b9d6ea5394c3aca8944662c4051a4c1c34b3ae784dc8"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/hydrography/v1/major-rivers/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/hydrography/v1/major-rivers/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

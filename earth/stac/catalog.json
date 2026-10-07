@@ -50,6 +50,24 @@
       "href": "koehler2015/collection.json",
       "type": "application/json",
       "title": "Köhler, de Boer, von der Heydt, Stap and van de Wal (2015) — koehler2015"
+    },
+    {
+      "rel": "child",
+      "href": "countries/collection.json",
+      "type": "application/json",
+      "title": "Natural Earth / DataHub"
+    },
+    {
+      "rel": "child",
+      "href": "major-rivers/collection.json",
+      "type": "application/json",
+      "title": "World Bank: Major Rivers of the World"
+    },
+    {
+      "rel": "child",
+      "href": "egm2008/collection.json",
+      "type": "application/json",
+      "title": "NGA EGM2008 5-minute geoid grid"
     }
   ]
 }

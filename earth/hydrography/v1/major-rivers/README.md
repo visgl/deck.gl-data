@@ -10,4 +10,4 @@ geometry coordinates remain longitude/latitude. These are selected major rivers,
 not a complete hydrographic network or a map of seasonal discharge.
 
 Legacy formats/geoparquet paths remain available. Conversion and verification:
-../../../../scripts/prepare-reference.py.
+../../../scripts/prepare-reference.py.

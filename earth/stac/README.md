@@ -2,8 +2,9 @@
 
 Open [catalog.json](catalog.json) to discover the Earth datasets using a static
 [STAC 1.1.0](https://github.com/radiantearth/stac-spec/tree/v1.1.0) catalog.
-It contains six Collections and seven Items:
+It contains nine Collections and ten Items:
 
+- **Earth reference datasets**: EGM2008 geoid, countries and major rivers, with original and converted assets.
 - **EGM96**: one Item per grid resolution, each with PGM and Parquet assets.
 - **Cao 2024**: one Item with the combined geometry/rotation Parquet snapshot.
 - **Glaciations and climate**: Alpine PISM, PaleoMIST and Köhler 2015; each has a snapshot Item with source files, lossless Parquet and separate display previews.

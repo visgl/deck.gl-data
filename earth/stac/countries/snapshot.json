@@ -1,0 +1,113 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-countries-snapshot",
+  "collection": "visgl-countries",
+  "bbox": [
+    -180,
+    -90,
+    180,
+    83.63410065300012
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          -90
+        ],
+        [
+          180,
+          -90
+        ],
+        [
+          180,
+          83.63410065300012
+        ],
+        [
+          -180,
+          83.63410065300012
+        ],
+        [
+          -180,
+          -90
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-10-07T16:31:40Z",
+    "visgl:source_commit": "eecfffd67766d44de1a240ef548b6c053dcbd62f",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation or measurement time",
+    "visgl:rows": 255
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "countries.geojson": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/boundaries/v1/countries/countries.geojson",
+      "type": "application/geo+json",
+      "roles": [
+        "data"
+      ],
+      "file:size": 24090863,
+      "file:checksum": "1220ec97d0cb24c4b5d986db540f3c25c067b31d5aaa4b57478f1b10ff8e8f9552fa"
+    },
+    "countries.parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/boundaries/v1/countries/countries.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 5301679,
+      "file:checksum": "12203a30af742c2fdf6180bb4a7b527985deb467cfddb61b04f64fb79330b21a782f"
+    },
+    "source.parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/boundaries/v1/countries/source.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 6012745,
+      "file:checksum": "12201bbfde04980c5c714fcd9e8759ccccf28793126015cfa2599c023937e8f12dfe"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/boundaries/v1/countries/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/eecfffd67766d44de1a240ef548b6c053dcbd62f/earth/boundaries/v1/countries/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

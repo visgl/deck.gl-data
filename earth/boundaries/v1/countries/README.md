@@ -11,4 +11,4 @@ is the existing separate GeoJSON fixture; do not assume coordinate precision or
 byte-for-byte equivalence between fixtures. Existing formats/* paths stay available.
 Country and disputed-boundary conventions follow the source, not a new policy.
 
-Conversion and verification: ../../../../scripts/prepare-reference.py.
+Conversion and verification: ../../../scripts/prepare-reference.py.
