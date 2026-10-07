@@ -1,0 +1,70 @@
+{
+  "model": "EGM96",
+  "source": "https://downloads.sourceforge.net/project/geographiclib/geoids-distrib/egm96-15.tar.bz2",
+  "sourceSha256": "8b1ebad1ebae0a045502d0edb9cc51553da1d3914f01e07470c11b3bed75048e",
+  "license": "Public domain (NGA model data)",
+  "files": {
+    "geoid-egm96-low.parquet": {
+      "model": "EGM96",
+      "license": "Public domain (NGA model data)",
+      "source": "https://downloads.sourceforge.net/project/geographiclib/geoids-distrib/egm96-15.tar.bz2",
+      "sourceSha256": "8b1ebad1ebae0a045502d0edb9cc51553da1d3914f01e07470c11b3bed75048e",
+      "pgmFile": "geoid-egm96-low.pgm",
+      "pgmSha256": "6927106a9bfbe1157b8610c8fb2470a8986f8d74c89f1715f26043019efd26e5",
+      "width": 360,
+      "height": 181,
+      "spacingArcMinutes": 60,
+      "offset": -108.0,
+      "scale": 0.003,
+      "units": "meters",
+      "heightReference": "WGS84 ellipsoid",
+      "heightDefinition": "geoid undulation N; ellipsoidal h = orthometric H + N",
+      "order": "row-major, north to south, columns east from 0 degrees",
+      "longitudeRange": "[-180, 180)",
+      "polesIncluded": true,
+      "preview": true,
+      "rows": 65160,
+      "bytes": 463109,
+      "sha256": "dfa1624d41761774802d479d193723f42feaff2da3f4d03af5ad32cd1e7c0ad8"
+    },
+    "geoid-egm96-hi.parquet": {
+      "model": "EGM96",
+      "license": "Public domain (NGA model data)",
+      "source": "https://downloads.sourceforge.net/project/geographiclib/geoids-distrib/egm96-15.tar.bz2",
+      "sourceSha256": "8b1ebad1ebae0a045502d0edb9cc51553da1d3914f01e07470c11b3bed75048e",
+      "pgmFile": "geoid-egm96-hi.pgm",
+      "pgmSha256": "2a12f13b6df65cdea52432c7fa1b43f34b007148eb817bf032af5af710905caa",
+      "width": 1440,
+      "height": 721,
+      "spacingArcMinutes": 15,
+      "offset": -108.0,
+      "scale": 0.003,
+      "units": "meters",
+      "heightReference": "WGS84 ellipsoid",
+      "heightDefinition": "geoid undulation N; ellipsoidal h = orthometric H + N",
+      "order": "row-major, north to south, columns east from 0 degrees",
+      "longitudeRange": "[-180, 180)",
+      "polesIncluded": true,
+      "preview": false,
+      "rows": 1038240,
+      "bytes": 6864738,
+      "sha256": "6af035a5e2600b5c075737d1320b9f42a235c86dfcf3a7981d54a5ced64de82a"
+    },
+    "geoid-egm96-low.pgm": {
+      "width": 360,
+      "height": 181,
+      "spacingArcMinutes": 60,
+      "bytes": 130430,
+      "sha256": "6927106a9bfbe1157b8610c8fb2470a8986f8d74c89f1715f26043019efd26e5",
+      "format": "PGM"
+    },
+    "geoid-egm96-hi.pgm": {
+      "width": 1440,
+      "height": 721,
+      "spacingArcMinutes": 15,
+      "bytes": 2076888,
+      "sha256": "2a12f13b6df65cdea52432c7fa1b43f34b007148eb817bf032af5af710905caa",
+      "format": "PGM"
+    }
+  }
+}

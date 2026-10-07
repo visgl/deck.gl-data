@@ -12,6 +12,7 @@ Large static data files used by the websites of various vis.gl repositories, to 
 * `3d-tiles` - 3D Tilesets
 * [`earth/tectonic-movements/v1`](earth/tectonic-movements/v1) - streamable CC-BY-4.0 tectonic geometry and rotation Parquet snapshots
 
+* [`earth/geoid/v1`](earth/geoid/v1) - public-domain NGA EGM96 geoid Parquet node tables
 * [`earth/stac`](earth/stac) - static STAC discovery catalog with version-pinned Earth dataset downloads
 
 * [`earth/glaciations/v1`](earth/glaciations/v1) - attributed ice-grid and climate source datasets, Parquet and browser previews
@@ -21,6 +22,12 @@ Large static data files used by the websites of various vis.gl repositories, to 
 * [`earth/geoid/egm2008/v1`](earth/geoid/egm2008/v1) - public-domain EGM2008 grid and lossless Parquet
 
 ## Attributions / Licenses / Data Sources
+
+### EGM96 geoid grids
+
+[`earth/geoid/v1`](earth/geoid/v1) contains public-domain NGA EGM96 grids
+converted from GeographicLib PGM distributions. Dataset licensing, provenance,
+changes, and checksums are documented beside the files. Conversion code is MIT.
 
 ### Tectonic reconstruction snapshots
 
