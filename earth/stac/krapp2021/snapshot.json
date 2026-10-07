@@ -1,0 +1,106 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-krapp2021-snapshot",
+  "collection": "visgl-krapp2021",
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          -90
+        ],
+        [
+          180,
+          -90
+        ],
+        [
+          180,
+          90
+        ],
+        [
+          -180,
+          90
+        ],
+        [
+          -180,
+          -90
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-10-07T22:30:00Z",
+    "visgl:source_commit": "cab5bf4195685ca07be4dae0a95c9d8e6e985251",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
+    "paleo:age_min_ka": 0,
+    "paleo:age_max_ka": 799,
+    "paleo:age_unit": "ka before present"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "source.nc": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/cab5bf4195685ca07be4dae0a95c9d8e6e985251/earth/glaciations/v1/krapp2021/source.nc",
+      "type": "application/x-netcdf",
+      "roles": [
+        "data"
+      ],
+      "file:size": 8572111,
+      "file:checksum": "1220722f7d964fb1b947563a0974026b7f8a289875393f5e52f9af6b46972f50d8d3"
+    },
+    "grids.parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/cab5bf4195685ca07be4dae0a95c9d8e6e985251/earth/glaciations/v1/krapp2021/grids.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 41785392,
+      "file:checksum": "1220c7a841b86aee997ead1168fc506f96d175b4a4c7e5a50aaf48dd77fb1264bc2b"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/cab5bf4195685ca07be4dae0a95c9d8e6e985251/earth/glaciations/v1/krapp2021/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/cab5bf4195685ca07be4dae0a95c9d8e6e985251/earth/glaciations/v1/krapp2021/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}
