@@ -40,8 +40,8 @@
     ]
   },
   "properties": {
-    "datetime": "2026-10-07T22:30:00Z",
-    "visgl:source_commit": "cab5bf4195685ca07be4dae0a95c9d8e6e985251",
+    "datetime": "2026-10-07T22:40:52Z",
+    "visgl:source_commit": "38c8da8e0c89dae44fc34b03cfccddbca2ba5218",
     "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
     "paleo:age_min_ka": 0,
     "paleo:age_max_ka": 799,
@@ -71,7 +71,7 @@
   ],
   "assets": {
     "source.nc": {
-      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/cab5bf4195685ca07be4dae0a95c9d8e6e985251/earth/glaciations/v1/krapp2021/source.nc",
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/38c8da8e0c89dae44fc34b03cfccddbca2ba5218/earth/glaciations/v1/krapp2021/source.nc",
       "type": "application/x-netcdf",
       "roles": [
         "data"
@@ -80,23 +80,23 @@
       "file:checksum": "1220722f7d964fb1b947563a0974026b7f8a289875393f5e52f9af6b46972f50d8d3"
     },
     "grids.parquet": {
-      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/cab5bf4195685ca07be4dae0a95c9d8e6e985251/earth/glaciations/v1/krapp2021/grids.parquet",
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/38c8da8e0c89dae44fc34b03cfccddbca2ba5218/earth/glaciations/v1/krapp2021/grids.parquet",
       "type": "application/vnd.apache.parquet",
       "roles": [
         "data"
       ],
-      "file:size": 41785392,
-      "file:checksum": "1220c7a841b86aee997ead1168fc506f96d175b4a4c7e5a50aaf48dd77fb1264bc2b"
+      "file:size": 41785387,
+      "file:checksum": "1220c02689a3f3a531e3fe3086adfbe42428df9fc0f284063e3a51143a2020baa5c9"
     },
     "manifest": {
-      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/cab5bf4195685ca07be4dae0a95c9d8e6e985251/earth/glaciations/v1/krapp2021/manifest.json",
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/38c8da8e0c89dae44fc34b03cfccddbca2ba5218/earth/glaciations/v1/krapp2021/manifest.json",
       "type": "application/json",
       "roles": [
         "metadata"
       ]
     },
     "attribution": {
-      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/cab5bf4195685ca07be4dae0a95c9d8e6e985251/earth/glaciations/v1/krapp2021/ATTRIBUTION.md",
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/38c8da8e0c89dae44fc34b03cfccddbca2ba5218/earth/glaciations/v1/krapp2021/ATTRIBUTION.md",
       "type": "text/markdown",
       "roles": [
         "metadata"

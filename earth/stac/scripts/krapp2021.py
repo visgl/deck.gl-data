@@ -4,8 +4,8 @@
 import json
 from pathlib import Path
 from generate import ROOT, WORLD, GEOMETRY, FILE_EXTENSION, link, write, url
-COMMIT='cab5bf4195685ca07be4dae0a95c9d8e6e985251'
-DATE='2026-10-07T22:30:00Z'
+COMMIT='38c8da8e0c89dae44fc34b03cfccddbca2ba5218'
+DATE='2026-10-07T22:40:52Z'
 TYPES={'.parquet':'application/vnd.apache.parquet','.nc':'application/x-netcdf','.zip':'application/zip','.gz':'application/gzip','.json':'application/json','.dat':'text/plain'}
 
 
