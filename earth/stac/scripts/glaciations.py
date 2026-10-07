@@ -28,7 +28,7 @@ def generate_glaciations():
         assets={}
         for record in manifest['files']:
             filename=record['path']
-            assets[filename]={'href':url(source,filename,media=True),'type':TYPES[Path(filename).suffix],
+            assets[filename]={'href':url(source,filename,media=Path(filename).suffix in ['.parquet','.nc','.zip','.gz']),'type':TYPES[Path(filename).suffix],
                 'roles':['metadata'] if filename=='preview-manifest.json' else ['data'],
                 'file:size':record['bytes'],'file:checksum':'1220'+record['sha256']}
         assets.update(manifest={'href':url(source,'manifest.json'),'type':'application/json','roles':['metadata']},attribution={'href':url(source,'ATTRIBUTION.md'),'type':'text/markdown','roles':['metadata']})

@@ -89,7 +89,7 @@
       "file:checksum": "1220189579bdc7df92d3514f2c530bebf432e45a6c1a76bca52cb07ca7e35fc2df5b"
     },
     "preview-manifest.json": {
-      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/paleomist/preview-manifest.json",
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/paleomist/preview-manifest.json",
       "type": "application/json",
       "roles": [
         "metadata"

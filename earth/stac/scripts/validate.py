@@ -63,7 +63,7 @@ def validate(downloads=False):
             with urlopen(asset['href']) as response:
                 content = response.read()
             if 'data' in asset['roles']:
-                assert asset['href'].startswith('https://media.githubusercontent.com/media/')
+                assert asset['href'].startswith(('https://media.githubusercontent.com/media/', 'https://raw.githubusercontent.com/'))
                 digest = hashlib.sha256(content).hexdigest()
                 assert asset['file:size'] == len(content)
                 assert asset['file:checksum'] == '1220' + digest

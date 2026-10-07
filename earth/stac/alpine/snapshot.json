@@ -89,7 +89,7 @@
       "file:checksum": "12201b1281378e1badea88d016d0ac3cc72cf51f1c0cf80ea1276ccb60ff06aeb6ea"
     },
     "preview-manifest.json": {
-      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/alpine/preview-manifest.json",
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/alpine/preview-manifest.json",
       "type": "application/json",
       "roles": [
         "metadata"

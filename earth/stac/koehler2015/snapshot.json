@@ -71,7 +71,7 @@
   ],
   "assets": {
     "albedo.dat": {
-      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/koehler2015/albedo.dat",
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/koehler2015/albedo.dat",
       "type": "text/plain",
       "roles": [
         "data"
@@ -89,7 +89,7 @@
       "file:checksum": "1220ca957a9bf9a0bb1a1f895b1526b0336d2911a148935f88a7db7544b387eded02"
     },
     "climate.json": {
-      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/koehler2015/climate.json",
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/koehler2015/climate.json",
       "type": "application/json",
       "roles": [
         "data"
@@ -107,7 +107,7 @@
       "file:checksum": "12200f256898ea93d07dac22f1eeea9cf1bf4c2a77d525058cacde3900b3f837d050"
     },
     "temperature.dat": {
-      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/koehler2015/temperature.dat",
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/koehler2015/temperature.dat",
       "type": "text/plain",
       "roles": [
         "data"
