@@ -124,4 +124,3 @@ if __name__ == '__main__':
     generate_glaciations()
     from reference import generate_reference
     generate_reference()
-
