@@ -1,0 +1,104 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-cao2024-snapshot",
+  "collection": "visgl-cao2024",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          -90
+        ],
+        [
+          180,
+          -90
+        ],
+        [
+          180,
+          90
+        ],
+        [
+          -180,
+          90
+        ],
+        [
+          -180,
+          -90
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "properties": {
+    "datetime": "2026-10-06T23:01:40Z",
+    "title": "visgl-cao2024-snapshot",
+    "description": "CC-BY-4.0 present-day geometry templates and finite rotations. Geometry is unreconstructed; geologic ages in Ma before present are separate from the STAC snapshot datetime. Xianzhi Cao, Alan Collins, Sergei Pisarevsky, Nicolas Flament, Sanzhong Li, Derrick Hasterok and Dietmar Müller (2024)",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
+    "visgl:source_commit": "6b82e2df927725dc54ba729267204498d4ac6c74",
+    "tectonic:model": "CAO2024",
+    "tectonic:source_version": "2.4",
+    "tectonic:age_min_ma": 0,
+    "tectonic:age_max_ma": 1800,
+    "tectonic:age_step_ma": 10,
+    "tectonic:reference_frame": "Paleomagnetic",
+    "tectonic:anchor_plate_id": 0
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "tectonic": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/6b82e2df927725dc54ba729267204498d4ac6c74/earth/tectonic-movements/v1/cao2024/tectonic.parquet",
+      "title": "tectonic.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1590691,
+      "file:checksum": "122034478dd51fb3bac7be3f00e9a58f0781dac0748345a06110c8ce253d1e42699e"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/6b82e2df927725dc54ba729267204498d4ac6c74/earth/tectonic-movements/v1/cao2024/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/6b82e2df927725dc54ba729267204498d4ac6c74/earth/tectonic-movements/v1/cao2024/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}
