@@ -7,6 +7,9 @@ import pyarrow.parquet as pq
 root=Path(__file__).resolve().parents[1]
 for path in root.glob('*/manifest.json'):
     manifest=json.loads(path.read_text())
+    assert min(manifest['ages']) >= 0
+    if manifest['id']=='alpine':
+        assert manifest['ages']==list(range(119,-1,-1))
     assert manifest['license'] in ['CC-BY-4.0','CC-BY-3.0']
     for record in manifest['files']:
         file=path.parent/record['path']

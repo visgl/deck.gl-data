@@ -6,126 +6,126 @@
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
   "ageUnit": "ka before present",
   "ages": [
-    -119.0,
-    -118.0,
-    -117.0,
-    -116.0,
-    -115.0,
-    -114.0,
-    -113.0,
-    -112.0,
-    -111.0,
-    -110.0,
-    -109.0,
-    -108.0,
-    -107.0,
-    -106.0,
-    -105.0,
-    -104.0,
-    -103.0,
-    -102.0,
-    -101.0,
-    -100.0,
-    -99.0,
-    -98.0,
-    -97.0,
-    -96.0,
-    -95.0,
-    -94.0,
-    -93.0,
-    -92.0,
-    -91.0,
-    -90.0,
-    -89.0,
-    -88.0,
-    -87.0,
-    -86.0,
-    -85.0,
-    -84.0,
-    -83.0,
-    -82.0,
-    -81.0,
-    -80.0,
-    -79.0,
-    -78.0,
-    -77.0,
-    -76.0,
-    -75.0,
-    -74.0,
-    -73.0,
-    -72.0,
-    -71.0,
-    -70.0,
-    -69.0,
-    -68.0,
-    -67.0,
-    -66.0,
-    -65.0,
-    -64.0,
-    -63.0,
-    -62.0,
-    -61.0,
-    -60.0,
-    -59.0,
-    -58.0,
-    -57.0,
-    -56.0,
-    -55.0,
-    -54.0,
-    -53.0,
-    -52.0,
-    -51.0,
-    -50.0,
-    -49.0,
-    -48.0,
-    -47.0,
-    -46.0,
-    -45.0,
-    -44.0,
-    -43.0,
-    -42.0,
-    -41.0,
-    -40.0,
-    -39.0,
-    -38.0,
-    -37.0,
-    -36.0,
-    -35.0,
-    -34.0,
-    -33.0,
-    -32.0,
-    -31.0,
-    -30.0,
-    -29.0,
-    -28.0,
-    -27.0,
-    -26.0,
-    -25.0,
-    -24.0,
-    -23.0,
-    -22.0,
-    -21.0,
-    -20.0,
-    -19.0,
-    -18.0,
-    -17.0,
-    -16.0,
-    -15.0,
-    -14.0,
-    -13.0,
-    -12.0,
-    -11.0,
-    -10.0,
-    -9.0,
-    -8.0,
-    -7.0,
-    -6.0,
-    -5.0,
-    -4.0,
-    -3.0,
-    -2.0,
-    -1.0,
-    0.0
+    119.0,
+    118.0,
+    117.0,
+    116.0,
+    115.0,
+    114.0,
+    113.0,
+    112.0,
+    111.0,
+    110.0,
+    109.0,
+    108.0,
+    107.0,
+    106.0,
+    105.0,
+    104.0,
+    103.0,
+    102.0,
+    101.0,
+    100.0,
+    99.0,
+    98.0,
+    97.0,
+    96.0,
+    95.0,
+    94.0,
+    93.0,
+    92.0,
+    91.0,
+    90.0,
+    89.0,
+    88.0,
+    87.0,
+    86.0,
+    85.0,
+    84.0,
+    83.0,
+    82.0,
+    81.0,
+    80.0,
+    79.0,
+    78.0,
+    77.0,
+    76.0,
+    75.0,
+    74.0,
+    73.0,
+    72.0,
+    71.0,
+    70.0,
+    69.0,
+    68.0,
+    67.0,
+    66.0,
+    65.0,
+    64.0,
+    63.0,
+    62.0,
+    61.0,
+    60.0,
+    59.0,
+    58.0,
+    57.0,
+    56.0,
+    55.0,
+    54.0,
+    53.0,
+    52.0,
+    51.0,
+    50.0,
+    49.0,
+    48.0,
+    47.0,
+    46.0,
+    45.0,
+    44.0,
+    43.0,
+    42.0,
+    41.0,
+    40.0,
+    39.0,
+    38.0,
+    37.0,
+    36.0,
+    35.0,
+    34.0,
+    33.0,
+    32.0,
+    31.0,
+    30.0,
+    29.0,
+    28.0,
+    27.0,
+    26.0,
+    25.0,
+    24.0,
+    23.0,
+    22.0,
+    21.0,
+    20.0,
+    19.0,
+    18.0,
+    17.0,
+    16.0,
+    15.0,
+    14.0,
+    13.0,
+    12.0,
+    11.0,
+    10.0,
+    9.0,
+    8.0,
+    7.0,
+    6.0,
+    5.0,
+    4.0,
+    3.0,
+    2.0,
+    1.0,
+    -0.0
   ],
   "sourceSha256": "d1aff41ff4147ce2804294679057443c07cb6644ee936f8d36f7384c59614dbb",
   "columns": [
@@ -231,625 +231,625 @@
   "conversion": "Full native grid, all source ages and selected scientific variables; no interpolation, rounding or decimation. Masked values are null.",
   "files": [
     {
+      "path": "source.nc",
+      "bytes": 115047649,
+      "sha256": "d1aff41ff4147ce2804294679057443c07cb6644ee936f8d36f7384c59614dbb"
+    },
+    {
+      "path": "grids.parquet",
+      "bytes": 320932516,
+      "sha256": "41e52a935a70e0c5d139917336f5f8892fe8c642a135416f1da44ee9d87f1f34"
+    },
+    {
       "path": "alpine.bin.gz",
       "bytes": 959184,
       "sha256": "02e72bd17e032a0a97cc3e46dd55f70792083617db8f1cc5e310a90ec58b649f"
     },
     {
-      "path": "grids.parquet",
-      "bytes": 320932794,
-      "sha256": "1b1281378e1badea88d016d0ac3cc72cf51f1c0cf80ea1276ccb60ff06aeb6ea"
-    },
-    {
       "path": "preview-manifest.json",
       "bytes": 7772,
       "sha256": "068dc0f99533bc9168ae50296a02cbfeaa5f7c88d0929612766ce6e70c77612f"
-    },
-    {
-      "path": "source.nc",
-      "bytes": 115047649,
-      "sha256": "d1aff41ff4147ce2804294679057443c07cb6644ee936f8d36f7384c59614dbb"
     }
   ],
   "rowGroupIndex": [
     {
       "rowGroup": 0,
-      "ageKa": -119.0,
+      "ageKa": 119.0,
       "rows": 135751
     },
     {
       "rowGroup": 1,
-      "ageKa": -118.0,
+      "ageKa": 118.0,
       "rows": 135751
     },
     {
       "rowGroup": 2,
-      "ageKa": -117.0,
+      "ageKa": 117.0,
       "rows": 135751
     },
     {
       "rowGroup": 3,
-      "ageKa": -116.0,
+      "ageKa": 116.0,
       "rows": 135751
     },
     {
       "rowGroup": 4,
-      "ageKa": -115.0,
+      "ageKa": 115.0,
       "rows": 135751
     },
     {
       "rowGroup": 5,
-      "ageKa": -114.0,
+      "ageKa": 114.0,
       "rows": 135751
     },
     {
       "rowGroup": 6,
-      "ageKa": -113.0,
+      "ageKa": 113.0,
       "rows": 135751
     },
     {
       "rowGroup": 7,
-      "ageKa": -112.0,
+      "ageKa": 112.0,
       "rows": 135751
     },
     {
       "rowGroup": 8,
-      "ageKa": -111.0,
+      "ageKa": 111.0,
       "rows": 135751
     },
     {
       "rowGroup": 9,
-      "ageKa": -110.0,
+      "ageKa": 110.0,
       "rows": 135751
     },
     {
       "rowGroup": 10,
-      "ageKa": -109.0,
+      "ageKa": 109.0,
       "rows": 135751
     },
     {
       "rowGroup": 11,
-      "ageKa": -108.0,
+      "ageKa": 108.0,
       "rows": 135751
     },
     {
       "rowGroup": 12,
-      "ageKa": -107.0,
+      "ageKa": 107.0,
       "rows": 135751
     },
     {
       "rowGroup": 13,
-      "ageKa": -106.0,
+      "ageKa": 106.0,
       "rows": 135751
     },
     {
       "rowGroup": 14,
-      "ageKa": -105.0,
+      "ageKa": 105.0,
       "rows": 135751
     },
     {
       "rowGroup": 15,
-      "ageKa": -104.0,
+      "ageKa": 104.0,
       "rows": 135751
     },
     {
       "rowGroup": 16,
-      "ageKa": -103.0,
+      "ageKa": 103.0,
       "rows": 135751
     },
     {
       "rowGroup": 17,
-      "ageKa": -102.0,
+      "ageKa": 102.0,
       "rows": 135751
     },
     {
       "rowGroup": 18,
-      "ageKa": -101.0,
+      "ageKa": 101.0,
       "rows": 135751
     },
     {
       "rowGroup": 19,
-      "ageKa": -100.0,
+      "ageKa": 100.0,
       "rows": 135751
     },
     {
       "rowGroup": 20,
-      "ageKa": -99.0,
+      "ageKa": 99.0,
       "rows": 135751
     },
     {
       "rowGroup": 21,
-      "ageKa": -98.0,
+      "ageKa": 98.0,
       "rows": 135751
     },
     {
       "rowGroup": 22,
-      "ageKa": -97.0,
+      "ageKa": 97.0,
       "rows": 135751
     },
     {
       "rowGroup": 23,
-      "ageKa": -96.0,
+      "ageKa": 96.0,
       "rows": 135751
     },
     {
       "rowGroup": 24,
-      "ageKa": -95.0,
+      "ageKa": 95.0,
       "rows": 135751
     },
     {
       "rowGroup": 25,
-      "ageKa": -94.0,
+      "ageKa": 94.0,
       "rows": 135751
     },
     {
       "rowGroup": 26,
-      "ageKa": -93.0,
+      "ageKa": 93.0,
       "rows": 135751
     },
     {
       "rowGroup": 27,
-      "ageKa": -92.0,
+      "ageKa": 92.0,
       "rows": 135751
     },
     {
       "rowGroup": 28,
-      "ageKa": -91.0,
+      "ageKa": 91.0,
       "rows": 135751
     },
     {
       "rowGroup": 29,
-      "ageKa": -90.0,
+      "ageKa": 90.0,
       "rows": 135751
     },
     {
       "rowGroup": 30,
-      "ageKa": -89.0,
+      "ageKa": 89.0,
       "rows": 135751
     },
     {
       "rowGroup": 31,
-      "ageKa": -88.0,
+      "ageKa": 88.0,
       "rows": 135751
     },
     {
       "rowGroup": 32,
-      "ageKa": -87.0,
+      "ageKa": 87.0,
       "rows": 135751
     },
     {
       "rowGroup": 33,
-      "ageKa": -86.0,
+      "ageKa": 86.0,
       "rows": 135751
     },
     {
       "rowGroup": 34,
-      "ageKa": -85.0,
+      "ageKa": 85.0,
       "rows": 135751
     },
     {
       "rowGroup": 35,
-      "ageKa": -84.0,
+      "ageKa": 84.0,
       "rows": 135751
     },
     {
       "rowGroup": 36,
-      "ageKa": -83.0,
+      "ageKa": 83.0,
       "rows": 135751
     },
     {
       "rowGroup": 37,
-      "ageKa": -82.0,
+      "ageKa": 82.0,
       "rows": 135751
     },
     {
       "rowGroup": 38,
-      "ageKa": -81.0,
+      "ageKa": 81.0,
       "rows": 135751
     },
     {
       "rowGroup": 39,
-      "ageKa": -80.0,
+      "ageKa": 80.0,
       "rows": 135751
     },
     {
       "rowGroup": 40,
-      "ageKa": -79.0,
+      "ageKa": 79.0,
       "rows": 135751
     },
     {
       "rowGroup": 41,
-      "ageKa": -78.0,
+      "ageKa": 78.0,
       "rows": 135751
     },
     {
       "rowGroup": 42,
-      "ageKa": -77.0,
+      "ageKa": 77.0,
       "rows": 135751
     },
     {
       "rowGroup": 43,
-      "ageKa": -76.0,
+      "ageKa": 76.0,
       "rows": 135751
     },
     {
       "rowGroup": 44,
-      "ageKa": -75.0,
+      "ageKa": 75.0,
       "rows": 135751
     },
     {
       "rowGroup": 45,
-      "ageKa": -74.0,
+      "ageKa": 74.0,
       "rows": 135751
     },
     {
       "rowGroup": 46,
-      "ageKa": -73.0,
+      "ageKa": 73.0,
       "rows": 135751
     },
     {
       "rowGroup": 47,
-      "ageKa": -72.0,
+      "ageKa": 72.0,
       "rows": 135751
     },
     {
       "rowGroup": 48,
-      "ageKa": -71.0,
+      "ageKa": 71.0,
       "rows": 135751
     },
     {
       "rowGroup": 49,
-      "ageKa": -70.0,
+      "ageKa": 70.0,
       "rows": 135751
     },
     {
       "rowGroup": 50,
-      "ageKa": -69.0,
+      "ageKa": 69.0,
       "rows": 135751
     },
     {
       "rowGroup": 51,
-      "ageKa": -68.0,
+      "ageKa": 68.0,
       "rows": 135751
     },
     {
       "rowGroup": 52,
-      "ageKa": -67.0,
+      "ageKa": 67.0,
       "rows": 135751
     },
     {
       "rowGroup": 53,
-      "ageKa": -66.0,
+      "ageKa": 66.0,
       "rows": 135751
     },
     {
       "rowGroup": 54,
-      "ageKa": -65.0,
+      "ageKa": 65.0,
       "rows": 135751
     },
     {
       "rowGroup": 55,
-      "ageKa": -64.0,
+      "ageKa": 64.0,
       "rows": 135751
     },
     {
       "rowGroup": 56,
-      "ageKa": -63.0,
+      "ageKa": 63.0,
       "rows": 135751
     },
     {
       "rowGroup": 57,
-      "ageKa": -62.0,
+      "ageKa": 62.0,
       "rows": 135751
     },
     {
       "rowGroup": 58,
-      "ageKa": -61.0,
+      "ageKa": 61.0,
       "rows": 135751
     },
     {
       "rowGroup": 59,
-      "ageKa": -60.0,
+      "ageKa": 60.0,
       "rows": 135751
     },
     {
       "rowGroup": 60,
-      "ageKa": -59.0,
+      "ageKa": 59.0,
       "rows": 135751
     },
     {
       "rowGroup": 61,
-      "ageKa": -58.0,
+      "ageKa": 58.0,
       "rows": 135751
     },
     {
       "rowGroup": 62,
-      "ageKa": -57.0,
+      "ageKa": 57.0,
       "rows": 135751
     },
     {
       "rowGroup": 63,
-      "ageKa": -56.0,
+      "ageKa": 56.0,
       "rows": 135751
     },
     {
       "rowGroup": 64,
-      "ageKa": -55.0,
+      "ageKa": 55.0,
       "rows": 135751
     },
     {
       "rowGroup": 65,
-      "ageKa": -54.0,
+      "ageKa": 54.0,
       "rows": 135751
     },
     {
       "rowGroup": 66,
-      "ageKa": -53.0,
+      "ageKa": 53.0,
       "rows": 135751
     },
     {
       "rowGroup": 67,
-      "ageKa": -52.0,
+      "ageKa": 52.0,
       "rows": 135751
     },
     {
       "rowGroup": 68,
-      "ageKa": -51.0,
+      "ageKa": 51.0,
       "rows": 135751
     },
     {
       "rowGroup": 69,
-      "ageKa": -50.0,
+      "ageKa": 50.0,
       "rows": 135751
     },
     {
       "rowGroup": 70,
-      "ageKa": -49.0,
+      "ageKa": 49.0,
       "rows": 135751
     },
     {
       "rowGroup": 71,
-      "ageKa": -48.0,
+      "ageKa": 48.0,
       "rows": 135751
     },
     {
       "rowGroup": 72,
-      "ageKa": -47.0,
+      "ageKa": 47.0,
       "rows": 135751
     },
     {
       "rowGroup": 73,
-      "ageKa": -46.0,
+      "ageKa": 46.0,
       "rows": 135751
     },
     {
       "rowGroup": 74,
-      "ageKa": -45.0,
+      "ageKa": 45.0,
       "rows": 135751
     },
     {
       "rowGroup": 75,
-      "ageKa": -44.0,
+      "ageKa": 44.0,
       "rows": 135751
     },
     {
       "rowGroup": 76,
-      "ageKa": -43.0,
+      "ageKa": 43.0,
       "rows": 135751
     },
     {
       "rowGroup": 77,
-      "ageKa": -42.0,
+      "ageKa": 42.0,
       "rows": 135751
     },
     {
       "rowGroup": 78,
-      "ageKa": -41.0,
+      "ageKa": 41.0,
       "rows": 135751
     },
     {
       "rowGroup": 79,
-      "ageKa": -40.0,
+      "ageKa": 40.0,
       "rows": 135751
     },
     {
       "rowGroup": 80,
-      "ageKa": -39.0,
+      "ageKa": 39.0,
       "rows": 135751
     },
     {
       "rowGroup": 81,
-      "ageKa": -38.0,
+      "ageKa": 38.0,
       "rows": 135751
     },
     {
       "rowGroup": 82,
-      "ageKa": -37.0,
+      "ageKa": 37.0,
       "rows": 135751
     },
     {
       "rowGroup": 83,
-      "ageKa": -36.0,
+      "ageKa": 36.0,
       "rows": 135751
     },
     {
       "rowGroup": 84,
-      "ageKa": -35.0,
+      "ageKa": 35.0,
       "rows": 135751
     },
     {
       "rowGroup": 85,
-      "ageKa": -34.0,
+      "ageKa": 34.0,
       "rows": 135751
     },
     {
       "rowGroup": 86,
-      "ageKa": -33.0,
+      "ageKa": 33.0,
       "rows": 135751
     },
     {
       "rowGroup": 87,
-      "ageKa": -32.0,
+      "ageKa": 32.0,
       "rows": 135751
     },
     {
       "rowGroup": 88,
-      "ageKa": -31.0,
+      "ageKa": 31.0,
       "rows": 135751
     },
     {
       "rowGroup": 89,
-      "ageKa": -30.0,
+      "ageKa": 30.0,
       "rows": 135751
     },
     {
       "rowGroup": 90,
-      "ageKa": -29.0,
+      "ageKa": 29.0,
       "rows": 135751
     },
     {
       "rowGroup": 91,
-      "ageKa": -28.0,
+      "ageKa": 28.0,
       "rows": 135751
     },
     {
       "rowGroup": 92,
-      "ageKa": -27.0,
+      "ageKa": 27.0,
       "rows": 135751
     },
     {
       "rowGroup": 93,
-      "ageKa": -26.0,
+      "ageKa": 26.0,
       "rows": 135751
     },
     {
       "rowGroup": 94,
-      "ageKa": -25.0,
+      "ageKa": 25.0,
       "rows": 135751
     },
     {
       "rowGroup": 95,
-      "ageKa": -24.0,
+      "ageKa": 24.0,
       "rows": 135751
     },
     {
       "rowGroup": 96,
-      "ageKa": -23.0,
+      "ageKa": 23.0,
       "rows": 135751
     },
     {
       "rowGroup": 97,
-      "ageKa": -22.0,
+      "ageKa": 22.0,
       "rows": 135751
     },
     {
       "rowGroup": 98,
-      "ageKa": -21.0,
+      "ageKa": 21.0,
       "rows": 135751
     },
     {
       "rowGroup": 99,
-      "ageKa": -20.0,
+      "ageKa": 20.0,
       "rows": 135751
     },
     {
       "rowGroup": 100,
-      "ageKa": -19.0,
+      "ageKa": 19.0,
       "rows": 135751
     },
     {
       "rowGroup": 101,
-      "ageKa": -18.0,
+      "ageKa": 18.0,
       "rows": 135751
     },
     {
       "rowGroup": 102,
-      "ageKa": -17.0,
+      "ageKa": 17.0,
       "rows": 135751
     },
     {
       "rowGroup": 103,
-      "ageKa": -16.0,
+      "ageKa": 16.0,
       "rows": 135751
     },
     {
       "rowGroup": 104,
-      "ageKa": -15.0,
+      "ageKa": 15.0,
       "rows": 135751
     },
     {
       "rowGroup": 105,
-      "ageKa": -14.0,
+      "ageKa": 14.0,
       "rows": 135751
     },
     {
       "rowGroup": 106,
-      "ageKa": -13.0,
+      "ageKa": 13.0,
       "rows": 135751
     },
     {
       "rowGroup": 107,
-      "ageKa": -12.0,
+      "ageKa": 12.0,
       "rows": 135751
     },
     {
       "rowGroup": 108,
-      "ageKa": -11.0,
+      "ageKa": 11.0,
       "rows": 135751
     },
     {
       "rowGroup": 109,
-      "ageKa": -10.0,
+      "ageKa": 10.0,
       "rows": 135751
     },
     {
       "rowGroup": 110,
-      "ageKa": -9.0,
+      "ageKa": 9.0,
       "rows": 135751
     },
     {
       "rowGroup": 111,
-      "ageKa": -8.0,
+      "ageKa": 8.0,
       "rows": 135751
     },
     {
       "rowGroup": 112,
-      "ageKa": -7.0,
+      "ageKa": 7.0,
       "rows": 135751
     },
     {
       "rowGroup": 113,
-      "ageKa": -6.0,
+      "ageKa": 6.0,
       "rows": 135751
     },
     {
       "rowGroup": 114,
-      "ageKa": -5.0,
+      "ageKa": 5.0,
       "rows": 135751
     },
     {
       "rowGroup": 115,
-      "ageKa": -4.0,
+      "ageKa": 4.0,
       "rows": 135751
     },
     {
       "rowGroup": 116,
-      "ageKa": -3.0,
+      "ageKa": 3.0,
       "rows": 135751
     },
     {
       "rowGroup": 117,
-      "ageKa": -2.0,
+      "ageKa": 2.0,
       "rows": 135751
     },
     {
       "rowGroup": 118,
-      "ageKa": -1.0,
+      "ageKa": 1.0,
       "rows": 135751
     },
     {
       "rowGroup": 119,
-      "ageKa": 0.0,
+      "ageKa": -0.0,
       "rows": 135751
     }
   ]

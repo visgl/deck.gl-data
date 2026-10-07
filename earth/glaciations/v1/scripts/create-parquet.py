@@ -19,6 +19,7 @@ def convert(source, target, identifier, credit, dataset, license, fields, age_na
     shutil.copyfile(source, original)
     with netCDF4.Dataset(source) as n:
         ages = np.asarray(n[age_name][:]) * scale
+        assert np.all(ages >= 0), "Ages must be positive ka before present"
         manifest = dict(id=identifier, credit=credit, dataset=dataset, license=license,
             licenseUrl=f'https://creativecommons.org/licenses/by/{"4.0" if license.endswith("4.0") else "3.0"}/',
             ageUnit='ka before present', ages=ages.tolist(),
@@ -60,7 +61,7 @@ def convert(source, target, identifier, credit, dataset, license, fields, age_na
                 actual=table[key].to_numpy()
                 np.testing.assert_array_equal(actual[~np.ma.getmaskarray(expected)],expected.data[~np.ma.getmaskarray(expected)])
         manifest['rowGroupIndex']=groups
-        manifest['files']=[dict(path=p.name,bytes=p.stat().st_size,sha256=digest(p)) for p in [original,output]]
+        manifest['files']=[dict(path=p.name,bytes=p.stat().st_size,sha256=digest(p)) for p in [original,output]+[target/name for name in ['alpine.bin.gz','global.bin.gz','preview-manifest.json'] if (target/name).exists()]]
         (target/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
         print(identifier, output.stat().st_size, 'bytes; all scientific values verified')
 
@@ -73,7 +74,7 @@ if __name__=='__main__':
     assert hashlib.md5(a.alpine.read_bytes()).hexdigest()=='0b59b7c26bb8d1b1797c9414638a2f32'
     assert digest(a.climate)=='0f256898ea93d07dac22f1eeea9cf1bf4c2a77d525058cacde3900b3f837d050'
     convert(a.global_ice,a.out/'paleomist', 'paleomist','Gowan et al. (2021)','https://doi.pangaea.de/10.1594/PANGAEA.905800','CC-BY-4.0',['ice_thickness','base_topography','paleo_topography','sea_level'],'time',-.001)
-    convert(a.alpine,a.out/'alpine','alpine','Julien Seguinot and colleagues (2018)','https://doi.org/10.5281/zenodo.7802275','CC-BY-4.0',['thk','topg','tempicethk_basal','temppabase','uvelbase','uvelsurf','vvelbase','vvelsurf'],'age',-1)
+    convert(a.alpine,a.out/'alpine','alpine','Julien Seguinot and colleagues (2018)','https://doi.org/10.5281/zenodo.7802275','CC-BY-4.0',['thk','topg','tempicethk_basal','temppabase','uvelbase','uvelsurf','vvelbase','vvelsurf'],'age',1)
     target=a.out/'koehler2015';target.mkdir(parents=True,exist_ok=True)
     shutil.copyfile(a.climate,target/'source.zip')
     z=zipfile.ZipFile(a.climate)
@@ -86,5 +87,5 @@ if __name__=='__main__':
         table=table.replace_schema_metadata({b'visgl.climate':json.dumps(dict(credit='Köhler et al. (2015)',dataset='https://doi.pangaea.de/10.1594/PANGAEA.855449',license='CC-BY-3.0',sourceHeader=raw.decode().split('\n-')[0],ageUnit='ka before present')).encode()})
         path=target/(key+'.parquet');pq.write_table(table,path,compression='zstd',compression_level=6,row_group_size=250)
         assert pq.read_table(path).equals(table)
-    manifest=dict(id='koehler2015',credit='Köhler, de Boer, von der Heydt, Stap and van de Wal (2015)',dataset='https://doi.pangaea.de/10.1594/PANGAEA.855449',license='CC-BY-3.0',licenseUrl='https://creativecommons.org/licenses/by/3.0/',ageUnit='ka before present',ages=[0,5000],sourceSha256=digest(a.climate),conversion='Original source values and all three temperature variants retained. Negative source time converted to positive ka BP. No rebasing or extrapolation.',files=[dict(path=f.name,bytes=f.stat().st_size,sha256=digest(f)) for f in sorted(target.iterdir())])
+    manifest=dict(id='koehler2015',credit='Köhler, de Boer, von der Heydt, Stap and van de Wal (2015)',dataset='https://doi.pangaea.de/10.1594/PANGAEA.855449',license='CC-BY-3.0',licenseUrl='https://creativecommons.org/licenses/by/3.0/',ageUnit='ka before present',ages=[0,5000],sourceSha256=digest(a.climate),conversion='Original source values and all three temperature variants retained. Negative source time converted to positive ka BP. No rebasing or extrapolation.',files=[dict(path=f.name,bytes=f.stat().st_size,sha256=digest(f)) for f in [target/name for name in ['source.zip','temperature.dat','temperature.parquet','albedo.dat','albedo.parquet','climate.json'] if (target/name).exists()]])
     (target/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')

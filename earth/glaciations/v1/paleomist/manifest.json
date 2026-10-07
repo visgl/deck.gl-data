@@ -91,9 +91,9 @@
   "conversion": "Full native grid, all source ages and selected scientific variables; no interpolation, rounding or decimation. Masked values are null.",
   "files": [
     {
-      "path": "global.bin.gz",
-      "bytes": 4212526,
-      "sha256": "c61734223ec27dbefc98a9c16bb183124004699704eba80549007a53b96d1e6f"
+      "path": "source.nc",
+      "bytes": 34538868,
+      "sha256": "ab6f74541339f5be44dd630dfb9c41189a6c1dfaf58fce6fc3c356430b539037"
     },
     {
       "path": "grids.parquet",
@@ -101,14 +101,14 @@
       "sha256": "189579bdc7df92d3514f2c530bebf432e45a6c1a76bca52cb07ca7e35fc2df5b"
     },
     {
+      "path": "global.bin.gz",
+      "bytes": 4212526,
+      "sha256": "c61734223ec27dbefc98a9c16bb183124004699704eba80549007a53b96d1e6f"
+    },
+    {
       "path": "preview-manifest.json",
       "bytes": 2631,
       "sha256": "edb0cdb2f0c3a80b7e7d7a7ac24277fb167b2db9e32b8d3efbc05041bf062ae4"
-    },
-    {
-      "path": "source.nc",
-      "bytes": 34538868,
-      "sha256": "ab6f74541339f5be44dd630dfb9c41189a6c1dfaf58fce6fc3c356430b539037"
     }
   ],
   "rowGroupIndex": [

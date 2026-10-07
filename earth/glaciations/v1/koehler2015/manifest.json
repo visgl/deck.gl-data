@@ -13,21 +13,6 @@
   "conversion": "Original source values and all three temperature variants retained. Negative source time converted to positive ka BP. No rebasing or extrapolation.",
   "files": [
     {
-      "path": "albedo.dat",
-      "bytes": 56695,
-      "sha256": "4db6f4fb50c9bd9a0eb46d4288539965a61bc707939e46e2d1eb343c03620ffc"
-    },
-    {
-      "path": "albedo.parquet",
-      "bytes": 50819,
-      "sha256": "ca957a9bf9a0bb1a1f895b1526b0336d2911a148935f88a7db7544b387eded02"
-    },
-    {
-      "path": "climate.json",
-      "bytes": 11002,
-      "sha256": "756b93fd16c9a3d5576b6736eedf4368eafcae21bda36794b5f5ef10af2644d9"
-    },
-    {
       "path": "source.zip",
       "bytes": 80955,
       "sha256": "0f256898ea93d07dac22f1eeea9cf1bf4c2a77d525058cacde3900b3f837d050"
@@ -41,6 +26,21 @@
       "path": "temperature.parquet",
       "bytes": 152598,
       "sha256": "d9b7e8f6ca08984fa97f00e561ac43290a54c48cf64f0c183a3ec1ddda532253"
+    },
+    {
+      "path": "albedo.dat",
+      "bytes": 56695,
+      "sha256": "4db6f4fb50c9bd9a0eb46d4288539965a61bc707939e46e2d1eb343c03620ffc"
+    },
+    {
+      "path": "albedo.parquet",
+      "bytes": 50819,
+      "sha256": "ca957a9bf9a0bb1a1f895b1526b0336d2911a148935f88a7db7544b387eded02"
+    },
+    {
+      "path": "climate.json",
+      "bytes": 11002,
+      "sha256": "756b93fd16c9a3d5576b6736eedf4368eafcae21bda36794b5f5ef10af2644d9"
     }
   ]
 }
