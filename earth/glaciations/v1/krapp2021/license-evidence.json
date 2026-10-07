@@ -1,0 +1,10 @@
+{
+  "checked": "2026-10-07",
+  "project": "https://api.osf.io/v2/nodes/8n43x/",
+  "projectLicenseRelationship": "563c1cf88c5e4a3877f9e96a",
+  "licenseEndpoint": "https://api.osf.io/v2/licenses/563c1cf88c5e4a3877f9e96a/",
+  "name": "CC-By Attribution 4.0 International",
+  "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "fileMetadata": "https://api.osf.io/v2/files/5fd87e75149e750381029864/",
+  "fileVersion": 1
+}

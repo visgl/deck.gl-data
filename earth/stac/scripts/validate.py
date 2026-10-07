@@ -72,7 +72,7 @@ def validate(downloads=False):
                 assert not content.startswith(b'version https://git-lfs.github.com/spec/v1')
                 assets_checked += 1
     catalog = pystac.Catalog.from_file(str(root))
-    assert len(list(catalog.get_all_items())) == 10
+    assert len(list(catalog.get_all_items())) == 11
     print(f'Validated {len(documents)} STAC documents, schema extensions, and reciprocal links.')
     if downloads:
         print(f'Verified {assets_checked} public data downloads against sizes, checksums, and source manifests.')

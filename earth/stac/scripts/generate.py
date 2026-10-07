@@ -124,3 +124,6 @@ if __name__ == '__main__':
     generate_glaciations()
     from reference import generate_reference
     generate_reference()
+
+    from krapp2021 import generate_krapp
+    generate_krapp()

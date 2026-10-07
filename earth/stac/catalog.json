@@ -68,6 +68,12 @@
       "href": "egm2008/collection.json",
       "type": "application/json",
       "title": "NGA EGM2008 5-minute geoid grid"
+    },
+    {
+      "rel": "child",
+      "href": "krapp2021/collection.json",
+      "type": "application/json",
+      "title": "Krapp et al. (2021), Terrestrial climate of the last 800,000 years — krapp2021"
     }
   ]
 }
