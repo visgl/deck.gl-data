@@ -1,0 +1,22 @@
+{
+  "model": "EGM96",
+  "source": "https://downloads.sourceforge.net/project/geographiclib/geoids-distrib/egm96-15.tar.bz2",
+  "sourceSha256": "8b1ebad1ebae0a045502d0edb9cc51553da1d3914f01e07470c11b3bed75048e",
+  "license": "Public domain (NGA model data)",
+  "files": {
+    "geoid-egm96-low.pgm": {
+      "width": 360,
+      "height": 181,
+      "spacingArcMinutes": 60,
+      "bytes": 130430,
+      "sha256": "6927106a9bfbe1157b8610c8fb2470a8986f8d74c89f1715f26043019efd26e5"
+    },
+    "geoid-egm96-hi.pgm": {
+      "width": 1440,
+      "height": 721,
+      "spacingArcMinutes": 15,
+      "bytes": 2076888,
+      "sha256": "2a12f13b6df65cdea52432c7fa1b43f34b007148eb817bf032af5af710905caa"
+    }
+  }
+}
