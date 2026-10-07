@@ -120,3 +120,5 @@ def generate():
 
 if __name__ == '__main__':
     generate()
+    from glaciations import generate_glaciations
+    generate_glaciations()

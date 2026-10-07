@@ -1,0 +1,124 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-paleomist-snapshot",
+  "collection": "visgl-paleomist",
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          -90
+        ],
+        [
+          180,
+          -90
+        ],
+        [
+          180,
+          90
+        ],
+        [
+          -180,
+          90
+        ],
+        [
+          -180,
+          -90
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-10-07T13:46:54Z",
+    "visgl:source_commit": "a5c369be5e8029cd741be65c0cef91b7e287556d",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
+    "paleo:age_min_ka": -0.0,
+    "paleo:age_max_ka": 80.0,
+    "paleo:age_unit": "ka before present"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "global.bin.gz": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/paleomist/global.bin.gz",
+      "type": "application/gzip",
+      "roles": [
+        "data"
+      ],
+      "file:size": 4212526,
+      "file:checksum": "1220c61734223ec27dbefc98a9c16bb183124004699704eba80549007a53b96d1e6f"
+    },
+    "grids.parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/paleomist/grids.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 36658476,
+      "file:checksum": "1220189579bdc7df92d3514f2c530bebf432e45a6c1a76bca52cb07ca7e35fc2df5b"
+    },
+    "preview-manifest.json": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/paleomist/preview-manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 2631,
+      "file:checksum": "1220edb0cdb2f0c3a80b7e7d7a7ac24277fb167b2db9e32b8d3efbc05041bf062ae4"
+    },
+    "source.nc": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/paleomist/source.nc",
+      "type": "application/x-netcdf",
+      "roles": [
+        "data"
+      ],
+      "file:size": 34538868,
+      "file:checksum": "1220ab6f74541339f5be44dd630dfb9c41189a6c1dfaf58fce6fc3c356430b539037"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/paleomist/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/a5c369be5e8029cd741be65c0cef91b7e287556d/earth/glaciations/v1/paleomist/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

@@ -32,6 +32,24 @@
       "href": "muller2022/collection.json",
       "type": "application/json",
       "title": "Müller et al. (2022) tectonic snapshot"
+    },
+    {
+      "rel": "child",
+      "href": "paleomist/collection.json",
+      "type": "application/json",
+      "title": "Gowan et al. (2021) — paleomist"
+    },
+    {
+      "rel": "child",
+      "href": "alpine/collection.json",
+      "type": "application/json",
+      "title": "Julien Seguinot and colleagues (2018) — alpine"
+    },
+    {
+      "rel": "child",
+      "href": "koehler2015/collection.json",
+      "type": "application/json",
+      "title": "Köhler, de Boer, von der Heydt, Stap and van de Wal (2015) — koehler2015"
     }
   ]
 }

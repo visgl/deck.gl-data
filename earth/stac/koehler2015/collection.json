@@ -1,0 +1,86 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "id": "visgl-koehler2015",
+  "title": "Köhler, de Boer, von der Heydt, Stap and van de Wal (2015) — koehler2015",
+  "description": "Original source values and all three temperature variants retained. Negative source time converted to positive ka BP. No rebasing or extrapolation. Ages in ka before present are separate from the repository snapshot datetime.",
+  "license": "CC-BY-3.0",
+  "providers": [
+    {
+      "name": "Köhler, de Boer, von der Heydt, Stap and van de Wal (2015)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://doi.pangaea.de/10.1594/PANGAEA.855449"
+    },
+    {
+      "name": "vis.gl",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://github.com/visgl/deck.gl-data"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-10-07T13:46:54Z",
+          "2026-10-07T13:46:54Z"
+        ]
+      ]
+    }
+  },
+  "summaries": {
+    "paleo:age_min_ka": [
+      0
+    ],
+    "paleo:age_max_ka": [
+      5000
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/3.0/",
+      "type": "text/html"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://doi.pangaea.de/10.1594/PANGAEA.855449",
+      "type": "text/html"
+    },
+    {
+      "rel": "item",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ]
+}
