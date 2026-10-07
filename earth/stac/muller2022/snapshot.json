@@ -1,0 +1,114 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-muller2022-snapshot",
+  "collection": "visgl-muller2022",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          -90
+        ],
+        [
+          180,
+          -90
+        ],
+        [
+          180,
+          90
+        ],
+        [
+          -180,
+          90
+        ],
+        [
+          -180,
+          -90
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "properties": {
+    "datetime": "2026-10-06T23:01:40Z",
+    "title": "visgl-muller2022-snapshot",
+    "description": "CC-BY-4.0 present-day geometry templates and finite rotations. Geometry is unreconstructed; geologic ages in Ma before present are separate from the STAC snapshot datetime. R. Dietmar Müller, Nicolas Flament, John Cannon, Michael G. Tetley, Simon E. Williams, Xianzhi Cao, Ömer F. Bodur, Sabin Zahirovic and Andrew Merdith (2022); coastline templates after Merdith et al. (2021)",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
+    "visgl:source_commit": "6b82e2df927725dc54ba729267204498d4ac6c74",
+    "tectonic:model": "MULLER2022",
+    "tectonic:source_version": "1.2.4",
+    "tectonic:age_min_ma": 0,
+    "tectonic:age_max_ma": 1000,
+    "tectonic:age_step_ma": 10,
+    "tectonic:reference_frame": "Optimised mantle",
+    "tectonic:anchor_plate_id": 0
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "geometry": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/6b82e2df927725dc54ba729267204498d4ac6c74/earth/tectonic-movements/v1/muller2022/geometry.parquet",
+      "title": "geometry.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 1377858,
+      "file:checksum": "12208d3dba1f663b34b7925bd2bbff3ba07ca65165ba64225c9c24ee714a32a47d86"
+    },
+    "rotations": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/6b82e2df927725dc54ba729267204498d4ac6c74/earth/tectonic-movements/v1/muller2022/rotations.parquet",
+      "title": "rotations.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 549996,
+      "file:checksum": "12205e5717d1456fb738a00da6be5d93c67d714e2df70e349b7ce9e755f0f8eac31c"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/6b82e2df927725dc54ba729267204498d4ac6c74/earth/tectonic-movements/v1/muller2022/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/6b82e2df927725dc54ba729267204498d4ac6c74/earth/tectonic-movements/v1/muller2022/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

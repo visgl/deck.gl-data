@@ -12,6 +12,8 @@ Large static data files used by the websites of various vis.gl repositories, to 
 * `3d-tiles` - 3D Tilesets
 * [`earth/tectonic-movements/v1`](earth/tectonic-movements/v1) - streamable CC-BY-4.0 tectonic geometry and rotation Parquet snapshots
 
+* [`earth/stac`](earth/stac) - static STAC discovery catalog with version-pinned Earth dataset downloads
+
 ## Attributions / Licenses / Data Sources
 
 ### Tectonic reconstruction snapshots

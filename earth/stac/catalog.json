@@ -1,0 +1,37 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "id": "visgl-earth",
+  "title": "vis.gl Earth datasets",
+  "description": "Static discovery catalog for version-pinned Earth datasets. Assets retain their own licenses; dates identify repository snapshots.",
+  "links": [
+    {
+      "rel": "self",
+      "href": "catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "root",
+      "href": "catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "egm96/collection.json",
+      "type": "application/json",
+      "title": "NGA EGM96 geoid grids"
+    },
+    {
+      "rel": "child",
+      "href": "cao2024/collection.json",
+      "type": "application/json",
+      "title": "Cao et al. (2024) tectonic snapshot"
+    },
+    {
+      "rel": "child",
+      "href": "muller2022/collection.json",
+      "type": "application/json",
+      "title": "Müller et al. (2022) tectonic snapshot"
+    }
+  ]
+}

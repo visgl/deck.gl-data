@@ -1,0 +1,114 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-egm96-low",
+  "collection": "visgl-egm96",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          -90
+        ],
+        [
+          180,
+          -90
+        ],
+        [
+          180,
+          90
+        ],
+        [
+          -180,
+          90
+        ],
+        [
+          -180,
+          -90
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "properties": {
+    "datetime": "2026-10-07T12:55:48Z",
+    "title": "visgl-egm96-low",
+    "description": "Public-domain NGA EGM96 geoid undulation grids, distributed through GeographicLib. Heights N are meters above WGS84; h = H + N. Low resolution is a decimated preview, not terrain elevation.",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
+    "visgl:source_commit": "676fb53ffef120e7ca4d1acdc91e94b4cc37ef69",
+    "geoid:model": "EGM96",
+    "geoid:width": 360,
+    "geoid:height": 181,
+    "geoid:spacing_arc_minutes": 60,
+    "geoid:preview": true,
+    "geoid:height_units": "meters",
+    "geoid:height_reference": "WGS84 ellipsoid"
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "low.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "pgm": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/676fb53ffef120e7ca4d1acdc91e94b4cc37ef69/earth/geoid/v1/geoid-egm96-low.pgm",
+      "title": "geoid-egm96-low.pgm",
+      "type": "image/x-portable-graymap",
+      "roles": [
+        "data"
+      ],
+      "file:size": 130430,
+      "file:checksum": "12206927106a9bfbe1157b8610c8fb2470a8986f8d74c89f1715f26043019efd26e5"
+    },
+    "parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/676fb53ffef120e7ca4d1acdc91e94b4cc37ef69/earth/geoid/v1/geoid-egm96-low.parquet",
+      "title": "geoid-egm96-low.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 463109,
+      "file:checksum": "1220dfa1624d41761774802d479d193723f42feaff2da3f4d03af5ad32cd1e7c0ad8"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/676fb53ffef120e7ca4d1acdc91e94b4cc37ef69/earth/geoid/v1/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/676fb53ffef120e7ca4d1acdc91e94b4cc37ef69/earth/geoid/v1/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}
