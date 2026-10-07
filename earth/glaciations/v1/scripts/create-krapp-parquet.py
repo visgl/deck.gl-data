@@ -24,25 +24,27 @@ def convert(source, out):
                     'globalAttributes': {key: ds.getncattr(key) for key in ds.ncattrs()},
                     'maskClasses': {'0': 'ocean', '1': 'land', '2': 'ice'},
                     'ordering': 'source time order; latitude-major, longitude-minor'}
-        schema = pa.schema([('gridX', pa.uint16()), ('gridY', pa.uint16()),
+        schema = pa.schema([('ageKa', pa.float64()), ('gridX', pa.uint16()), ('gridY', pa.uint16()),
                             ('longitude', pa.float32()), ('latitude', pa.float32()),
-                            ('ageKa', pa.float64()), ('sourceTimeYears', pa.float64()),
+                            ('sourceTimeYears', pa.float64()),
                             ('land_max', pa.int16()), ('mask', pa.int16())],
                            metadata={b'krapp2021': json.dumps(metadata).encode()})
         with pq.ParquetWriter(out / 'grids.parquet', schema, compression='zstd', compression_level=6) as writer:
             for index, time in enumerate(ds['time'][:]):
-                arrays = coords + [np.full(x.size, -float(time) / 1000), np.full(x.size, float(time)),
+                arrays = [np.full(x.size, -float(time) / 1000)] + coords + [np.full(x.size, float(time)),
                                    ds['land_max'][index].ravel(), ds['mask'][index].ravel()]
                 writer.write_table(pa.Table.from_arrays(arrays, schema=schema), row_group_size=x.size)
                 if index % 100 == 0:
                     print(f'Converted {index + 1}/800 snapshots', flush=True)
     files = [{'path': name, 'bytes': (out / name).stat().st_size,
               'sha256': hashlib.sha256((out / name).read_bytes()).hexdigest()} for name in ['source.nc', 'grids.parquet']]
-    manifest = dict(dataset='https://osf.io/8n43x/', paper='https://doi.org/10.1038/s41597-021-01009-3',
+    manifest = dict(id='krapp2021', dataset='https://osf.io/8n43x/', paper='https://doi.org/10.1038/s41597-021-01009-3',
                     credit='Krapp et al. (2021), Terrestrial climate of the last 800,000 years',
                     license='CC-BY-4.0', licenseUrl='https://creativecommons.org/licenses/by/4.0/',
                     ages=list(range(799, -1, -1)), ageUnit='ka before present',
                     dimensions={'time': 800, 'lat': 360, 'lon': 720}, rows=207360000,
+                    rowGroupIndex=[dict(rowGroup=i, ageKa=float(age), rows=259200)
+                                   for i, age in enumerate(range(799, -1, -1))],
                     source={'filename': 'icesheets_000-800_cru.nc', 'osfFileId': '5fd87e75149e750381029864',
                             'version': 1, 'sha256': SHA,
                             'download': 'https://files.osf.io/v1/resources/8n43x/providers/osfstorage/5fd87e75149e750381029864'},

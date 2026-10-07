@@ -4,9 +4,9 @@
 
 - `source.nc`: unchanged upstream `icesheets_000-800_cru.nc`, OSF file version 1.
 - `grids.parquet`: lossless tabular conversion of all 207,360,000 cells, 800 row groups in source time order (799 ka first, present last).
-- `manifest.json`: source hash, dimensions, native variable/global attributes, conversion details and asset checksums.
+- `manifest.json`: dataset ID, age-to-row-group index, source hash, dimensions, native variable/global attributes, conversion details and asset checksums.
 
-Each row has `gridX`, `gridY` (zero-based source indices), `longitude`, `latitude` (original float32 cell centers), `ageKa` (positive ka before present), `sourceTimeYears` (original float64 time), and original int16 `land_max` and `mask`. Mask classes are 0 ocean, 1 land, 2 ice. `land_max` retains the separate upstream maximum land extent variable. All cells are included, without interpolation, simplification or quantization. Arrow schema metadata retains native attributes, including the source time units `years since 0000-01-01` and `360_day` calendar. Coordinates are longitude −179.75…179.75 and latitude −89.75…89.75.
+Each row begins with `ageKa` (positive ka before present), followed by `gridX`, `gridY` (zero-based source indices), `longitude`, `latitude` (original float32 cell centers), `sourceTimeYears` (original float64 time), and original int16 `land_max` and `mask`. Mask classes are 0 ocean, 1 land, 2 ice. `land_max` retains the separate upstream maximum land extent variable. All cells are included, without interpolation, simplification or quantization. Arrow schema metadata retains native attributes, including the source time units `years since 0000-01-01` and `360_day` calendar. Coordinates are longitude −179.75…179.75 and latitude −89.75…89.75.
 
 The masks are reconstructions, combining ICE-6G for 0–122 ka, Ganopolski & Calov (2011) for 123–799 ka, and Spratt & Lisiecki (2016) sea level (as recorded in the NetCDF history). They contain no ice thickness or volume. Older coverage enables earlier ice-age visualizations, but does not establish exact boundaries or dates for the regional Günz, Mindel and Riss terminology. Any interpolated animation should be identified as interpolation.
 
