@@ -1,0 +1,6 @@
+{
+  "egm/egm2008-5.zip": "408f05e0c04a9f2e17b9ea2d27123f936e9dea60128bb3411a272f8ddbe318dd",
+  "formats/geojson/countries.geojson": "ec97d0cb24c4b5d986db540f3c25c067b31d5aaa4b57478f1b10ff8e8f9552fa",
+  "formats/geoparquet/countries/countries_zstd.parquet": "1bbfde04980c5c714fcd9e8759ccccf28793126015cfa2599c023937e8f12dfe",
+  "formats/geoparquet/major-rivers/major-rivers_0.4.0_gzip.parquet": "7a2c47f37efcafaa6146b9d6ea5394c3aca8944662c4051a4c1c34b3ae784dc8"
+}

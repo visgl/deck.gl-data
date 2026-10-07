@@ -1,0 +1,167 @@
+{
+  "id": "egm2008",
+  "title": "NGA EGM2008 5-minute geoid grid",
+  "credit": "NGA; GeographicLib PGM distribution",
+  "dataset": "https://geographiclib.sourceforge.io/C++/doc/geoid.html",
+  "license": "other",
+  "licenseUrl": "https://raw.githubusercontent.com/OSGeo/PROJ-data/master/us_nga/us_nga_README.txt",
+  "licenseDescription": "Public-domain NGA EGM2008 model data; not a CC0 assertion",
+  "sourceRepositoryCommit": "c120179186c1e0cacb536c04cf667348e6dde937",
+  "sourcePath": "egm/egm2008-5.zip",
+  "sourceSha256": "408f05e0c04a9f2e17b9ea2d27123f936e9dea60128bb3411a272f8ddbe318dd",
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "rows": 9335520,
+  "rowGroupIndex": [
+    {
+      "rowGroup": 0,
+      "rowStart": 0,
+      "rowStop": 120,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 1,
+      "rowStart": 120,
+      "rowStop": 240,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 2,
+      "rowStart": 240,
+      "rowStop": 360,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 3,
+      "rowStart": 360,
+      "rowStop": 480,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 4,
+      "rowStart": 480,
+      "rowStop": 600,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 5,
+      "rowStart": 600,
+      "rowStop": 720,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 6,
+      "rowStart": 720,
+      "rowStop": 840,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 7,
+      "rowStart": 840,
+      "rowStop": 960,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 8,
+      "rowStart": 960,
+      "rowStop": 1080,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 9,
+      "rowStart": 1080,
+      "rowStop": 1200,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 10,
+      "rowStart": 1200,
+      "rowStop": 1320,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 11,
+      "rowStart": 1320,
+      "rowStop": 1440,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 12,
+      "rowStart": 1440,
+      "rowStop": 1560,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 13,
+      "rowStart": 1560,
+      "rowStop": 1680,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 14,
+      "rowStart": 1680,
+      "rowStop": 1800,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 15,
+      "rowStart": 1800,
+      "rowStop": 1920,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 16,
+      "rowStart": 1920,
+      "rowStop": 2040,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 17,
+      "rowStart": 2040,
+      "rowStop": 2160,
+      "rows": 518400
+    },
+    {
+      "rowGroup": 18,
+      "rowStart": 2160,
+      "rowStop": 2161,
+      "rows": 4320
+    }
+  ],
+  "grid": {
+    "model": "EGM2008",
+    "units": "meters",
+    "heightReference": "WGS84 ellipsoid",
+    "heightDefinition": "Geoid undulation N; h = H + N, not terrain elevation",
+    "width": 4320,
+    "height": 2161,
+    "spacingArcMinutes": 5,
+    "offset": -108.0,
+    "scale": 0.003,
+    "sourcePgmSha256": "96d55e88db186ddae892b00c5f8cc42a37cdac8ddb69b6de00af8c75dffb34a3",
+    "license": "Public Domain",
+    "rowOrder": "north to south; columns east from 0 degrees"
+  },
+  "conversion": "Original ZIP retained and PGM extracted unchanged. Full native grid converted without decimation; raw uint16 values and scaled float64 meter heights both retained. ZSTD level 6.",
+  "files": [
+    {
+      "path": "egm2008-5.parquet",
+      "bytes": 46287317,
+      "sha256": "e953e1335918ea326dc8d51fdef1308b3238782295b71eab267de6595caed168"
+    },
+    {
+      "path": "egm2008-5.pgm",
+      "bytes": 18671444,
+      "sha256": "96d55e88db186ddae892b00c5f8cc42a37cdac8ddb69b6de00af8c75dffb34a3"
+    },
+    {
+      "path": "source.zip",
+      "bytes": 16773259,
+      "sha256": "408f05e0c04a9f2e17b9ea2d27123f936e9dea60128bb3411a272f8ddbe318dd"
+    }
+  ]
+}

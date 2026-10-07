@@ -1,0 +1,127 @@
+{
+  "id": "major-rivers",
+  "title": "World Bank: Major Rivers of the World",
+  "credit": "World Bank: Major Rivers of the World",
+  "dataset": "https://datacatalog.worldbank.org/infrastructure-data/search/dataset/0042032/major-rivers-of-the-world",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "sourceRepositoryCommit": "c120179186c1e0cacb536c04cf667348e6dde937",
+  "sourcePath": "formats/geoparquet/major-rivers/major-rivers_0.4.0_gzip.parquet",
+  "sourceSha256": "7a2c47f37efcafaa6146b9d6ea5394c3aca8944662c4051a4c1c34b3ae784dc8",
+  "rows": 98,
+  "columns": [
+    "NAME",
+    "SYSTEM",
+    "MILES",
+    "KILOMETERS",
+    "geometry"
+  ],
+  "geometry": {
+    "primary_column": "geometry",
+    "columns": {
+      "geometry": {
+        "encoding": "WKB",
+        "crs": {
+          "$schema": "https://proj.org/schemas/v0.7/projjson.schema.json",
+          "type": "GeographicCRS",
+          "name": "WGS 84",
+          "datum_ensemble": {
+            "name": "World Geodetic System 1984 ensemble",
+            "members": [
+              {
+                "name": "World Geodetic System 1984 (Transit)"
+              },
+              {
+                "name": "World Geodetic System 1984 (G730)"
+              },
+              {
+                "name": "World Geodetic System 1984 (G873)"
+              },
+              {
+                "name": "World Geodetic System 1984 (G1150)"
+              },
+              {
+                "name": "World Geodetic System 1984 (G1674)"
+              },
+              {
+                "name": "World Geodetic System 1984 (G1762)"
+              },
+              {
+                "name": "World Geodetic System 1984 (G2139)"
+              }
+            ],
+            "ellipsoid": {
+              "name": "WGS 84",
+              "semi_major_axis": 6378137,
+              "inverse_flattening": 298.257223563
+            },
+            "accuracy": "2.0",
+            "id": {
+              "authority": "EPSG",
+              "code": 6326
+            }
+          },
+          "coordinate_system": {
+            "subtype": "ellipsoidal",
+            "axis": [
+              {
+                "name": "Geodetic latitude",
+                "abbreviation": "Lat",
+                "direction": "north",
+                "unit": "degree"
+              },
+              {
+                "name": "Geodetic longitude",
+                "abbreviation": "Lon",
+                "direction": "east",
+                "unit": "degree"
+              }
+            ]
+          },
+          "scope": "Horizontal component of 3D system.",
+          "area": "World.",
+          "bbox": {
+            "south_latitude": -90,
+            "west_longitude": -180,
+            "north_latitude": 90,
+            "east_longitude": 180
+          },
+          "id": {
+            "authority": "EPSG",
+            "code": 4326
+          }
+        },
+        "bbox": [
+          -164.88743636363637,
+          -36.96944545454546,
+          160.76359563636362,
+          71.39248954545454
+        ],
+        "geometry_types": [
+          "LineString",
+          "MultiLineString"
+        ]
+      }
+    },
+    "version": "1.1.0"
+  },
+  "bbox": [
+    -164.88743636363637,
+    -36.96944545454546,
+    160.76359563636362,
+    71.39248954545454
+  ],
+  "conversion": "Source rows, WKB geometry and attributes retained exactly. GeoParquet metadata upgraded to 1.1.0; ZSTD level 6. Country GeoJSON is retained separately from the legacy repository and is not claimed to be byte-equivalent to its Parquet geometry.",
+  "files": [
+    {
+      "path": "major-rivers.parquet",
+      "bytes": 305826,
+      "sha256": "a24fc1034fa5fb0bb4678100bc98d978dc1b575ae55a77dc69e51d151103528a"
+    },
+    {
+      "path": "source.parquet",
+      "bytes": 310719,
+      "sha256": "7a2c47f37efcafaa6146b9d6ea5394c3aca8944662c4051a4c1c34b3ae784dc8"
+    }
+  ]
+}

@@ -4,3 +4,6 @@ formats/geoparquet filter=lfs diff=lfs merge=lfs -text
 earth/glaciations/**/*.nc filter=lfs diff=lfs merge=lfs -text
 earth/glaciations/**/*.zip filter=lfs diff=lfs merge=lfs -text
 earth/glaciations/**/*.gz filter=lfs diff=lfs merge=lfs -text
+
+earth/geoid/egm2008/v1/*.pgm filter=lfs diff=lfs merge=lfs -text
+earth/geoid/egm2008/v1/*.zip filter=lfs diff=lfs merge=lfs -text

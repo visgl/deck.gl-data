@@ -1,0 +1,60 @@
+{
+  "id": "countries",
+  "title": "Natural Earth / DataHub",
+  "credit": "Natural Earth / DataHub",
+  "dataset": "https://datahub.io/core/geo-countries",
+  "license": "ODC-PDDL-1.0",
+  "licenseUrl": "https://opendatacommons.org/licenses/pddl/1-0/",
+  "sourceRepositoryCommit": "c120179186c1e0cacb536c04cf667348e6dde937",
+  "sourcePath": "formats/geoparquet/countries/countries_zstd.parquet",
+  "sourceSha256": "1bbfde04980c5c714fcd9e8759ccccf28793126015cfa2599c023937e8f12dfe",
+  "rows": 255,
+  "columns": [
+    "ADMIN",
+    "ISO_A3",
+    "geometry"
+  ],
+  "geometry": {
+    "version": "1.1.0",
+    "primary_column": "geometry",
+    "columns": {
+      "geometry": {
+        "encoding": "WKB",
+        "geometry_types": [
+          "Polygon",
+          "MultiPolygon"
+        ],
+        "bbox": [
+          -180,
+          -90,
+          180.0000000000002,
+          83.63410065300012
+        ]
+      }
+    }
+  },
+  "bbox": [
+    -180,
+    -90,
+    180,
+    83.63410065300012
+  ],
+  "conversion": "Source rows, WKB geometry and attributes retained exactly. GeoParquet metadata upgraded to 1.1.0; ZSTD level 6. Country GeoJSON is retained separately from the legacy repository and is not claimed to be byte-equivalent to its Parquet geometry.",
+  "files": [
+    {
+      "path": "countries.geojson",
+      "bytes": 24090863,
+      "sha256": "ec97d0cb24c4b5d986db540f3c25c067b31d5aaa4b57478f1b10ff8e8f9552fa"
+    },
+    {
+      "path": "countries.parquet",
+      "bytes": 5301679,
+      "sha256": "3a30af742c2fdf6180bb4a7b527985deb467cfddb61b04f64fb79330b21a782f"
+    },
+    {
+      "path": "source.parquet",
+      "bytes": 6012745,
+      "sha256": "1bbfde04980c5c714fcd9e8759ccccf28793126015cfa2599c023937e8f12dfe"
+    }
+  ]
+}
