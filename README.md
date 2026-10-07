@@ -14,6 +14,8 @@ Large static data files used by the websites of various vis.gl repositories, to 
 
 * [`earth/stac`](earth/stac) - static STAC discovery catalog with version-pinned Earth dataset downloads
 
+* [`earth/glaciations/v1`](earth/glaciations/v1) - attributed ice-grid and climate source datasets, Parquet and browser previews
+
 ## Attributions / Licenses / Data Sources
 
 ### Tectonic reconstruction snapshots

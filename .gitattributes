@@ -1,2 +1,6 @@
 formats/geoparquet filter=lfs diff=lfs merge=lfs -text
 *.parquet filter=lfs diff=lfs merge=lfs -text
+
+earth/glaciations/**/*.nc filter=lfs diff=lfs merge=lfs -text
+earth/glaciations/**/*.zip filter=lfs diff=lfs merge=lfs -text
+earth/glaciations/**/*.gz filter=lfs diff=lfs merge=lfs -text
