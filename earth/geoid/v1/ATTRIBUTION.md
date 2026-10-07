@@ -2,7 +2,7 @@
 
 The EGM96 gravity model is produced by the US National Geospatial-Intelligence
 Agency (NGA). The grid distributed by GeographicLib and its lossless Parquet
-conversions here are **public domain**, suitable for redistribution.
+conversions and the included PGM files here are **public domain**, suitable for redistribution.
 
 License evidence, checked October 7, 2026:
 

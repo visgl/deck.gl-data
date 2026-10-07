@@ -17,7 +17,10 @@ import pyarrow.parquet as pq
 
 
 def convert(source, output):
-    manifest = json.loads((source / 'geoid-manifest.json').read_text())
+    manifest_path = source / 'geoid-manifest.json'
+    if not manifest_path.exists():
+        manifest_path = source / 'scripts/source-manifest.json'
+    manifest = json.loads(manifest_path.read_text())
     output.mkdir(parents=True, exist_ok=True)
     result = dict(model=manifest['model'], source=manifest['source'],
                   sourceSha256=manifest['sourceSha256'], license=manifest['license'], files={})
@@ -26,6 +29,8 @@ def convert(source, output):
             continue
         content = (source / name).read_bytes()
         assert hashlib.sha256(content).hexdigest() == info['sha256'], name
+        (output / name).write_bytes(content)
+        result['files'][name] = dict(info, format='PGM')
         header, pixels = content.split(b'65535\n', 1)
         lines = header.decode('ascii').splitlines()
         width, height = map(int, lines[-1].split())

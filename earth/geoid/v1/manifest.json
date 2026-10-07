@@ -49,6 +49,22 @@
       "rows": 1038240,
       "bytes": 6864738,
       "sha256": "6af035a5e2600b5c075737d1320b9f42a235c86dfcf3a7981d54a5ced64de82a"
+    },
+    "geoid-egm96-low.pgm": {
+      "width": 360,
+      "height": 181,
+      "spacingArcMinutes": 60,
+      "bytes": 130430,
+      "sha256": "6927106a9bfbe1157b8610c8fb2470a8986f8d74c89f1715f26043019efd26e5",
+      "format": "PGM"
+    },
+    "geoid-egm96-hi.pgm": {
+      "width": 1440,
+      "height": 721,
+      "spacingArcMinutes": 15,
+      "bytes": 2076888,
+      "sha256": "2a12f13b6df65cdea52432c7fa1b43f34b007148eb817bf032af5af710905caa",
+      "format": "PGM"
     }
   }
 }

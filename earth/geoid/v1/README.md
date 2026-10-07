@@ -1,6 +1,6 @@
-# EGM96 geoid node tables
+# EGM96 geoid grids and node tables
 
-Lossless Parquet conversions of the optional math.gl EGM96 grids. Model data are
+Original-format PGM grids and lossless Parquet conversions of the optional math.gl EGM96 grids. Model data are
 **public domain (NGA)**; conversion code is MIT licensed. Heights are geoid
 undulation N in meters relative to WGS84: ellipsoidal h = orthometric H + N.
 This is not terrain elevation.
@@ -13,6 +13,11 @@ This is not terrain elevation.
 The preview samples every fourth row and column of the original; it does not
 retain the original interpolation error bounds. Neither table performs
 interpolation. math.gl's `parsePGM` continues to use the packaged PGM grids.
+
+The matching `geoid-egm96-low.pgm` (130 KB) and `geoid-egm96-hi.pgm`
+(2.08 MB) are included alongside the tables, byte-for-byte identical to the
+checksum-pinned math.gl assets. The high PGM is the original GeographicLib grid;
+the low PGM is its decimated preview. Both work directly with `parsePGM`.
 
 ## Schema
 
@@ -37,14 +42,14 @@ See [GeographicLib geoid documentation](https://geographiclib.sourceforge.io/C++
 and [PROJ's NGA public-domain attribution](https://github.com/OSGeo/PROJ-data/blob/master/us_nga/us_nga_README.txt).
 Source and PGM SHA-256 checksums are pinned in `scripts/source-manifest.json`.
 
-From a math.gl checkout containing `modules/geoid/data`:
+Regenerate Parquet from the included PGM files in this directory:
 
 ```sh
 python3 -m pip install -r scripts/requirements.txt
-python3 scripts/generate-parquet.py --source /path/to/math.gl/modules/geoid/data --output .
+python3 scripts/generate-parquet.py --source . --output .
 ```
 
-The converter checks both PGM hashes, verifies every column after writing and
+The converter retains the source PGM files, checks both PGM hashes, verifies every column after writing and
 reading each file, and reconstructs the original pixel bytes exactly.
 
 For public downloads of Git LFS files, use `media.githubusercontent.com`, e.g.
