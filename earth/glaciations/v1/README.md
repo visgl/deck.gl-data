@@ -38,8 +38,9 @@ and ice reconstructions should not be represented as one coupled simulation.
 
 Preview gzip assets and preview manifests reproduce the math.gl app's decimated,
 quantized display grids; climate.json is its subset. These are not the Parquet
-representation's scientific precision. Günz, Mindel and Riss are outside both ice
+representation's scientific precision. Günz, Mindel and Riss are outside the Alpine and PaleoMIST ice
 grid time ranges; the climate series alone does not supply their mapped extents.
+The additional Krapp masks below extend the global age range.
 
 ## Reproduce
 
@@ -52,3 +53,7 @@ arrays and checks climate Arrow round trips. ZSTD compression level is 6.
 Use Git LFS to download .nc, .zip, .gz and .parquet files. Public HTTP consumers
 must use GitHub's media endpoint with an immutable commit; raw endpoints can return
 LFS pointers. The STAC catalog supplies pinned URLs and file checksums.
+
+## Older global ice masks
+
+[Krapp et al. (2021)](krapp2021/README.md) adds 800 global 0.5° ice/ocean/land mask snapshots from 799–0 ka (CC BY 4.0), unchanged NetCDF and lossless Parquet. Unlike the younger thickness grids, these masks provide no thickness or volume. They extend coverage into earlier glaciations; regional stage correlations and any interpolated animation remain interpretive.
