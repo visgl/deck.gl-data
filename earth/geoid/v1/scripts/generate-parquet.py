@@ -17,9 +17,8 @@ import pyarrow.parquet as pq
 
 
 def convert(source, output):
-    manifest_path = source / 'geoid-manifest.json'
-    if not manifest_path.exists():
-        manifest_path = source / 'scripts/source-manifest.json'
+    # Trust the manifest committed beside this converter, never source inputs.
+    manifest_path = Path(__file__).resolve().with_name('source-manifest.json')
     manifest = json.loads(manifest_path.read_text())
     output.mkdir(parents=True, exist_ok=True)
     result = dict(model=manifest['model'], source=manifest['source'],
@@ -28,7 +27,8 @@ def convert(source, output):
         if not name.endswith('.pgm'):
             continue
         content = (source / name).read_bytes()
-        assert hashlib.sha256(content).hexdigest() == info['sha256'], name
+        if hashlib.sha256(content).hexdigest() != info['sha256']:
+            raise ValueError(f'{name}: SHA-256 does not match the pinned source manifest')
         (output / name).write_bytes(content)
         result['files'][name] = dict(info, format='PGM')
         header, pixels = content.split(b'65535\n', 1)

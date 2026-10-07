@@ -47,7 +47,14 @@ Regenerate Parquet from the included PGM files in this directory:
 ```sh
 python3 -m pip install -r scripts/requirements.txt
 python3 scripts/generate-parquet.py --source . --output .
+python3 scripts/test-generate-parquet.py
 ```
+
+The converter always loads the pinned `scripts/source-manifest.json` beside its
+own script; `--source` only locates PGM bytes. Manifests supplied in the input
+directory cannot override the trusted hashes. Checks remain active with Python
+optimization enabled. The regression checks cover PGM-only inputs and modified
+PGM bytes accompanied by forged input manifests.
 
 The converter retains the source PGM files, checks both PGM hashes, verifies every column after writing and
 reading each file, and reconstructs the original pixel bytes exactly.
