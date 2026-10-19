@@ -54,6 +54,42 @@ class ConversionTests(unittest.TestCase):
                            citation="", license_id="CC-BY-4.0",
                            model="TEST", coordinate_epoch="present")
 
+    def test_rejects_nonfinite_epoch(self):
+        for epoch in ("Ma:nan", "Ma:inf", "Ma:-1", "Ma:invalid", "Ma:"):
+            with self.subTest(epoch=epoch), self.assertRaises(ValueError):
+                module.convert("missing.geojson", "out.parquet", "manifest.json",
+                               citation="Source", license_id="CC-BY-4.0",
+                               model="TEST", coordinate_epoch=epoch)
+
+    def test_rejects_coordinates_outside_geographic_bounds(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "invalid.geojson"
+            source.write_text(json.dumps({
+                "type": "FeatureCollection",
+                "features": [{"type": "Feature", "properties": {},
+                              "geometry": {"type": "Point", "coordinates": [190, 20]}}]
+            }))
+            with self.assertRaisesRegex(ValueError, "Coordinates outside"):
+                module.convert(source, root / "out.parquet", root / "manifest.json",
+                               citation="Source", license_id="CC-BY-4.0",
+                               model="TEST", coordinate_epoch="present")
+
+    def test_rejects_unsupported_declared_crs(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "invalid.geojson"
+            source.write_text(json.dumps({
+                "type": "FeatureCollection",
+                "crs": {"type": "name", "properties": {"name": "EPSG:3857"}},
+                "features": [{"type": "Feature", "properties": {},
+                              "geometry": {"type": "Point", "coordinates": [10, 20]}}]
+            }))
+            with self.assertRaisesRegex(ValueError, "Unsupported GeoJSON CRS"):
+                module.convert(source, root / "out.parquet", root / "manifest.json",
+                               citation="Source", license_id="CC-BY-4.0",
+                               model="TEST", coordinate_epoch="present")
+
     def test_rejects_unsupported_epoch(self):
         with self.assertRaises(ValueError):
             module.convert("missing.geojson", "out.parquet", "manifest.json",
