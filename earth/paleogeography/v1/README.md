@@ -54,3 +54,18 @@ generation/validation workflows rather than hand-maintaining divergent files.
 3. Check name/plate ID retention, topology, age validity, reference frame.
 4. Publish immutable assets and manifests, then register STAC Items/Collections.
 5. Consume verified assets from the math.gl Tectonic Time Machine.
+
+## Local publication preflight
+
+After converting an approved source archive, verify the manifest against
+the actual artifact before proposing a STAC Item:
+
+```sh
+python3 scripts/validate_manifest.py output.manifest.json --artifact output.parquet
+python3 -m unittest discover -s scripts -p 'test_*.py'
+```
+
+The preflight verifies the file's byte size and SHA-256, required provenance
+fields, GeoParquet CRS, and feature count. This does not establish that
+third-party redistribution rights have been secured, or that the asset is
+already hosted at a stable URL.
