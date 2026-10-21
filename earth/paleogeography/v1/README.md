@@ -1,8 +1,8 @@
 # Paleogeography GeoParquet ingestion (proposed)
 
-This directory establishes a reproducible **conversion pipeline**, not a published
-paleogeographic dataset. No third-party geometry or unverified license is bundled.
-Source archives must be selected and audited separately before publishing assets.
+This directory contains the licensed [PALEOMAP PaleoDEMs v2 dataset](paleodem/),
+with all 109 source CSV age grids converted losslessly to ZSTD Parquet, plus a
+reproducible conversion pipeline for separately audited vector sources.
 
 ## Licensed source candidates
 
@@ -15,7 +15,7 @@ replace the earlier blanket permission restriction on PALEOMAP.
 PaleoDEMs are elevation grids, not named vector geological features. Converting
 them requires a raster/contour preparation step before this GeoJSON converter.
 GPlates GeoData contains multiple components whose notices require separate
-inspection. No new data assets have been ingested or published by this PR.
+inspection. Only the audited PaleoDEM CSV release is included here.
 
 ## Conversion
 
@@ -53,7 +53,7 @@ generation/validation workflows rather than hand-maintaining divergent files.
 
 ## Future work
 
-1. Select and license-audit a named geological feature archive.
+1. Select and license-audit a named vector geological feature archive.
 2. Pin upstream source version and reproduce conversion.
 3. Check name/plate ID retention, topology, age validity, reference frame.
 4. Publish immutable assets and manifests, then register STAC Items/Collections.

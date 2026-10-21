@@ -1,0 +1,1577 @@
+{
+  "title": "PALEOMAP PaleoDEMs for the Phanerozoic",
+  "version": "v2",
+  "dataset": "https://doi.org/10.5281/zenodo.5460860",
+  "source": "https://zenodo.org/records/5460860/files/PaleoDEMS_long_lat_elev_csv_v2.zip",
+  "sourceSha256": "db43e6261411ff468c9030ca240778a73f224bf34bf8186c735477e41454c873",
+  "credit": "Scotese, Christopher R. and Wright, Nicky M. (2018). PALEOMAP Paleodigital Elevation Models (PaleoDEMs) for the Phanerozoic, v2. https://doi.org/10.5281/zenodo.5460860",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "sourceLicenseFile": "License.txt",
+  "model": "PALEOMAP Scotese and Wright (2018)",
+  "coordinateFrame": "Source reconstructed paleogeographic longitude/latitude; no datum or plate-model transformation applied",
+  "columns": {
+    "age_ma": "Million years before present (positive into the past)",
+    "longitude": "Degrees east",
+    "latitude": "Degrees north",
+    "elevation_m": "Source paleotopography/bathymetry in meters; positive land, negative ocean depth; not a modern geodetic vertical datum"
+  },
+  "grid": {
+    "spacingDegrees": 1,
+    "order": "Latitude descending, longitude ascending (longitude varies fastest)",
+    "endpoints": "Source-specific dimensions and bounds retained per row group; no edge or pole nodes added or removed",
+    "precision": "All float64 values preserved, including near-zero source latitude at 145 Ma"
+  },
+  "compression": {
+    "codec": "ZSTD",
+    "level": 6
+  },
+  "ages": {
+    "min": 0,
+    "max": 540,
+    "step": 5,
+    "count": 109
+  },
+  "rowGroups": [
+    {
+      "index": 0,
+      "ageMa": 0,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map01_000Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 1,
+      "ageMa": 5,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map03_005Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 2,
+      "ageMa": 10,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map05_010Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 3,
+      "ageMa": 15,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map06_015Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 4,
+      "ageMa": 20,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map07_020Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 5,
+      "ageMa": 25,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map08_025Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 6,
+      "ageMa": 30,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map09_030Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 7,
+      "ageMa": 35,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map10_035Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 8,
+      "ageMa": 40,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map11_040Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 9,
+      "ageMa": 45,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map12_045Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 10,
+      "ageMa": 50,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map13_050Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 11,
+      "ageMa": 55,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map14_055Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 12,
+      "ageMa": 60,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map15_060Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 13,
+      "ageMa": 65,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map16_065Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 14,
+      "ageMa": 70,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map17_070Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 15,
+      "ageMa": 75,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map18_075Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 16,
+      "ageMa": 80,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map19_080Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 17,
+      "ageMa": 85,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map20_085Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 18,
+      "ageMa": 90,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map21_090Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 19,
+      "ageMa": 95,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map22_095Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 20,
+      "ageMa": 100,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map23_100Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 21,
+      "ageMa": 105,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map24_105Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 22,
+      "ageMa": 110,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map25_110Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 23,
+      "ageMa": 115,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map26_115Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 24,
+      "ageMa": 120,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map27_120Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 25,
+      "ageMa": 125,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map28_125Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 26,
+      "ageMa": 130,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map29_130Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 27,
+      "ageMa": 135,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map30_135Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 28,
+      "ageMa": 140,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map31_140Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 29,
+      "ageMa": 145,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map32_145Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 30,
+      "ageMa": 150,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map33_150Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 31,
+      "ageMa": 155,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map34_155Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 32,
+      "ageMa": 160,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map35_160Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 33,
+      "ageMa": 165,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map36_165Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 34,
+      "ageMa": 170,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map37_170Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 35,
+      "ageMa": 175,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map38_175Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 36,
+      "ageMa": 180,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map39_180Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 37,
+      "ageMa": 185,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map40_185Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 38,
+      "ageMa": 190,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map41_190Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 39,
+      "ageMa": 195,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map42_195Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 40,
+      "ageMa": 200,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map43_200Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 41,
+      "ageMa": 205,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map43.5_205Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 42,
+      "ageMa": 210,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map44_210Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 43,
+      "ageMa": 215,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map44.5_215Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 44,
+      "ageMa": 220,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map45_220Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 45,
+      "ageMa": 225,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map45.5_225Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 46,
+      "ageMa": 230,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map46_230Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 47,
+      "ageMa": 235,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map46.5_235Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 48,
+      "ageMa": 240,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map47_240Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 49,
+      "ageMa": 245,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map48_245Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 50,
+      "ageMa": 250,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map49_250Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 51,
+      "ageMa": 255,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map50_255Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 52,
+      "ageMa": 260,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map51_260Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 53,
+      "ageMa": 265,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map51.5_265Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 54,
+      "ageMa": 270,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map52_270Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 55,
+      "ageMa": 275,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map53_275Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 56,
+      "ageMa": 280,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map53.5_280Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 57,
+      "ageMa": 285,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map54_285Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 58,
+      "ageMa": 290,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map55_290Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 59,
+      "ageMa": 295,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map56_295Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 60,
+      "ageMa": 300,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map57_300Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 61,
+      "ageMa": 305,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map58_305Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 62,
+      "ageMa": 310,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map59_310Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 63,
+      "ageMa": 315,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map59.5_315Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 64,
+      "ageMa": 320,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map60_320Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 65,
+      "ageMa": 325,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map61_325Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 66,
+      "ageMa": 330,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map62_330Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 67,
+      "ageMa": 335,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map62.5_335Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 68,
+      "ageMa": 340,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map63_340Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 69,
+      "ageMa": 345,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map63.5_345Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 70,
+      "ageMa": 350,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map64_350Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 71,
+      "ageMa": 355,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map64.5_355Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 72,
+      "ageMa": 360,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map65_360Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 73,
+      "ageMa": 365,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map65.5_365Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 74,
+      "ageMa": 370,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map66_370Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 75,
+      "ageMa": 375,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map66.5_375Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 76,
+      "ageMa": 380,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map67_380Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 77,
+      "ageMa": 385,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map67.5_385Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 78,
+      "ageMa": 390,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map68_390Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 79,
+      "ageMa": 395,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map69_395Ma.csv",
+      "rows": 64800,
+      "width": 360,
+      "height": 180,
+      "bbox": [
+        -180.0,
+        -89.0,
+        179.0,
+        90.0
+      ]
+    },
+    {
+      "index": 80,
+      "ageMa": 400,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map70_400Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 81,
+      "ageMa": 405,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map70.5_405Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 82,
+      "ageMa": 410,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map71_410Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 83,
+      "ageMa": 415,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map72_415Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 84,
+      "ageMa": 420,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map73_420Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 85,
+      "ageMa": 425,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map74_425Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 86,
+      "ageMa": 430,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map75_430Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 87,
+      "ageMa": 435,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map75.5_435Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 88,
+      "ageMa": 440,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map76_440Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 89,
+      "ageMa": 445,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map77_445Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 90,
+      "ageMa": 450,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map78_450Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 91,
+      "ageMa": 455,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map79_455Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 92,
+      "ageMa": 460,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map80_460Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 93,
+      "ageMa": 465,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map80.5_465Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 94,
+      "ageMa": 470,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map81_470Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 95,
+      "ageMa": 475,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map81.5_475Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 96,
+      "ageMa": 480,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map82_480Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 97,
+      "ageMa": 485,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map82.5_485Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 98,
+      "ageMa": 490,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map83_490Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 99,
+      "ageMa": 495,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map83.5_495Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 100,
+      "ageMa": 500,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map84_500Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 101,
+      "ageMa": 505,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map84.1_505Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 102,
+      "ageMa": 510,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map84.2_510Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 103,
+      "ageMa": 515,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map85_515Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 104,
+      "ageMa": 520,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map86_520Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 105,
+      "ageMa": 525,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map86.5_525Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 106,
+      "ageMa": 530,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map87_530Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 107,
+      "ageMa": 535,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map87.5_535Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    },
+    {
+      "index": 108,
+      "ageMa": 540,
+      "sourceFile": "PaleoDEMS_long_lat_elev_csv_v2.csv/Map88_540Ma.csv",
+      "rows": 65341,
+      "width": 361,
+      "height": 181,
+      "bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ]
+    }
+  ],
+  "conversion": "Lossless numeric CSV-to-Parquet conversion; all 109 CSV grids included, original node order and float64 values retained. No resampling, deduplication, contouring, reconstruction or inferred missing values. ZSTD level 6; one complete age grid per row group; column statistics enable age filtering.",
+  "software": {
+    "pyarrow": "21.0.0",
+    "numpy": "2.0.2"
+  },
+  "files": [
+    {
+      "path": "paleodem.parquet",
+      "bytes": 3111980,
+      "sha256": "273da657c3edfb5802ea8ef1ace41f702c0da435f91a9e72710924f5e530f026",
+      "rows": 7095119,
+      "rowGroups": 109
+    }
+  ]
+}

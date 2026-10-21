@@ -1,6 +1,6 @@
 # Upstream source audit checklist
 
-**Status: explicit source licenses found; no new data assets ingested or published.**
+**Status: PaleoDEM CSV v2 source grids included as lossless Parquet; other sources remain candidates.**
 
 Record one entry per upstream dataset release before redistribution.
 
@@ -46,7 +46,7 @@ The archive contains reconstructed elevation/bathymetry grids (1 degree,
 540–0 Ma, nominal 5 Ma sampling), not named orogen polygons. Derived contours
 must record their thresholds, reconstruction frame, source ages and processing.
 Do not rotate an already reconstructed grid a second time or silently combine
-it with a different plate model. Raster preparation remains separate work.
+it with a different plate model. The numeric grid conversion is included under `paleodem/`; contour/vector derivation remains separate work.
 
 ### Macrostrat: explicit service-level CC-BY-4.0 terms
 

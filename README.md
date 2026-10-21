@@ -21,6 +21,8 @@ Large static data files used by the websites of various vis.gl repositories, to 
 * [`earth/hydrography/v1/major-rivers`](earth/hydrography/v1/major-rivers) - CC-BY-4.0 global major rivers
 * [`earth/geoid/egm2008/v1`](earth/geoid/egm2008/v1) - public-domain EGM2008 grid and lossless Parquet
 
+* [`earth/paleogeography/v1/paleodem`](earth/paleogeography/v1/paleodem) - CC-BY-4.0 PALEOMAP PaleoDEMs, 109 reconstructed elevation grids in streamable Parquet
+
 ## Attributions / Licenses / Data Sources
 
 ### EGM96 geoid grids
