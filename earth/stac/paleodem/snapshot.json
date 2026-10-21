@@ -1,0 +1,112 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-paleodem-snapshot",
+  "collection": "visgl-paleodem",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          -90
+        ],
+        [
+          180,
+          -90
+        ],
+        [
+          180,
+          90
+        ],
+        [
+          -180,
+          90
+        ],
+        [
+          -180,
+          -90
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "properties": {
+    "datetime": "2026-10-21T03:17:32Z",
+    "title": "Scotese and Wright (2018) PALEOMAP PaleoDEMs v2",
+    "description": "109 reconstructed elevation/bathymetry grids at 5 Ma intervals, 0–540 Ma before present, converted losslessly from the licensed CSV v2 archive. Numeric Parquet nodes, not vector geometries; one age grid per row group. Source-specific grid dimensions and coordinates are preserved. Geologic ages are separate from repository snapshot datetime.",
+    "visgl:source_commit": "eaa2649826c795492ee89a2632d863788545f2a2",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
+    "paleo:age_min_ma": 0,
+    "paleo:age_max_ma": 540,
+    "paleo:age_step_ma": 5,
+    "paleo:age_count": 109,
+    "paleo:age_unit": "Ma before present",
+    "paleo:coordinate_frame": "Source reconstructed paleogeographic longitude/latitude; no datum or plate-model transformation applied",
+    "paleo:row_groups": 109,
+    "paleo:node_count": 7095119
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "elevation": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/eaa2649826c795492ee89a2632d863788545f2a2/earth/paleogeography/v1/paleodem/paleodem.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "title": "All 109 PaleoDEM age grids (ZSTD Parquet)",
+      "file:size": 3111980,
+      "file:checksum": "1220273da657c3edfb5802ea8ef1ace41f702c0da435f91a9e72710924f5e530f026"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/eaa2649826c795492ee89a2632d863788545f2a2/earth/paleogeography/v1/paleodem/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/eaa2649826c795492ee89a2632d863788545f2a2/earth/paleogeography/v1/paleodem/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "source-license": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/eaa2649826c795492ee89a2632d863788545f2a2/earth/paleogeography/v1/paleodem/LICENSE.source.txt",
+      "type": "text/plain",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

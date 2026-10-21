@@ -1,0 +1,92 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "id": "visgl-paleodem",
+  "title": "Scotese and Wright (2018) PALEOMAP PaleoDEMs v2",
+  "description": "109 reconstructed elevation/bathymetry grids at 5 Ma intervals, 0–540 Ma before present, converted losslessly from the licensed CSV v2 archive. Numeric Parquet nodes, not vector geometries; one age grid per row group. Source-specific grid dimensions and coordinates are preserved. Geologic ages are separate from repository snapshot datetime.",
+  "license": "CC-BY-4.0",
+  "providers": [
+    {
+      "name": "Christopher R. Scotese and Nicky M. Wright",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://doi.org/10.5281/zenodo.5460860"
+    },
+    {
+      "name": "vis.gl",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://github.com/visgl/deck.gl-data"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-10-21T03:17:32Z",
+          "2026-10-21T03:17:32Z"
+        ]
+      ]
+    }
+  },
+  "summaries": {
+    "paleo:age_min_ma": [
+      0
+    ],
+    "paleo:age_max_ma": [
+      540
+    ],
+    "paleo:age_step_ma": [
+      5
+    ],
+    "paleo:age_unit": [
+      "Ma before present"
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://doi.org/10.5281/zenodo.5460860",
+      "type": "text/html"
+    },
+    {
+      "rel": "item",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ]
+}

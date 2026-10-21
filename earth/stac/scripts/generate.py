@@ -127,3 +127,6 @@ if __name__ == '__main__':
 
     from krapp2021 import generate_krapp
     generate_krapp()
+
+    from paleodem import generate_paleodem
+    generate_paleodem()
