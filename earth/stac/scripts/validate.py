@@ -13,9 +13,11 @@ import pystac
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def validate(downloads=False):
+def validate(downloads=False, collection=None):
     paths = sorted(ROOT.rglob('*.json'))
     documents = {path.resolve(): json.loads(path.read_text()) for path in paths}
+    assert collection is None or any(doc['type'] == 'Collection' and doc['id'] == collection
+                                     for doc in documents.values()), collection
     ids = set()
     assets_checked = 0
     root = (ROOT / 'catalog.json').resolve()
@@ -50,7 +52,8 @@ def validate(downloads=False):
         assert document['properties']['visgl:datetime_semantics'].startswith('Repository dataset snapshot')
         commit = document['properties']['visgl:source_commit']
         assert len(commit) == 40 and all(c in '0123456789abcdef' for c in commit)
-        if downloads:
+        check_downloads = downloads and (collection is None or document['collection'] == collection)
+        if check_downloads:
             with urlopen(document['assets']['manifest']['href']) as response:
                 manifest = json.load(response)
             inventory = manifest['files']
@@ -58,7 +61,7 @@ def validate(downloads=False):
                 inventory = {entry['path']: entry for entry in inventory}
         for asset in document['assets'].values():
             assert f'/{commit}/' in asset['href'], asset['href']
-            if not downloads:
+            if not check_downloads:
                 continue
             with urlopen(asset['href']) as response:
                 content = response.read()
@@ -72,7 +75,7 @@ def validate(downloads=False):
                 assert not content.startswith(b'version https://git-lfs.github.com/spec/v1')
                 assets_checked += 1
     catalog = pystac.Catalog.from_file(str(root))
-    assert len(list(catalog.get_all_items())) == 11
+    assert len(list(catalog.get_all_items())) == 12
     print(f'Validated {len(documents)} STAC documents, schema extensions, and reciprocal links.')
     if downloads:
         print(f'Verified {assets_checked} public data downloads against sizes, checksums, and source manifests.')
@@ -81,4 +84,8 @@ def validate(downloads=False):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--downloads', action='store_true')
-    validate(parser.parse_args().downloads)
+    parser.add_argument('--collection', help='Limit public download checks to this Collection ID; all local documents still validate')
+    args = parser.parse_args()
+    if args.collection and not args.downloads:
+        parser.error('--collection requires --downloads')
+    validate(args.downloads, args.collection)

@@ -2,12 +2,13 @@
 
 Open [catalog.json](catalog.json) to discover the Earth datasets using a static
 [STAC 1.1.0](https://github.com/radiantearth/stac-spec/tree/v1.1.0) catalog.
-It contains nine Collections and ten Items:
+It contains eleven Collections and twelve Items:
 
 - **Earth reference datasets**: EGM2008 geoid, countries and major rivers, with original and converted assets.
 - **EGM96**: one Item per grid resolution, each with PGM and Parquet assets.
 - **Cao 2024**: one Item with the combined geometry/rotation Parquet snapshot.
 - **Glaciations and climate**: Alpine PISM, PaleoMIST, Krapp 2021 and Köhler 2015; each has a snapshot Item with source files and lossless Parquet. Alpine, PaleoMIST and Köhler additionally provide separate display previews. Krapp provides 799–0 ka global ice/ocean/land masks.
+- **PALEOMAP PaleoDEMs v2**: one Item with 109 CC-BY-4.0 reconstructed elevation grids in age-filterable Parquet, plus manifest, attribution and original license.
 - **Müller 2022**: one Item pairing geometry and rotation Parquet assets.
 
 Collection and Item links are relative, so the catalog can be browsed locally or
@@ -55,8 +56,23 @@ python3 scripts/validate.py --downloads
 ```
 
 Generation reads immutable manifests specified in the generator. Validation checks
-core and File Info extension schemas, reciprocal catalog links, unique IDs, the
-four discoverable Items, and every public asset's availability. Data downloads must
+core and File Info extension schemas, reciprocal catalog links, unique IDs, all
+discoverable Items, and every public asset's availability. Data downloads must
 match both the declared size/checksum and their source manifest. Internet access is
 required for source manifests, schema resolution, and download checks. Omit
 `--downloads` to skip downloading dataset assets.
+
+PaleoDEM `paleo:age_min_ma`, `paleo:age_max_ma`, `paleo:age_step_ma` and
+`paleo:age_unit` use millions of years before present; `paleo:age_count`,
+`paleo:row_groups` and `paleo:node_count` describe the Parquet snapshot.
+`paleo:coordinate_frame` identifies already reconstructed source coordinates.
+These are custom properties, not a claim of a separate STAC extension.
+Per-age grid dimensions, units, row-group indexes and source filenames are
+available in the embedded Parquet metadata and manifest. PaleoDEM assets are
+pinned to their uploaded dataset commit independently of the STAC registration.
+
+To validate all catalog documents while downloading only the PaleoDEM assets:
+
+```sh
+python3 scripts/validate.py --downloads --collection visgl-paleodem
+```

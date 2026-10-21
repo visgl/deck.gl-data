@@ -74,6 +74,12 @@
       "href": "krapp2021/collection.json",
       "type": "application/json",
       "title": "Krapp et al. (2021), Terrestrial climate of the last 800,000 years — krapp2021"
+    },
+    {
+      "rel": "child",
+      "href": "paleodem/collection.json",
+      "type": "application/json",
+      "title": "Scotese and Wright (2018) PALEOMAP PaleoDEMs v2"
     }
   ]
 }
