@@ -4,14 +4,18 @@ This directory establishes a reproducible **conversion pipeline**, not a publish
 paleogeographic dataset. No third-party geometry or unverified license is bundled.
 Source archives must be selected and audited separately before publishing assets.
 
-## Candidate sources
+## Licensed source candidates
 
-- EarthByte / GPlates: inspect the **specific archive**, version, individual
-  contributors, and license notices before redistribution. A general EarthByte
-  website license is not evidence for every third-party feature collection.
-- Macrostrat: inspect the API/database license and the attribution and reuse
-  conditions of underlying map sources before selecting any export.
-- PALEOMAP: **do not redistribute** without explicit dataset-specific permission.
+The [source audit](SOURCE-AUDIT.md) records release-specific evidence checked on
+2026-10-20. PALEOMAP PaleoDEMs v2 has an explicit **CC-BY-4.0** license in both
+its Zenodo release metadata and downloaded CSV archive. Macrostrat also states
+CC-BY-4.0 with attribution to Macrostrat and original providers. These findings
+replace the earlier blanket permission restriction on PALEOMAP.
+
+PaleoDEMs are elevation grids, not named vector geological features. Converting
+them requires a raster/contour preparation step before this GeoJSON converter.
+GPlates GeoData contains multiple components whose notices require separate
+inspection. No new data assets have been ingested or published by this PR.
 
 ## Conversion
 
