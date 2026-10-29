@@ -43,7 +43,9 @@
     "datetime": "2026-10-07T16:31:40Z",
     "visgl:source_commit": "eecfffd67766d44de1a240ef548b6c053dcbd62f",
     "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation or measurement time",
-    "visgl:rows": 255
+    "visgl:rows": 255,
+    "title": "World country boundaries and attributes",
+    "description": "Country boundary polygons and source attributes from Natural Earth / DataHub, provided as GeoParquet and a separately retained legacy GeoJSON asset. Source rows and WKB geometries are preserved in Parquet; the GeoJSON is not claimed to have byte-equivalent geometry."
   },
   "links": [
     {

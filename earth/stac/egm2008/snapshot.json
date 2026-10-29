@@ -43,7 +43,9 @@
     "datetime": "2026-10-07T16:31:40Z",
     "visgl:source_commit": "eecfffd67766d44de1a240ef548b6c053dcbd62f",
     "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation or measurement time",
-    "visgl:rows": 9335520
+    "visgl:rows": 9335520,
+    "title": "EGM2008 geoid undulation grid (5 arc minutes)",
+    "description": "Global 5-arc-minute NGA EGM2008 geoid grid with source and Parquet assets. Geoid undulation N is measured in meters relative to WGS84; ellipsoidal height h = orthometric height H + N. These values are not terrain elevation."
   },
   "links": [
     {

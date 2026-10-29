@@ -5,6 +5,8 @@ import json
 from pathlib import Path
 from urllib.request import urlopen
 
+from item_metadata import ITEM_METADATA
+
 ROOT = Path(__file__).resolve().parents[1]
 REPO = 'visgl/deck.gl-data'
 FILE_EXTENSION = 'https://stac-extensions.github.io/file/v2.1.0/schema.json'
@@ -34,6 +36,10 @@ def link(rel, href, media_type='application/json', **extra):
 
 
 def write(path, document):
+    # Keep standalone Item labels consistent across every dataset generator.
+    if document['type'] == 'Feature':
+        title, description = ITEM_METADATA[str(path)]
+        document['properties'].update(title=title, description=description)
     target = ROOT / path
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(document, indent=2, ensure_ascii=False) + '\n')

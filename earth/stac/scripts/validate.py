@@ -49,6 +49,8 @@ def validate(downloads=False, collection=None):
                            for entry in linked['links'] if entry['rel'] == 'parent')
         if document['type'] != 'Feature':
             continue
+        assert document['properties'].get('title', '').strip() not in ['', document['id']], path
+        assert document['properties'].get('description', '').strip(), path
         assert document['properties']['visgl:datetime_semantics'].startswith('Repository dataset snapshot')
         commit = document['properties']['visgl:source_commit']
         assert len(commit) == 40 and all(c in '0123456789abcdef' for c in commit)

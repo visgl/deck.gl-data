@@ -41,8 +41,6 @@
   ],
   "properties": {
     "datetime": "2026-10-07T12:55:48Z",
-    "title": "visgl-egm96-hi",
-    "description": "Public-domain NGA EGM96 geoid undulation grids, distributed through GeographicLib. Heights N are meters above WGS84; h = H + N. Low resolution is a decimated preview, not terrain elevation.",
     "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
     "visgl:source_commit": "676fb53ffef120e7ca4d1acdc91e94b4cc37ef69",
     "geoid:model": "EGM96",
@@ -51,7 +49,9 @@
     "geoid:spacing_arc_minutes": 15,
     "geoid:preview": false,
     "geoid:height_units": "meters",
-    "geoid:height_reference": "WGS84 ellipsoid"
+    "geoid:height_reference": "WGS84 ellipsoid",
+    "title": "EGM96 geoid undulation grid (15 arc minutes)",
+    "description": "Global 15-arc-minute EGM96 geoid undulation grid in PGM and Parquet. Heights N are meters relative to the WGS84 ellipsoid; ellipsoidal height h = orthometric height H + N. These values are not terrain elevation."
   },
   "links": [
     {

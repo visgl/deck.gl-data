@@ -41,8 +41,6 @@
   ],
   "properties": {
     "datetime": "2026-10-06T23:01:40Z",
-    "title": "visgl-muller2022-snapshot",
-    "description": "CC-BY-4.0 present-day geometry templates and finite rotations. Geometry is unreconstructed; geologic ages in Ma before present are separate from the STAC snapshot datetime. R. Dietmar Müller, Nicolas Flament, John Cannon, Michael G. Tetley, Simon E. Williams, Xianzhi Cao, Ömer F. Bodur, Sabin Zahirovic and Andrew Merdith (2022); coastline templates after Merdith et al. (2021)",
     "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
     "visgl:source_commit": "6b82e2df927725dc54ba729267204498d4ac6c74",
     "tectonic:model": "MULLER2022",
@@ -51,7 +49,9 @@
     "tectonic:age_max_ma": 1000,
     "tectonic:age_step_ma": 10,
     "tectonic:reference_frame": "Optimised mantle",
-    "tectonic:anchor_plate_id": 0
+    "tectonic:anchor_plate_id": 0,
+    "title": "Müller et al. (2022) tectonic plate geometries and rotations",
+    "description": "Present-day tectonic geometry templates and finite plate rotations from the Müller et al. (2022) model, provided as Parquet tables. Geometry is unreconstructed; rotation records describe plate motion at geological ages in millions of years before present."
   },
   "links": [
     {

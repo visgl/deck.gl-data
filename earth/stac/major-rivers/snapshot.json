@@ -43,7 +43,9 @@
     "datetime": "2026-10-07T16:31:40Z",
     "visgl:source_commit": "eecfffd67766d44de1a240ef548b6c053dcbd62f",
     "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation or measurement time",
-    "visgl:rows": 98
+    "visgl:rows": 98,
+    "title": "Major rivers of the world: river lines and attributes",
+    "description": "World Bank major-river line geometries and source attributes, provided as GeoParquet. Source rows, WKB geometries and attributes are retained, with GeoParquet 1.1.0 metadata and ZSTD compression."
   },
   "links": [
     {

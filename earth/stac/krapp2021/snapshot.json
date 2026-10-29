@@ -45,7 +45,9 @@
     "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
     "paleo:age_min_ka": 0,
     "paleo:age_max_ka": 799,
-    "paleo:age_unit": "ka before present"
+    "paleo:age_unit": "ka before present",
+    "title": "Krapp et al. (2021) global ice-mask grids",
+    "description": "Global ice-mask snapshots from 799,000 years ago to the present at 1,000-year intervals, provided as source NetCDF and lossless Parquet grids. All native cells and values are retained, with one age snapshot per Parquet row group."
   },
   "links": [
     {
