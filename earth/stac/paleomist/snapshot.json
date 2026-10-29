@@ -45,7 +45,9 @@
     "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
     "paleo:age_min_ka": -0.0,
     "paleo:age_max_ka": 80.0,
-    "paleo:age_unit": "ka before present"
+    "paleo:age_unit": "ka before present",
+    "title": "PaleoMIST ice-sheet thickness and paleotopography grids",
+    "description": "Global PaleoMIST grids of ice thickness, base topography, paleotopography and sea level from 80,000 years ago to the present. Includes the source NetCDF, lossless Parquet grids and a binary preview with its manifest. Ages are in thousands of years before present, separate from the repository snapshot date."
   },
   "links": [
     {

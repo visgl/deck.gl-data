@@ -55,6 +55,9 @@ python3 -m pip install -r scripts/requirements.txt
 python3 scripts/validate.py --downloads
 ```
 
+Item titles identify the kind of data, while descriptions summarize variables, coverage and asset formats.
+The generator applies these labels from `scripts/item_metadata.py` to every Item.
+
 Generation reads immutable manifests specified in the generator. Validation checks
 core and File Info extension schemas, reciprocal catalog links, unique IDs, all
 discoverable Items, and every public asset's availability. Data downloads must

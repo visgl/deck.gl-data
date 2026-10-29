@@ -41,8 +41,6 @@
   ],
   "properties": {
     "datetime": "2026-10-21T03:17:32Z",
-    "title": "Scotese and Wright (2018) PALEOMAP PaleoDEMs v2",
-    "description": "109 reconstructed elevation/bathymetry grids at 5 Ma intervals, 0–540 Ma before present, converted losslessly from the licensed CSV v2 archive. Numeric Parquet nodes, not vector geometries; one age grid per row group. Source-specific grid dimensions and coordinates are preserved. Geologic ages are separate from repository snapshot datetime.",
     "visgl:source_commit": "eaa2649826c795492ee89a2632d863788545f2a2",
     "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
     "paleo:age_min_ma": 0,
@@ -52,7 +50,9 @@
     "paleo:age_unit": "Ma before present",
     "paleo:coordinate_frame": "Source reconstructed paleogeographic longitude/latitude; no datum or plate-model transformation applied",
     "paleo:row_groups": 109,
-    "paleo:node_count": 7095119
+    "paleo:node_count": 7095119,
+    "title": "PALEOMAP PaleoDEM elevation and bathymetry grids (0–540 Ma)",
+    "description": "109 reconstructed global elevation and bathymetry grids at 5-million-year intervals from the present to 540 million years ago. Converted losslessly from PALEOMAP PaleoDEMs v2 CSV grids to numeric Parquet nodes, with one age grid per row group. Source grid dimensions and coordinates are preserved; these are gridded heights, not vector geometries."
   },
   "links": [
     {

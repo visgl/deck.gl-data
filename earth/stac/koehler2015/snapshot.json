@@ -45,7 +45,9 @@
     "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
     "paleo:age_min_ka": 0,
     "paleo:age_max_ka": 5000,
-    "paleo:age_unit": "ka before present"
+    "paleo:age_unit": "ka before present",
+    "title": "Köhler et al. (2015) paleoclimate temperature and albedo time series",
+    "description": "Temperature and albedo time series spanning the last 5 million years, with original source data and Parquet tables. All three source temperature variants are retained, without rebasing or extrapolation. Ages are expressed as thousands of years before present."
   },
   "links": [
     {

@@ -45,7 +45,9 @@
     "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or geologic age",
     "paleo:age_min_ka": -0.0,
     "paleo:age_max_ka": 119.0,
-    "paleo:age_unit": "ka before present"
+    "paleo:age_unit": "ka before present",
+    "title": "Alpine PISM glacier thickness, temperature and velocity grids",
+    "description": "Alpine ice-sheet simulation grids covering 119,000 years ago to the present, with ice thickness, bed topography, basal temperature and basal/surface velocity components. Includes the source NetCDF, lossless Parquet grids and a binary preview with its manifest. Ages are in thousands of years before present."
   },
   "links": [
     {
