@@ -41,7 +41,7 @@ def coordinates(text):
 
 def cities():
     """Preserve every CSV city, including its original signed coordinates."""
-    with (ROOT / 'examples/text-layer/cities-1000.csv').open() as source:
+    with (ROOT / 'examples/text-layer/cities-1000.csv').open(encoding='utf-8', newline='') as source:
         return [dict(name=r['name'], population=int(r['population']),
                      longitude=float(r['longitude']), latitude=float(r['latitude']))
                 for r in csv.DictReader(source)]
@@ -49,7 +49,7 @@ def cities():
 
 def meteorites():
     """Expand coordinate dictionary references without dropping unknown years."""
-    lines = (ROOT / 'website/meteorites.txt').read_text().splitlines()
+    lines = (ROOT / 'website/meteorites.txt').read_text(encoding='utf-8').splitlines()
     points = coordinates(lines[0])
     rows = []
     for line in lines[1:]:
@@ -65,7 +65,7 @@ def earthquakes():
     """Expand delta timestamps and scaled values in source order."""
     timestamp = 0
     rows = []
-    for line in (ROOT / 'website/earthquakes.txt').read_text().split('\n'):
+    for line in (ROOT / 'website/earthquakes.txt').read_text(encoding='utf-8').split('\n'):
         if not line:
             continue
         time, rest = line[1:].split('\x01')
