@@ -63,6 +63,7 @@ def main():
         make_source(s_path, 's', 'woa23_decav_s00_01.nc', np.random.default_rng(1))
         for prefix, path in [('t', t_path), ('s', s_path)]:
             converter.SOURCES[prefix]['bytes'] = path.stat().st_size
+            converter.SOURCES[prefix]['sha256'] = converter.digest(path)
         converter.convert(t_path, s_path, out)
 
         manifest = json.loads((out / 'manifest.json').read_text())
@@ -91,7 +92,7 @@ def main():
                             if np.ma.is_masked(source):
                                 assert packed[row, col, level] == fill
                             else:
-                                assert abs(packed[row, col, level] / 1000 - float(source)) <= 0.0005 + 1e-6
+                                assert abs(packed[row, col, level] / converter.PREVIEW_SCALE - float(source)) <= 0.5 / converter.PREVIEW_SCALE + 1e-6
     print('WOA23 converter: lossless Parquet, nulls and preview decoding verified on synthetic inputs.')
 
 

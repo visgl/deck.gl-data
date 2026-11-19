@@ -1,0 +1,593 @@
+{
+  "id": "woa23",
+  "title": "World Ocean Atlas 2023 annual temperature and salinity (1\u00b0)",
+  "credit": "NOAA NCEI World Ocean Atlas 2023 (Locarnini et al. 2023; Reagan et al. 2023)",
+  "dataset": "https://www.ncei.noaa.gov/products/world-ocean-atlas",
+  "accession": "https://www.ncei.noaa.gov/archive/accession/0270533",
+  "citations": [
+    "https://doi.org/10.25923/54bh-1613",
+    "https://doi.org/10.25923/70qt-9574"
+  ],
+  "license": "other",
+  "licenseUrl": "https://www.ncei.noaa.gov/products/world-ocean-atlas",
+  "licenseStatement": "These data are openly available to the public. Please acknowledge the use of these data with the text given in the acknowledgment attribute.",
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "decade": "decav",
+  "period": "annual",
+  "timeCoverage": "1955-01-01/P68Y",
+  "dimensions": {
+    "depth": 102,
+    "lat": 180,
+    "lon": 360
+  },
+  "rows": 6609600,
+  "columns": [
+    "t_an",
+    "t_mn",
+    "t_dd",
+    "t_sd",
+    "t_se",
+    "t_oa",
+    "t_gp",
+    "t_sdo",
+    "t_sea",
+    "s_an",
+    "s_mn",
+    "s_dd",
+    "s_sd",
+    "s_se",
+    "s_oa",
+    "s_gp",
+    "s_sdo",
+    "s_sea"
+  ],
+  "rowGroupIndex": [
+    {
+      "rowGroup": 0,
+      "depthMeters": 0.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 1,
+      "depthMeters": 5.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 2,
+      "depthMeters": 10.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 3,
+      "depthMeters": 15.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 4,
+      "depthMeters": 20.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 5,
+      "depthMeters": 25.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 6,
+      "depthMeters": 30.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 7,
+      "depthMeters": 35.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 8,
+      "depthMeters": 40.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 9,
+      "depthMeters": 45.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 10,
+      "depthMeters": 50.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 11,
+      "depthMeters": 55.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 12,
+      "depthMeters": 60.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 13,
+      "depthMeters": 65.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 14,
+      "depthMeters": 70.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 15,
+      "depthMeters": 75.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 16,
+      "depthMeters": 80.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 17,
+      "depthMeters": 85.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 18,
+      "depthMeters": 90.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 19,
+      "depthMeters": 95.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 20,
+      "depthMeters": 100.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 21,
+      "depthMeters": 125.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 22,
+      "depthMeters": 150.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 23,
+      "depthMeters": 175.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 24,
+      "depthMeters": 200.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 25,
+      "depthMeters": 225.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 26,
+      "depthMeters": 250.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 27,
+      "depthMeters": 275.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 28,
+      "depthMeters": 300.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 29,
+      "depthMeters": 325.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 30,
+      "depthMeters": 350.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 31,
+      "depthMeters": 375.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 32,
+      "depthMeters": 400.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 33,
+      "depthMeters": 425.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 34,
+      "depthMeters": 450.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 35,
+      "depthMeters": 475.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 36,
+      "depthMeters": 500.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 37,
+      "depthMeters": 550.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 38,
+      "depthMeters": 600.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 39,
+      "depthMeters": 650.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 40,
+      "depthMeters": 700.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 41,
+      "depthMeters": 750.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 42,
+      "depthMeters": 800.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 43,
+      "depthMeters": 850.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 44,
+      "depthMeters": 900.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 45,
+      "depthMeters": 950.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 46,
+      "depthMeters": 1000.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 47,
+      "depthMeters": 1050.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 48,
+      "depthMeters": 1100.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 49,
+      "depthMeters": 1150.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 50,
+      "depthMeters": 1200.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 51,
+      "depthMeters": 1250.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 52,
+      "depthMeters": 1300.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 53,
+      "depthMeters": 1350.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 54,
+      "depthMeters": 1400.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 55,
+      "depthMeters": 1450.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 56,
+      "depthMeters": 1500.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 57,
+      "depthMeters": 1550.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 58,
+      "depthMeters": 1600.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 59,
+      "depthMeters": 1650.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 60,
+      "depthMeters": 1700.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 61,
+      "depthMeters": 1750.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 62,
+      "depthMeters": 1800.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 63,
+      "depthMeters": 1850.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 64,
+      "depthMeters": 1900.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 65,
+      "depthMeters": 1950.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 66,
+      "depthMeters": 2000.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 67,
+      "depthMeters": 2100.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 68,
+      "depthMeters": 2200.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 69,
+      "depthMeters": 2300.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 70,
+      "depthMeters": 2400.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 71,
+      "depthMeters": 2500.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 72,
+      "depthMeters": 2600.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 73,
+      "depthMeters": 2700.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 74,
+      "depthMeters": 2800.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 75,
+      "depthMeters": 2900.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 76,
+      "depthMeters": 3000.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 77,
+      "depthMeters": 3100.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 78,
+      "depthMeters": 3200.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 79,
+      "depthMeters": 3300.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 80,
+      "depthMeters": 3400.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 81,
+      "depthMeters": 3500.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 82,
+      "depthMeters": 3600.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 83,
+      "depthMeters": 3700.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 84,
+      "depthMeters": 3800.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 85,
+      "depthMeters": 3900.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 86,
+      "depthMeters": 4000.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 87,
+      "depthMeters": 4100.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 88,
+      "depthMeters": 4200.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 89,
+      "depthMeters": 4300.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 90,
+      "depthMeters": 4400.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 91,
+      "depthMeters": 4500.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 92,
+      "depthMeters": 4600.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 93,
+      "depthMeters": 4700.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 94,
+      "depthMeters": 4800.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 95,
+      "depthMeters": 4900.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 96,
+      "depthMeters": 5000.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 97,
+      "depthMeters": 5100.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 98,
+      "depthMeters": 5200.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 99,
+      "depthMeters": 5300.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 100,
+      "depthMeters": 5400.0,
+      "rows": 64800
+    },
+    {
+      "rowGroup": 101,
+      "depthMeters": 5500.0,
+      "rows": 64800
+    }
+  ],
+  "conversion": "Every source cell, depth and statistic of the WOA23 annual 1\u00b0 decav temperature and salinity files; source float32/int32 values unchanged; fill values are null. One standard depth per row group. The display preview is decimated and quantized separately.",
+  "sources": {
+    "t": {
+      "id": "woa23_decav_t00_01.nc",
+      "bytes": 85168080,
+      "sha256": "0bd98d3c9c20254e8fcf714aefdd23b4a191eacdfdc3ce5d019205e4a8bc41b5",
+      "url": "https://www.ncei.noaa.gov/thredds-ocean/fileServer/woa23/DATA/temperature/netcdf/decav/1.00/woa23_decav_t00_01.nc"
+    },
+    "s": {
+      "id": "woa23_decav_s00_01.nc",
+      "bytes": 77439270,
+      "sha256": "3ab18000cea789a2b349cf6b08531f1ebf144f601d90a83f4c3508456003f019",
+      "url": "https://www.ncei.noaa.gov/thredds-ocean/fileServer/woa23/DATA/salinity/netcdf/decav/1.00/woa23_decav_s00_01.nc"
+    }
+  },
+  "files": [
+    {
+      "path": "grids.parquet",
+      "bytes": 220899701,
+      "sha256": "951fc0bf33b6477d1bb562adbbfefaaf32eab15fdeb18dd30018f4f16325ebce"
+    },
+    {
+      "path": "preview.bin.gz",
+      "bytes": 598112,
+      "sha256": "2ad5728ade4ca5150fa3421813de3cad5a0747d16a3b38e447142b6a95827fe1"
+    },
+    {
+      "path": "preview-manifest.json",
+      "bytes": 3758,
+      "sha256": "4afaee4e2cb56b03b42f270b3e3f4683c771bef1c7a460d1e36a603ca30aa9fd"
+    }
+  ]
+}

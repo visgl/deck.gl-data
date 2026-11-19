@@ -30,4 +30,4 @@ to the conversion scripts only.
 Changes: `grids.parquet` keeps every cell, standard depth and statistic of the two
 source files, with unchanged float32/int32 values and fill values as null. The
 display preview (`preview.bin.gz`) is decimated (every second node) and quantized
-(0.001 °C and 0.001 salinity units) at 33 of the 102 standard depths.
+(0.01 °C and 0.01 salinity units) at 33 of the 102 standard depths.

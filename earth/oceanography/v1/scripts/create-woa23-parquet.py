@@ -17,12 +17,13 @@ import numpy as np
 import pyarrow as pa
 import pyarrow.parquet as pq
 
-# NCEI THREDDS fileServer sizes, Last-Modified 2024-01-29. SHA-256 values are
-# pinned from the first approved download, then enforced here.
+# NCEI THREDDS fileServer sizes and SHA-256 (Last-Modified 2024-01-29, downloaded 2026-11-19).
 SOURCES = {
-    't': {'id': 'woa23_decav_t00_01.nc', 'bytes': 85168080, 'sha256': None,
+    't': {'id': 'woa23_decav_t00_01.nc', 'bytes': 85168080,
+          'sha256': '0bd98d3c9c20254e8fcf714aefdd23b4a191eacdfdc3ce5d019205e4a8bc41b5',
           'url': 'https://www.ncei.noaa.gov/thredds-ocean/fileServer/woa23/DATA/temperature/netcdf/decav/1.00/woa23_decav_t00_01.nc'},
-    's': {'id': 'woa23_decav_s00_01.nc', 'bytes': 77439270, 'sha256': None,
+    's': {'id': 'woa23_decav_s00_01.nc', 'bytes': 77439270,
+          'sha256': '3ab18000cea789a2b349cf6b08531f1ebf144f601d90a83f4c3508456003f019',
           'url': 'https://www.ncei.noaa.gov/thredds-ocean/fileServer/woa23/DATA/salinity/netcdf/decav/1.00/woa23_decav_s00_01.nc'},
 }
 # The nine per-cell statistics in each WOA23 file (OPeNDAP DDS, checked 2026-11-19).
@@ -32,7 +33,8 @@ PREVIEW_DEPTHS = [0, 10, 20, 30, 50, 75, 100, 125, 150, 200, 250, 300, 400, 500,
                   900, 1000, 1100, 1200, 1300, 1400, 1500, 1750, 2000, 2500, 3000, 3500, 4000,
                   4500, 5000, 5500]
 PREVIEW_STRIDE = 2
-PREVIEW_SCALE = 1000
+# 0.01 °C and 0.01 salinity units: at most about 0.03 m/s in sound speed, for a gzip size near 0.6 MB.
+PREVIEW_SCALE = 100
 PREVIEW_FILL = {'t': -32768, 's': 65535}
 
 
@@ -44,7 +46,7 @@ def check_source(prefix, path):
     expected = SOURCES[prefix]
     assert path.stat().st_size == expected['bytes'], f'{path}: unexpected size'
     sha256 = digest(path)
-    assert expected['sha256'] in (None, sha256), f'{path}: unexpected SHA-256'
+    assert sha256 == expected['sha256'], f'{path}: unexpected SHA-256'
     with netCDF4.Dataset(path) as ds:
         assert ds.getncattr('id') == expected['id'], f'{path}: unexpected dataset id'
     return sha256
@@ -188,9 +190,5 @@ if __name__ == '__main__':
     parser.add_argument('--temperature', type=Path, required=True, help='woa23_decav_t00_01.nc')
     parser.add_argument('--salinity', type=Path, required=True, help='woa23_decav_s00_01.nc')
     parser.add_argument('--out', type=Path, required=True)
-    parser.add_argument('--skip-size-check', action='store_true', help='for synthetic test inputs only')
     args = parser.parse_args()
-    if args.skip_size_check:
-        for prefix, path in [('t', args.temperature), ('s', args.salinity)]:
-            SOURCES[prefix]['bytes'] = path.stat().st_size
     convert(args.temperature, args.salinity, args.out)
