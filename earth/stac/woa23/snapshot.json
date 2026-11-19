@@ -1,0 +1,141 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json"
+  ],
+  "id": "visgl-woa23-snapshot",
+  "collection": "visgl-woa23",
+  "bbox": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          -90
+        ],
+        [
+          180,
+          -90
+        ],
+        [
+          180,
+          90
+        ],
+        [
+          -180,
+          90
+        ],
+        [
+          -180,
+          -90
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2026-11-19T20:23:32Z",
+    "visgl:source_commit": "ddd9edb07c99282cc4c142706f804e2208a0bfe0",
+    "visgl:datetime_semantics": "Repository dataset snapshot commit time; not observation time or climatology period",
+    "ocean:climatology": "WOA23 annual decav",
+    "ocean:time_coverage": "1955-01-01/P68Y",
+    "ocean:spacing_degrees": 1,
+    "ocean:depth_levels": 102,
+    "ocean:depth_min_m": 0.0,
+    "ocean:depth_max_m": 5500.0,
+    "ocean:variables": [
+      "t_an",
+      "t_mn",
+      "t_dd",
+      "t_sd",
+      "t_se",
+      "t_oa",
+      "t_gp",
+      "t_sdo",
+      "t_sea",
+      "s_an",
+      "s_mn",
+      "s_dd",
+      "s_sd",
+      "s_se",
+      "s_oa",
+      "s_gp",
+      "s_sdo",
+      "s_sea"
+    ],
+    "visgl:rows": 6609600,
+    "title": "World Ocean Atlas 2023 annual temperature and salinity (1°, 0–5500 m)",
+    "description": "Global 1-degree NOAA NCEI WOA23 annual climatology of in-situ temperature and practical salinity at 102 standard depths from 0 to 5500 m, with every source statistic in lossless Parquet and a separate quantized display preview. Climatological means, not measured profiles; not for navigation."
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ],
+  "assets": {
+    "grids.parquet": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/ddd9edb07c99282cc4c142706f804e2208a0bfe0/earth/oceanography/v1/woa23/grids.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "file:size": 220899701,
+      "file:checksum": "1220951fc0bf33b6477d1bb562adbbfefaaf32eab15fdeb18dd30018f4f16325ebce"
+    },
+    "preview.bin.gz": {
+      "href": "https://media.githubusercontent.com/media/visgl/deck.gl-data/ddd9edb07c99282cc4c142706f804e2208a0bfe0/earth/oceanography/v1/woa23/preview.bin.gz",
+      "type": "application/gzip",
+      "roles": [
+        "data"
+      ],
+      "file:size": 598112,
+      "file:checksum": "12202ad5728ade4ca5150fa3421813de3cad5a0747d16a3b38e447142b6a95827fe1"
+    },
+    "preview-manifest.json": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/ddd9edb07c99282cc4c142706f804e2208a0bfe0/earth/oceanography/v1/woa23/preview-manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 3758,
+      "file:checksum": "12204afaee4e2cb56b03b42f270b3e3f4683c771bef1c7a460d1e36a603ca30aa9fd"
+    },
+    "manifest": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/ddd9edb07c99282cc4c142706f804e2208a0bfe0/earth/oceanography/v1/woa23/manifest.json",
+      "type": "application/json",
+      "roles": [
+        "metadata"
+      ]
+    },
+    "attribution": {
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/ddd9edb07c99282cc4c142706f804e2208a0bfe0/earth/oceanography/v1/woa23/ATTRIBUTION.md",
+      "type": "text/markdown",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

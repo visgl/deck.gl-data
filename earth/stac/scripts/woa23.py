@@ -6,9 +6,8 @@ import json
 from pathlib import Path
 from generate import ROOT, WORLD, GEOMETRY, FILE_EXTENSION, link, write, url
 
-# Set both values to the dataset commit that adds earth/oceanography/v1/woa23.
-COMMIT = None
-DATE = None
+COMMIT = 'ddd9edb07c99282cc4c142706f804e2208a0bfe0'
+DATE = '2026-11-19T20:23:32Z'
 FOLDER = 'earth/oceanography/v1/woa23'
 TYPES = {'.parquet': 'application/vnd.apache.parquet', '.gz': 'application/gzip', '.json': 'application/json'}
 CITATIONS = [

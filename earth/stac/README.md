@@ -2,7 +2,7 @@
 
 Open [catalog.json](catalog.json) to discover the Earth datasets using a static
 [STAC 1.1.0](https://github.com/radiantearth/stac-spec/tree/v1.1.0) catalog.
-It contains eleven Collections and twelve Items:
+It contains twelve Collections and thirteen Items:
 
 - **Earth reference datasets**: EGM2008 geoid, countries and major rivers, with original and converted assets.
 - **EGM96**: one Item per grid resolution, each with PGM and Parquet assets.
@@ -10,6 +10,7 @@ It contains eleven Collections and twelve Items:
 - **Glaciations and climate**: Alpine PISM, PaleoMIST, Krapp 2021 and Köhler 2015; each has a snapshot Item with source files and lossless Parquet. Alpine, PaleoMIST and Köhler additionally provide separate display previews. Krapp provides 799–0 ka global ice/ocean/land masks.
 - **PALEOMAP PaleoDEMs v2**: one Item with 109 CC-BY-4.0 reconstructed elevation grids in age-filterable Parquet, plus manifest, attribution and original license.
 - **Müller 2022**: one Item pairing geometry and rotation Parquet assets.
+- **World Ocean Atlas 2023**: one Item with the annual 1° temperature and salinity climatology (102 standard depths, 0–5500 m) as lossless Parquet, plus a quantized display preview and its manifest.
 
 Collection and Item links are relative, so the catalog can be browsed locally or
 served as static JSON. The catalog provides discovery, not a STAC API search
@@ -28,7 +29,7 @@ in the linked manifests and attribution files.
 The EGM96 snapshot is pinned to the uploaded files in
 [dataset PR #46](https://github.com/visgl/deck.gl-data/pull/46); the catalog does not
 require those files to be merged into master first. Tectonic assets are pinned to
-the master snapshot that merged dataset PR #45. Glaciation assets are pinned to the dataset commit in this PR.
+the master snapshot that merged dataset PR #45. Glaciation assets are pinned to the dataset commit in this PR. WOA23 assets are pinned to their uploaded dataset commit.
 
 ## Licenses and time conventions
 
@@ -43,7 +44,7 @@ extents reflect those snapshot dates. This convention is explicit on every Item.
 Tectonic age coverage and sampling are separate `tectonic:*` properties in millions
 of years before present; geological times are not forced into Gregorian dates.
 `geoid:*` and `tectonic:*` properties are documented custom fields, not claims of
-compliance with additional STAC extensions. Glaciation `paleo:age_min_ka`, `paleo:age_max_ka` and `paleo:age_unit` use thousands of years before present. Alpine, PaleoMIST and Krapp data retain CC-BY-4.0; Köhler climate data retains CC-BY-3.0.
+compliance with additional STAC extensions. Glaciation `paleo:age_min_ka`, `paleo:age_max_ka` and `paleo:age_unit` use thousands of years before present. Alpine, PaleoMIST and Krapp data retain CC-BY-4.0; Köhler climate data retains CC-BY-3.0. NOAA WOA23 data have no named license: NCEI states that they are openly available to the public and asks for acknowledgment. Its Collection uses `license: "other"` with the NCEI statement, a license-evidence file and `cite-as` links to the temperature and salinity volumes. `ocean:*` properties are documented custom fields, not a separate STAC extension; depths are meters, positive down.
 
 ## Regeneration and validation
 

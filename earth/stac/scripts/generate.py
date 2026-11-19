@@ -136,3 +136,6 @@ if __name__ == '__main__':
 
     from paleodem import generate_paleodem
     generate_paleodem()
+
+    from woa23 import generate_woa23
+    generate_woa23()

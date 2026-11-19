@@ -80,6 +80,12 @@
       "href": "paleodem/collection.json",
       "type": "application/json",
       "title": "Scotese and Wright (2018) PALEOMAP PaleoDEMs v2"
+    },
+    {
+      "rel": "child",
+      "href": "woa23/collection.json",
+      "type": "application/json",
+      "title": "NOAA World Ocean Atlas 2023 temperature and salinity"
     }
   ]
 }

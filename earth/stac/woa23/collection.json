@@ -1,0 +1,109 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "id": "visgl-woa23",
+  "title": "NOAA World Ocean Atlas 2023 temperature and salinity",
+  "description": "NOAA NCEI World Ocean Atlas 2023 annual 1° climatology of in-situ temperature (°C) and practical salinity (PSS-78) at 102 standard depths from 0 to 5500 m, averaged over all decades 1955–2022. Every source cell, depth and statistic of the WOA23 annual 1° decav temperature and salinity files; source float32/int32 values unchanged; fill values are null. One standard depth per row group. The display preview is decimated and quantized separately. NCEI states that the data are openly available to the public and asks users to acknowledge them; no named license applies. Climatological means, not measured profiles; not for navigation.",
+  "license": "other",
+  "providers": [
+    {
+      "name": "NOAA National Centers for Environmental Information (NCEI)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.ncei.noaa.gov/products/world-ocean-atlas"
+    },
+    {
+      "name": "vis.gl",
+      "roles": [
+        "processor",
+        "host"
+      ],
+      "url": "https://github.com/visgl/deck.gl-data"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-11-19T20:23:32Z",
+          "2026-11-19T20:23:32Z"
+        ]
+      ]
+    }
+  },
+  "summaries": {
+    "ocean:depth_min_m": [
+      0.0
+    ],
+    "ocean:depth_max_m": [
+      5500.0
+    ],
+    "ocean:climatology": [
+      "WOA23 annual decav"
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://www.ncei.noaa.gov/products/world-ocean-atlas",
+      "type": "text/html",
+      "title": "NCEI World Ocean Atlas access statement"
+    },
+    {
+      "rel": "license",
+      "href": "https://raw.githubusercontent.com/visgl/deck.gl-data/ddd9edb07c99282cc4c142706f804e2208a0bfe0/earth/oceanography/v1/woa23/license-evidence.json",
+      "type": "application/json",
+      "title": "License evidence"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://www.ncei.noaa.gov/archive/accession/0270533",
+      "type": "text/html",
+      "title": "NCEI Accession 0270533"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.25923/54bh-1613",
+      "type": "text/html",
+      "title": "Locarnini et al. (2023). World Ocean Atlas 2023, Volume 1: Temperature. NOAA Atlas NESDIS 89."
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.25923/70qt-9574",
+      "type": "text/html",
+      "title": "Reagan et al. (2023). World Ocean Atlas 2023, Volume 2: Salinity. NOAA Atlas NESDIS 90."
+    },
+    {
+      "rel": "item",
+      "href": "snapshot.json",
+      "type": "application/geo+json"
+    }
+  ]
+}
