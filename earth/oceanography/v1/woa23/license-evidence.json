@@ -1,0 +1,15 @@
+{
+  "checked": "2026-11-19",
+  "netcdfLicenseAttribute": "These data are openly available to the public. Please acknowledge the use of these data with the text given in the acknowledgment attribute.",
+  "netcdfAcknowledgmentAttribute": null,
+  "netcdfAcknowledgmentNote": "The temperature and salinity files reference an acknowledgment attribute but do not contain one. The catalog uses the NCEI product citation and the two volume citations instead.",
+  "opendapAttributes": [
+    "https://www.ncei.noaa.gov/thredds-ocean/dodsC/woa23/DATA/temperature/netcdf/decav/1.00/woa23_decav_t00_01.nc.das",
+    "https://www.ncei.noaa.gov/thredds-ocean/dodsC/woa23/DATA/salinity/netcdf/decav/1.00/woa23_decav_s00_01.nc.das"
+  ],
+  "productPage": "https://www.ncei.noaa.gov/products/world-ocean-atlas",
+  "productPageStatement": "WOA data are available free of charge.",
+  "productCitation": "Reagan, James R.; Boyer, Tim P.; García, Hernán E.; Locarnini, Ricardo A.; Baranova, Olga K.; Bouchard, Courtney; Cross, Scott L.; Mishonov, Alexey V.; Paver, Christopher R.; Seidov, Dan; Wang, Zhankun; Dukhovskoy, Dmitry. (2024). World Ocean Atlas 2023. NOAA National Centers for Environmental Information. Dataset: NCEI Accession 0270533.",
+  "namedLicense": null,
+  "stacLicense": "other"
+}

@@ -62,6 +62,11 @@ ITEM_METADATA = {'alpine/snapshot.json': ['Alpine PISM glacier thickness, temper
                             'Parquet nodes, with one age grid per row group. Source grid '
                             'dimensions and coordinates are preserved; these are gridded heights, '
                             'not vector geometries.'],
+ 'woa23/snapshot.json': ['World Ocean Atlas 2023 annual temperature and salinity (1°, 0–5500 m)',
+                         'Global 1-degree NOAA NCEI WOA23 annual climatology of in-situ temperature and '
+                         'practical salinity at 102 standard depths from 0 to 5500 m, with every source '
+                         'statistic in lossless Parquet and a separate quantized display preview. '
+                         'Climatological means, not measured profiles; not for navigation.'],
  'paleomist/snapshot.json': ['PaleoMIST ice-sheet thickness and paleotopography grids',
                              'Global PaleoMIST grids of ice thickness, base topography, '
                              'paleotopography and sea level from 80,000 years ago to the present. '
